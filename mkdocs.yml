@@ -1,0 +1,10 @@
+site_name: "Agents Concierge Tech Guides"
+site_url: "https://lucapagliari.github.io/agents-concierge/"
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - Tutorials:
+      - Primo tutorial: guide/first-guide.md
