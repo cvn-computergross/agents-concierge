@@ -1,1 +1,4 @@
 /.venv
+/.obsidian
+.DS_Store
+Thumbs.db

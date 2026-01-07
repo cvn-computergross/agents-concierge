@@ -1,7 +1,16 @@
 # HR Assistant · v1 — Lab guide
 
 ## Goal
-Placeholder.
+
+!!! note
+	Placeholder
+
+!!! warning
+	Placeholder 1
+	Placeholder 2
+
+??? tips
+	Placeholder
 
 ## Steps
 1. Step 1 (placeholder)  
