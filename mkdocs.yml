@@ -1,6 +1,10 @@
 site_name: "Agents Concierge Tech Guides"
 site_url: ""
 
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+
 theme:
   name: material
 
