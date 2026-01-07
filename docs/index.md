@@ -1,5 +1,8 @@
-# Benvenuto
+# Copilot Concierge
 
-Questo sito raccoglie tutorial tecnici.
+Hands-on lab guides for building Copilot agents.
 
-Vai alla sezione **Tutorials** per iniziare.
+Agents are available in two levels:
+
+- **[Agents · LV1](lv1/index.md)** (Agent Builder)
+- **[Agents · LV2](lv2/index.md)** (Copilot Studio)
