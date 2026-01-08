@@ -20,7 +20,7 @@ Abbiamo identificato tre criticità principali nel supporto IT di primo livello:
 
 ## Soluzione
 
-![[ts-gen1.webp]]
+![Panoramica Agent](assets/ts-gen1.webp)
 
 **Tech Support (v1)** è un agente Copilot progettato per fornire **supporto tecnico di primo livello**, interrogando **esclusivamente una knowledge base aziendale predefinita**.
 
@@ -49,7 +49,7 @@ Questo approccio:
 2. Fornisce istruzioni passo-passo
 3. Non attiva escalation
 
-![[ts-gen2.webp]]
+![Esempio 1](assets/ts-gen2.webp)
 
 ### 2) Troubleshooting guidato
 
@@ -63,7 +63,7 @@ Questo approccio:
 2. Riassume i controlli suggeriti dalla guida VPN
 3. Indica il risultato atteso
 
-![[ts-gen3.webp]]
+![Esempio 2](assets/ts-gen3.webp)
 
 ### 3) Richiesta fuori perimetro → Escalation
 
@@ -77,7 +77,7 @@ Questo approccio:
 2. Non inventa procedure 
 3. Guida l’utente verso il Portale o contatto IT ufficiale
 
-![[ts-gen4.webp]]
+![Esempio 3](assets/ts-gen4.webp)
 
 ## Get started
 → **[Apri la guida tecnica](lab-guide.md)**
