@@ -1,7 +1,5 @@
 # Copilot Agents Concierge - Tech
 
-??? tip
-	TEST :)
 
 Agents are available in two levels:
 

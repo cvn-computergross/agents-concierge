@@ -1,4 +1,6 @@
 /.venv
 /.obsidian
+raw-assets/
+resized-assets/
 .DS_Store
 Thumbs.db
