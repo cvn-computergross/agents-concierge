@@ -9,7 +9,7 @@
 	Placeholder 1
 	Placeholder 2
 
-??? tips
+??? tip
 	Placeholder
 
 ## Steps

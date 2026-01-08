@@ -1,6 +1,7 @@
-# Copilot Concierge
+# Copilot Agents Concierge - Tech
 
-Hands-on lab guides for building Copilot agents.
+??? tip
+	TEST :)
 
 Agents are available in two levels:
 
