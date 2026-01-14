@@ -1,4 +1,4 @@
-# Template Writer  · v1
+# Job Writer  · v2
 
 ## Overview
 Placeholder overview for the Template Writer .
@@ -13,5 +13,3 @@ Placeholder overview for the Template Writer .
 ## Get started
 → **[Open the lab guide](lab-guide.md)**
 
-## Next
-→ **[Template Writer · next version](../../lv2/template-writer-/index.md)**
