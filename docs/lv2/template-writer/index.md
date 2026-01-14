@@ -1,7 +1,7 @@
-# HR Assistant · v1 (LV1 — Lite)
+# Template Writer  · v2
 
 ## Overview
-Placeholder overview for the LV1 HR Assistant.
+Placeholder overview for the Template Writer .
 
 ## What this version demonstrates
 - Search on SharePoint knowledge
@@ -13,5 +13,3 @@ Placeholder overview for the LV1 HR Assistant.
 ## Get started
 → **[Open the lab guide](lab-guide.md)**
 
-## Next
-→ **[HR Assistant · v2](../../lv2/hr-assistant/index.md)**

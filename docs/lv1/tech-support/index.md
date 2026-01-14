@@ -1,5 +1,8 @@
 # Tech Support · v1 (Agent Builder)
 
+## Get started
+→ **[Apri la guida tecnica](lab-guide.md)**
+
 ## Panoramica
 
 Il supporto IT di primo livello è spesso coinvolto nella gestione di richieste **ripetitive e a basso valore**, come problemi di accesso, reset password, configurazione MFA o connessione VPN.
@@ -37,7 +40,7 @@ Questo approccio:
 
 ## Esempi di utilizzo
 
-### 1) Problema risolvibile tramite guida aziendale
+### Richiesta con risposta chiara
 
 **Richiesta utente**
 
@@ -51,7 +54,7 @@ Questo approccio:
 
 ![Esempio 1](assets/ts-gen2.webp)
 
-### 2) Troubleshooting guidato
+### Troubleshooting guidato
 
 **Richiesta utente**
 
@@ -65,7 +68,7 @@ Questo approccio:
 
 ![Esempio 2](assets/ts-gen3.webp)
 
-### 3) Richiesta fuori perimetro → Escalation
+### Richiesta fuori perimetro
 
 **Richiesta utente**
 
@@ -81,7 +84,3 @@ Questo approccio:
 
 ## Get started
 → **[Apri la guida tecnica](lab-guide.md)**
-
-vvv TO DO
-## Next
-→ **[IT Help Desk · v2](../../lv2/it-help-desk/index.md)**
