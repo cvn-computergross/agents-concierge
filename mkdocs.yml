@@ -17,8 +17,8 @@ nav:
 - Agent Builder:
   - Overview: lv1/index.md
   - Tech Support: lv1/tech-support/index.md
-  - Template Writer: lv1/job-writer/index.md
+  - Job Writer: lv1/job-writer/index.md
 - Copilot Studio:
   - Overview: lv2/index.md
   - Tech Support: lv2/tech-support/index.md
-  - Template Writer: lv2/job-writer/index.md
+  - Job Writer: lv2/job-writer/index.md
