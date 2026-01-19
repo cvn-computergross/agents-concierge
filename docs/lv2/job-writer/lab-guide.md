@@ -3,24 +3,25 @@
 
 ## Prima Configurazione
 
-1. Navigare all'interno di [Copilot Studio](https://copilotstudio.microsoft.com/) e selezionare **Agents**  situato nel menù laterale a sinistra, premere **+ Create blank agent**.
+Navigare all'interno di [Copilot Studio](https://copilotstudio.microsoft.com/) e selezionare **Agents**  situato nel menù laterale a sinistra, premere **+ Create blank agent**.
 
-2. Finito il provisioning dell'agente modificare **Nome** e **Descrizione**:
+Finito il provisioning dell'agente modificare **Nome** e **Descrizione**:
 
--  **Nome**:
+- **Nome**:
 ```
 Job Writer (v2)
 ```
 
--  **Descrizione**:
+- **Descrizione**:
 ```
 Esperto di annunci di lavoro
 ```
 
-3. Lasciare le istruzioni vuote per il momento e proseguire con la guida.
+Lasciare le istruzioni vuote per il momento e proseguire con la guida.
+
 ## Creazione del Topic
 
-1. Nella pagina dell'agente andare nella sezione  **Topics** e selezionare **Add a topic** → **From blank**.
+Nella pagina dell'agente andare nella sezione  **Topics** e selezionare **Add a topic** → **From blank**.
 
 ![Topic1](assets/JobWriterv2-Topic1.png)
 
@@ -68,7 +69,7 @@ Queste variabili saranno utilizzate per popolare il template e la Prompt Action.
 
 ## Creare la Prompt Action
 
-1. Sotto al trigger premere `Add node`, selezionare `Add a tool` e poi premere su `New Prompt`.
+ Sotto al trigger premere `Add node`, selezionare `Add a tool` e poi premere su `New Prompt`.
 
 ```
 ## RUOLO
@@ -274,37 +275,36 @@ Unisciti a Zava S.p.A. – Potenziamo le imprese con Cloud & AI
 - In caso di incertezza, generare suggerimenti di massima ma contrassegnarli come “(suggerito)”.
 ```
 
-2. Copiare e incollare questo prompt, successivamente aggiungere 3 variabili attraverso `add content` → `Text`  come in figura:
+Copiare e incollare il prompt, successivamente aggiungere 3 variabili attraverso `add content` → `Text`  come in figura:
 
 ![AddContent](assets/JobWriterv2-AddContent.png)
 
-3. Salvare il Prompt e tornare nel Topic aggiungere il Prompt e configurare gli input come in figura.
+Salvare il Prompt e tornare nel Topic aggiungerlo e configurare gli input come in figura.
 
 ![Prompt](assets/JobWriterv2-Prompt.png)
 
-4. Modificare la variabile di output della Prompt Action e chiamarla `OutPosting`.
-5. Sotto premere `Add node`  e selezionare `Send a message`.
-6. Come contenuto inserire la seguente  Formula PowerFx:
+Modificare la variabile di output della Prompt Action e chiamarla `OutPosting`.
+Sotto premere `Add node`  e selezionare `Send a message`.
+Come contenuto inserire la seguente  Formula PowerFx:
 
 ```
 Topic.OutPosting.text
 ```
 
-7. Salvare il topic.
-## Step 4 – Aggiungere il tool MCP Server per Word
+Salvare il topic.
+## Model Context Protocol
  
-1. Andare su Tools e premere `Add a tool`.
-2. Selezionare `Model Context Protocol` e successivamente `Microsoft Word MCP`.
-3. Rinominarlo `Job Posting to Word`.
-4. Abilitare soltanto le seguenti funzioni:
+Andare su Tools e premere `Add a tool`, selezionare `Model Context Protocol` e successivamente `Microsoft Word MCP`.
+
+Rinominarlo `Job Posting to Word` e abilitare soltanto le seguenti funzioni:
 
 ![MCP](assets/JobWriterv2-Tool1.png)
 
-5. Salvare il tool.
+Salvare il tool.
 
-## Step 5 – Istruzioni finali
+## Istruzioni finali
 
-1. Aggiornare le **Instructions** dell’agente:
+Aggiornare le **Instructions** dell’agente:
 
 ```
 ## C — CONTESTO
@@ -364,15 +364,15 @@ Dopo aver raccolto i dati:
 - “Ecco il tuo annuncio. Vuoi che lo salvi in un documento Word?”
 ```
 
-2. Inserire come in figura tramite lo `/` il Topic dove è presente.
+Inserire come in figura tramite lo `/` il Topic dove è presente.
 
 ![Istruzioni1](assets/JobWriterv2-Istruzioni1.png)
 ![Istruzioni2](assets/JobWriterv2-Istruzioni2.png)
 
 ## Risultato finale
 
-L’agente ora:
+Miglioramenti e funzionalità di Job Writer (v2):
 
-- Raccoglie i dati in modo semplice e guidato
-- Genera l’annuncio con il template ufficiale e con un output superiore rispetto alla versione 1
-- Salva il documento in OneDrive senza interventi manuali mantenendo la struttura intatta.
+- Raccogliere i dati in modo semplice e guidato
+- Generare l'annuncio con una qualità di output superiore rispetto al Job Writer (v1)
+- Salvare il documento in OneDrive senza interventi manuali mantenendo la struttura intatta.

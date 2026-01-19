@@ -48,26 +48,15 @@ Questo approccio permette di:
 
 `Genera un annuncio di lavoro secondo il template aziendale`
 
-<<<<<<< HEAD
-![Esempio 1](assets/JobWriterv1-Esempio1.png)
-
-**Comportamento dell’agente**
-
-=======
 **Comportamento dell’agente**
 
 ![Esempio 1](assets/JobWriterv1-Esempio1.png)
 
->>>>>>> 324c430acf896da628f7a73e83fc1207aa32d16e
 1. Verifica la presenza delle informazioni obbligatorie  
 2. Richiede eventuali dettagli mancanti prima di procedere  
 3. Applica il template aziendale ufficiale  
 4. Genera l'annuncio in formato coerente e pronto per l’uso  
 
 ![Esempio 2](assets/JobWriterv1-Esempio2.png)
-<<<<<<< HEAD
-=======
-
->>>>>>> 324c430acf896da628f7a73e83fc1207aa32d16e
 ## Get started
 → **[Apri la guida tecnica](lab-guide.md)**

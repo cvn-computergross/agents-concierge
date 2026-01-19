@@ -7,11 +7,7 @@
 
 Navigare all'interno della Copilot Chat all'indirizzo [https://m365.cloud.microsoft/](https://m365.cloud.microsoft/) e selezionare il tasto **Nuovo agente** situato all'interno della barra di sinistra sotto il menu espandibile **Agenti**:
 
-<<<<<<< HEAD
-![Step 01](../../lv1/tech-support/assets/ts-lg-1.webp)
-=======
 ![Step 01](../../lv1/tech-support/assets/ts-lg-1.webp)			
->>>>>>> 324c430acf896da628f7a73e83fc1207aa32d16e
 
 La prima schermata che viene aperta è quella della configurazione _conversazionale_. E' una valida scelta per creare un agente ma nel nostro caso adotteremo un approccio manuale, quindi aprire il pannello di configurazione e inserire i seguenti valori:
 
@@ -121,4 +117,4 @@ L'agente a questo punto sarà pienamente funzionante e sarà possibile testarlo 
 
 ## Scopri la versione avanzata con Copilot Studio
 
-→ TO DO **[Job Writer · v2](../../lv2/job-writer/index.md)**
+→ **[Job Writer · v2](../../lv2/job-writer/index.md)**

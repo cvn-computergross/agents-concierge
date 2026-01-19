@@ -5,81 +5,36 @@
 → **[Apri la guida tecnica](lab-guide.md)**
 ## Panoramica
 
-Il processo di creazione degli annunci di lavoro è stato semplificato con **Job Writer (v1)**, che permette di generare annunci e salvarli in Word. Tuttavia, la versione precedente presenta limiti: il documento non è perfettamente identico alla versione in chat e richiede interventi manuali per correggere formattazione e struttura.
+La redazione di annunci di lavoro richiede coerenza, precisione e rispetto degli standard aziendali.  
+Con **Job Writer (v1)** è stato introdotto un primo livello di automazione, utile per generare bozze di annunci in modo rapido, ma ancora dipendente da attività manuali per correggere struttura e formattazione.
 
-**Job Writer (v2)** supera questi limiti introducendo:
+**Job Writer (v2)** nasce per eliminare queste inefficienze, offrendo un processo **completo e interamente guidato**.  
+L’agente accompagna l’utente nella raccolta delle informazioni, applica automaticamente il template aziendale e genera annunci di lavoro **di qualità superiore**, più coerenti, accurati e allineati agli standard aziendali.
 
-- Creazione guidata tramite **topic dedicato**, che accelera la raccolta dati.
-- Utilizzo di **Prompt Action** per applicare il template aziendale in modo immediato e  un annuncio più accurato e professionale.
-- Generazione automatica di un documento Word **perfettamente identico alla versione in chat**
-- Salvataggio diretto del file in **OneDrive dell’utente** tramite integrazione MCP Server
-
-Queste evoluzioni trasformano l’agente da semplice generatore di testo a **strumento completo per la gestione degli annunci**, riducendo ulteriormente il carico operativo del team HR.
-
-## Continuità con il livello 1
-
-Job Writer v2 **non sostituisce** il livello 1, ma lo completa.
-
-- Il **LV1** si occupa di:
-
-  - Generazione rapida di annunci rispettando un template.
-  - Salvataggio in Word **con formattazione non sempre fedele**.
-  - Output in chat pronto per copia/incolla.
-
-- Il **LV2** interviene quando:
-
-  - Serve una creazione guidata per annunci di lavoro di qualità superiore.
-  - È richiesta **fedeltà totale tra l'annuncio in chat e il documento Word**
-  - Serve una **riduzione del tempo di revisione**.
-  - È richiesta una **Standardizzazione degli annunci** per garantire uniformità tra reparti e sedi.
-
-L’obiettivo è **automatizzare l’intero flusso**, dalla richiesta alla pubblicazione, senza correzioni manuali.
-
-## Problema
-
-Anche con Job Writer v1, persistono criticità:
-
-- **Documento Word non identico alla chat** (richiede correzioni manuali)
-- **Rischio di perdita di formattazione** tra generazione e salvataggio
-- **Processo non ottimizzato** per velocità e qualità dell'output.
-
-Queste lacune rallentano il processo e aumentano il rischio di errori.
+Il risultato è un documento Word **standardizzato e identico alla versione generata in chat**, salvato direttamente nell’ambiente di lavoro dell’utente.  
+Job Writer evolve così da semplice supporto alla scrittura a **strumento operativo per la generazione di annunci di lavoro**, con un impatto diretto sulla produttività del team HR.
 
 ## Soluzione
 
-**Job Writer (v2)** risolve queste criticità con un percorso guidato e automatizzato:
+**Job Writer (v2)** introduce un processo **guidato e automatizzato** per la creazione degli annunci di lavoro, eliminando le incoerenze e le attività manuali.
 
-- Avvio tramite **topic guidato** che raccoglie gli input
-- Generazione dell’annuncio con **Prompt Action** e template ufficiale
-- Creazione di un documento Word **perfettamente identico alla versione in chat**
-- Salvataggio diretto in **OneDrive dell’utente** tramite MCP Server
+L’agente segue una logica chiara e ripetibile: raccoglie solo le informazioni necessarie, genera l’annuncio utilizzando template ufficiali e produce direttamente un documento pronto all’uso.
 
-Il risultato è un flusso:
-> Conversazione → Raccolta dati → Generazione → Documento pronto e salvato
+Quando il flusso viene avviato:
 
-## Come funziona
+1. L’agente entra in un **topic guidato** per raccogliere gli input necessari, verificando se alcune informazioni sono già disponibili nella richiesta iniziale dell'utente
+2. I dati raccolti vengono utilizzati da una **Prompt Action** che applica il template aziendale per la generazione dell’annuncio
+3. Il contenuto generato viene trasformato in un **documento Word identico alla versione mostrata in chat**
+4. Il documento viene salvato automaticamente nel **OneDrive dell’utente** tramite **MCP Server**
 
-### 1. Avvio del topic guidato
+In questo modo l’utente segue un percorso strutturato che porta direttamente al risultato molto vicino a quello finale.
 
-L’agente:
+Questo approccio permette di:
 
-- Verifica se gli input richiesti sono già presenti
-- Richiede solo le informazioni mancanti
-
-### 2. Generazione dell’annuncio
-
-- Utilizza **Prompt Action** con il template aziendale
-- Mantiene coerenza e conformità 
-
-### 3. Creazione del documento Word
-
-- Replica **esattamente** il contenuto generato in chat
-- Applica la formattazione ufficiale senza interventi manuali
-
-### 4. Salvataggio in OneDrive
-
-- Tramite MCP Server, il documento viene salvato automaticamente
-- Garantisce tracciabilità e accesso immediato per l’utente
+- Garantire coerenza e conformità agli standard aziendali
+- Eliminare passaggi manuali e possibili errori di formattazione
+- Separare chiaramente la fase conversazionale dalla generazione e gestione dei documenti
+- Fornire all’utente un file immediatamente disponibile, tracciabile e pronto all’uso
 
 ## Esempio di utilizzo
 
@@ -87,22 +42,24 @@ L’agente:
 
 **Richiesta utente**
 
-`Vorrei creare un annuncio di lavoro completo e salvarlo in Word`
+```
+Genera l'annuncio di lavoro per la seguente posizione:
+Ruolo: Data Analyst, Seniority: Junior, Location: Milano, Italia, Tipo di lavoro: Ibrido
+```
+
+![Es1](assets/JobWriterv2-Esempio1.png)
+![Es2](assets/JobWriterv2-Esempio2.png)
+![Es3](assets/JobWriterv2-WordFinale.png)
 
 **Comportamento dell’agente**
 
 1. Avvia il topic guidato
-2. Raccoglie le informazioni necessarie
+2. Raccoglie le informazioni necessarie se non specificate nella richiesta iniziale
 3. Genera l’annuncio con il template ufficiale
-4. Crea il documento Word identico alla chat
+4. Chiede se creare il documento Word identico alla chat 
 5. Salva il file in OneDrive dell’utente
 
-## Benefici principali
 
-- **Fedeltà totale** tra chat e documento Word
-- **Velocità operativa**: riduzione drastica dei passaggi manuali
-- **Integrazione nativa con OneDrive** per accesso immediato
-- **Flusso HR completamente automatizzato**
 
 ## Get started
 → **[Apri la guida tecnica](lab-guide.md)**
