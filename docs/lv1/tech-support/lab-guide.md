@@ -118,6 +118,9 @@ Inoltre, è caldamente consigliato abilitare l'opzione **Only use specified sour
 
 L'agente a questo punto sarà pienamente funzionante e sarà possibile testarlo interrogandolo nel pannello **Agent preview** a destra delle configurazioni, oppure dentro l'interfaccia della Copilot Chat dopo aver premuto il tasto **Crea** in alto a destra.  
 
+??? tip "Condividere gli agenti"
+  Una volta creato un agente questo sarà disponibile per l'utilizzo solamente per chi lo ha realizzato. Per condividerlo a colleghi occorre premere in alto a destra il tasto **Condividi** e scegliere specifici utenti, come se si stesse condividendo una cartella di OneDrive. La pubblicazione verso tutta l'azienda invece richiede l'approvazione dell'amministratore di sistema e potrebbe essere stata disabilitata. Per maggiori informazioni, consultare la [documentazione ufficiale](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-builder-share-manage-agents).
+
 ## Approfondimento: migliorare la base di conoscenza
 
 Nell'esempio abbiamo caricato i file direttamente nella configurazione dell'agente, ma sebbene sia un ottimo metodo per testarne le funzioni, il consiglio è quello di utilizzare documenti contenuti all'interno di un *Sito SharePoint Online* per diverse ragioni, ad esempio:
