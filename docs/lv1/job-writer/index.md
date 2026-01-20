@@ -58,5 +58,6 @@ Questo approccio permette di:
 4. Genera l'annuncio in formato coerente e pronto per l’uso  
 
 ![Esempio 2](assets/JobWriterv1-Esempio2.png)
+
 ## Get started
 → **[Apri la guida tecnica](lab-guide.md)**

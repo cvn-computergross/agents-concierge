@@ -1,9 +1,41 @@
 
 # Lab Guide (Job Writer · v2)
 
-## Prima Configurazione
+## Prerequisiti
 
-Navigare all'interno di [Copilot Studio](https://copilotstudio.microsoft.com/) e selezionare **Agents**  situato nel menù laterale a sinistra, premere **+ Create blank agent**.
+### Setup Copilot Studio
+
+Copilot Studio è contenuto all'interno di Microsoft 365, per cui come prima cosa è necessario essere in possesso di un valido account Microsoft 365.
+
+Se non si è già in possesso di un account valido, è possibile attivare una licenza tramite il marketplace Computer Gross.  Eventualmente, solo per tenant di prova è possibile navigare alla pagina [Piani e prezzi di Microsoft 365 per aziende | Microsoft 365](https://www.microsoft.com/it-it/microsoft-365/business/microsoft-365-plans-and-pricing) ed attivare una licenza gratuita tramite l'opzione `Prova gratuitamente`.
+
+Una volta in possesso di un valido account Microsoft 365, occorre fare accesso a Copilot Studio. E' possibile attivare una trial gratuita seguendo i seguenti passaggi:
+
+1. Navigare su [aka.ms/TryCopilotStudio](https://aka.ms/TryCopilotStudio)
+2. Inserire l'indirizzo mail dell'account Microsoft 365.
+3. Seguire il wizard fino a raggiungere `Start free trial`.
+
+??? info "Copilot Studio Trail"
+	Per maggiori informazioni sulla versione di prova ed ulteriori approfondimenti sull'attivazione di Copilot Studio, consultare la documentazione ufficiale [Get access to Copilot Studio - Microsoft Copilot Studio | Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
+
+### Setup nuovo ambiente developer
+
+Usando lo stesso account usato nel punto precedente, è possibile attivare un piano gratuito per sviluppatori in modo da avere un ambiente sicuro e slegato dai dati aziendali, utile a fare i propri test.
+
+1. Fare login all'interno del portale https://aka.ms/PowerAppsDevPlan
+2. Inserire l'indirizzo mail utilizzato nei precedenti punti ed attivare la prova
+3. Questo genererà un ambiente con il vostro nome, che sarà possibile visualizzare in alto a destra rispetto all'interfaccia di Power Apps o Copilot Studio. Ad esempio `Mario Rossi's environment`
+
+??? note "Power Platform Environments"
+	Gli ambienti della Power Platform sono un concetto fondamentale per gestire la segmentazione dei dati ed il rilascio delle nuove applicazioni (come gli *agenti*). Il loro approfondimento è fuori dagli scopi di questa guida ma è consigliabile un approfondimento presso la documentazione ufficiale [Power Platform environments overview - Power Platform | Microsoft Learn](https://learn.microsoft.com/en-us/power-platform/admin/environments-overview).
+
+## Creazione Agente da Copilot Studio
+
+Navigare all'interno di [Copilot Studio](https://copilotstudio.microsoft.com/) e selezionare **Agents**  situato nel menù laterale a sinistra. 
+Accedendo alla sezione **Agents**, viene inizialmente proposta la schermata di configurazione conversazionale. 
+Sebbene questa modalità consenta di creare rapidamente un agente, in questa guida procederemo con una configurazione manuale; per questo motivo, selezionare l’opzione `Create blank agent` disponibile nella parte superiore della pagina.
+
+![Provisioning](assets/JobWriterv2-Provisioning.png)
 
 Finito il provisioning dell'agente modificare **Nome** e **Descrizione**:
 
@@ -14,13 +46,14 @@ Job Writer (v2)
 
 - **Descrizione**:
 ```
-Esperto di annunci di lavoro
+Agente incaricato di redigere annunci di lavoro tramite template aziendale e generare l’output direttamente in formato Word.
 ```
 
 Lasciare le istruzioni vuote per il momento e proseguire con la guida.
 
-## Creazione del Topic
+## Creazione del Topic *New Job Posting*
 
+Lo scopo è guidare la conversazione durante la creazione di ticket per garantire un output migliore e conforme al template aziendale, andando a raccogliere alcuni dati di input.
 Nella pagina dell'agente andare nella sezione  **Topics** e selezionare **Add a topic** → **From blank**.
 
 ![Topic1](assets/JobWriterv2-Topic1.png)
@@ -35,7 +68,6 @@ Questo strumento può gestire richieste come queste: nuovo annuncio di lavoro(jo
 ```
 
 ![Topic2](assets/JobWriterv2-Topic2.png)
-## Creare le variabili di input nel Topic
 
 Andare su `Details` aggiungere le seguenti variabili di input:
 
@@ -67,9 +99,15 @@ Livello di esperienza normalizzato in Junior | Mid | Senior (mappatura: entry/gr
 
 Queste variabili saranno utilizzate per popolare il template e la Prompt Action.
 
-## Creare la Prompt Action
+## Creazione della Prompt Action
 
- Sotto al trigger premere `Add node`, selezionare `Add a tool` e poi premere su `New Prompt`.
+Dopo aver configurato gli input come descritti nello step precedente, non resta che creare la Prompt Action con il template.
+Sotto al trigger premere `Add node`, selezionare `Add a tool` e poi premere su `New Prompt`.
+
+Apparirà una schermata dove inserire per la scrittura del Prompt, che risulteà simile al box delle istruzioni. 
+Come prima cosa rinominare il Prompt: `Job Posting - Zava`
+
+Successivamente copiare e incollare il seguente prompt:
 
 ```
 ## RUOLO
@@ -275,25 +313,28 @@ Unisciti a Zava S.p.A. – Potenziamo le imprese con Cloud & AI
 - In caso di incertezza, generare suggerimenti di massima ma contrassegnarli come “(suggerito)”.
 ```
 
-Copiare e incollare il prompt, successivamente aggiungere 3 variabili attraverso `add content` → `Text`  come in figura:
+Dopo ciò aggiungere 3 variabili attraverso il tasto in basso a sinistra `add content` → `Text`  come in figura:
 
 ![AddContent](assets/JobWriterv2-AddContent.png)
 
-Salvare il Prompt e tornare nel Topic aggiungerlo e configurare gli input come in figura.
+Salvare il Prompt e tornare nel **Topic**, aggiungere il tool creato premendo `Add node` →  `Add a tool`  →  `Job Posting - Zava` e configurare gli input come in figura.
 
 ![Prompt](assets/JobWriterv2-Prompt.png)
 
 Modificare la variabile di output della Prompt Action e chiamarla `OutPosting`.
-Sotto premere `Add node`  e selezionare `Send a message`.
+
+In seguito, sotto alla configurazione del prompt premere `Add node`  e selezionare `Send a message`.
+
 Come contenuto inserire la seguente  Formula PowerFx:
 
 ```
 Topic.OutPosting.text
 ```
 
-Salvare il topic.
+In fine, salvare il topic.
 ## Model Context Protocol
  
+Per poter inserire l'annuncio direttamente in un file word senza perdere la fromattazione o il design presente in chat è necessario aggiungere un nuovo tool all'agente.
 Andare su Tools e premere `Add a tool`, selezionare `Model Context Protocol` e successivamente `Microsoft Word MCP`.
 
 Rinominarlo `Job Posting to Word` e abilitare soltanto le seguenti funzioni:
@@ -365,6 +406,7 @@ Dopo aver raccolto i dati:
 ```
 
 Inserire come in figura tramite lo `/` il Topic dove è presente.
+Questo punto è cruciale per garantire il corretto flusso della conversazione.
 
 ![Istruzioni1](assets/JobWriterv2-Istruzioni1.png)
 ![Istruzioni2](assets/JobWriterv2-Istruzioni2.png)
