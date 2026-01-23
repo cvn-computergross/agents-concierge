@@ -40,11 +40,13 @@ Sebbene questa modalità consenta di creare rapidamente un agente, in questa gui
 Finito il provisioning dell'agente modificare **Nome** e **Descrizione**:
 
 - **Nome**:
+
 ```
 Job Writer (v2)
 ```
 
 - **Descrizione**:
+
 ```
 Agente incaricato di redigere annunci di lavoro tramite template aziendale e generare l’output direttamente in formato Word.
 ```
