@@ -57,7 +57,7 @@ L’utente interagisce normalmente con l’assistente all’interno di una conve
 ![Esempio](assets/Postmanv2-Esempio.png)
 
 !!! warning "Nota tecnica"
-	Nel presente esempio l’agente è stato integrato con **Job Writer (v2)** al solo fine di dimostrarne il funzionamento. Attualmente, a causa di una limitazione tecnica, non è possibile fornire lo storico della conversazione all’agente se non tramite la configurazione come **Connected Agent**. Per lo stesso motivo, Job Writer (v2) non può essere utilizzato in modalità standalone né invocato singolarmente tramite **@Postman**.
+	Nel presente esempio l’agente è stato integrato con **Job Writer (v2)** al solo fine di dimostrarne il funzionamento. Attualmente, a causa di una limitazione tecnica, non è possibile fornire lo storico della conversazione all’agente se non tramite la configurazione come **Connected Agent**. Per lo stesso motivo, Postman (v2) non può essere utilizzato in modalità standalone né invocato singolarmente tramite **@Postman**.
 
 
 **Comportamento dell’agente**

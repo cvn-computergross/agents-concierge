@@ -60,6 +60,7 @@ Dopo aver configurato istruzioni e qualche dettaglio dell'agente andare nelle im
 | Use general Knowledge        | Off      |
 | Use information from the Web | Off      |
 
+
 Successivamente recarsi nelle impostazioni di linguaggio per aggiungere la lingua italiana.
 Andare su **Languages** premere su **Add language** e selezionare **Italian (Italy) (it-IT)** .
 
@@ -174,6 +175,7 @@ Per rendere dinamico il prompt occorre modificare i nomi in fondo chiamati `[DA 
 Una volta aggiunti correttamente i due input e chiamati `Username` e `Content`, salvare il tool tramite `Save`. Successivamente, premere `Add and configure`.
 
 Come descrizione inserire:
+
 ```
 Trasforma il contenuto in ingresso in un frammento HTML professionale per email, preservando struttura e collegamenti, senza alterare il contenuto
 ```
@@ -184,6 +186,8 @@ Recarsi nella sezione **Input** e impostare i seguenti valori:
 | ---------- | ------------------------ | ---------------- |
 | Username   | Custom value             | User.DisplayName |
 | Content    | Dynamically fill with AI | Customize        |
+
+
 Per inserire la variabile nel Value dell'Username premere il simbolo “…” selezionare **System** e cercare `User.DisplayName`.
 Per quanto riguarda il Content premere su **Customize** e aggiungere la seguente **Description**:
 
@@ -225,6 +229,7 @@ Ora non resta che configurare i vari Input secondo i valori qui sotto:
 | To         | Custom value             | User.Email |
 | Subject    | Dynamically fill with AI | Customize  |
 | Body       | Dynamically fill with AI | Customize  |
+
 
 Per inserire la variabile nel Value del To premere il simbolo “…” selezionare **System** e cercare `User.Email`.
 Per quanto riguarda il Subject premere su **Customize** e aggiungere la seguente **Description**:
@@ -285,7 +290,6 @@ Il tuo compito è:
 - Non generare HTML manualmente: usa solo lo strumento dedicato.
 - Non modificare, aggiungere o rimuovere informazioni dal contenuto.
 - L’output finale visibile deve essere solo l’azione “Invia Riepilogo Email”.
-
 ```
 
 Sostituire il nome degli strumenti con l'iperlink utilizzando il tasto `/` seguito dal nome dello strumento all'interno del box delle istruzioni, come mostrato in figura.
@@ -296,4 +300,34 @@ Sostituire il nome degli strumenti con l'iperlink utilizzando il tasto `/` segui
 	La struttura utilizzata nelle istruzioni (*Contesto*, *Azioni*, etc.) non è obbligatoria. Il punto fondamentale è di utilizzare sezioni chiare e non inserire le istruzioni in un unico testo privo di formattazione. 
 
 ## Connettere Postman ad un altro agente
+
+Terminato il setup dell'agente resta soltanto aggiungerlo ad un altro agente per poterlo usare.
+Pubblicare Postman (v2) attraverso il tasto **Publish**, poi recarsi su un qualsiasi altro agente, in questo esempio useremo "Job Writer (v2)".
+
+!!! warning "Nota tecnica"
+	Nel presente esempio l’agente è stato integrato con **Job Writer (v2)** al solo fine di dimostrarne il funzionamento. Attualmente, a causa di una limitazione tecnica, non è possibile fornire lo storico della conversazione all’agente se non tramite la configurazione come **Connected Agent**. Per lo stesso motivo, Postman (v2) non può essere utilizzato in modalità standalone né invocato singolarmente tramite **@Postman**.
+
+Aperto l'agent su copilot studio andare sulla pagina Agent, premsere su **+Add** e selezionare Postman (v2).
+
+Ora andare nella schermata di Overview per modificare le istruzioni ed aggiungere il seguente prompt:
+
+```
+5. Chiedi se vuole l'annuncio via mail grazie a [Postman (v2)].
+```
+
+Sostituire il nome dell'agente con l'iperlink utilizzando il tasto `/` seguito da Postman all'interno del box delle istruzioni, come mostrato in figura.
+
+![istruzioni](assets/Postmanv2-Istruzioni2.png)
+
+Salvare le istruzioni.
+
+## Risultato finale
+
+Miglioramenti e funzionalità di Postman (v2):
+
+- Analizzare automaticamente l’intero storico della conversazione
+- Individuare la risposta finale più rilevante dell’assistente senza interventi manuali
+- Convertire il contenuto selezionato in un’email HTML professionale e coerente
+- Inviare il riepilogo via email in modo trasparente come agente connesso
+- Ridurre le interazioni dell’utente mantenendo invariata l’esperienza conversazionale
 
