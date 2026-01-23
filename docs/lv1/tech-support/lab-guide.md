@@ -140,4 +140,4 @@ Fare questo è semplicissimo, occorre soltanto:
 
 ## Scopri la versione avanzata con Copilot Studio
 
-→ **[Tech Support · v2](../../lv2/tech-support/index.md)**
+→ TO DO **[Tech Support · v2](../../lv2/tech-support/index.md)**

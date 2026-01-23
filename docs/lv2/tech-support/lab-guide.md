@@ -1,314 +1,222 @@
-# Lab Guide (Tech Support · v2)
-
-## Obiettivo della Lab
-
-In questa lab verrà implementata una **gestione strutturata dell’escalation**, tramite:
-
-- raccolta guidata delle informazioni con **Adaptive Card**
-- creazione automatica di un ticket
-- scrittura dei dati in una **SharePoint List**
-
-Al termine, l’agente sarà in grado di:
-- riconoscere quando non può risolvere una richiesta
-- proporre l’apertura di un ticket
-- generare richieste complete e tracciabili per il team IT
+# Setup Guide (Tech Support · v2)
 
 ## Prerequisiti
 
-- Accesso a **Copilot Studio**
-- Un sito **SharePoint Online** (anche demo)
+### Setup Copilot Studio
 
----
+Copilot Studio è contenuto all'interno di Microsoft 365, per cui come prima cosa è necessario essere in possesso di un valido account Microsoft 365.
 
-## Step 1 – Preparare la lista SharePoint per i ticket
+Se non si è già in possesso di un account valido, è possibile attivare una licenza tramite il marketplace Computer Gross.  Eventualmente, solo per tenant di prova è possibile navigare alla pagina [Piani e prezzi di Microsoft 365 per aziende | Microsoft 365](https://www.microsoft.com/it-it/microsoft-365/business/microsoft-365-plans-and-pricing) ed attivare una licenza gratuita tramite l'opzione `Prova gratuitamente`.
 
-Creare una nuova **SharePoint List** che fungerà da sistema di ticketing minimale.
+Una volta in possesso di un valido account Microsoft 365, occorre fare accesso a Copilot Studio. E' possibile attivare una trial gratuita seguendo i seguenti passaggi:
 
-### Colonne consigliate
+1. Navigare su [aka.ms/TryCopilotStudio](https://aka.ms/TryCopilotStudio)
+2. Inserire l'indirizzo mail dell'account Microsoft 365.
+3. Seguire il wizard fino a raggiungere `Start free trial`.
 
-| Nome colonna | Tipo                              |
-| ------------ | --------------------------------- |
-| Title        | Single line of text               |
-| Description  | Multiple lines of text            |
-| Created      | Date (default)                    |
-| Created By   | Person (default)                  |
-| Status       | Choice (New, In Progress, Closed) |
-|              |                                   |
-![[Pasted image 20260115144417.png]] 
+??? info "Copilot Studio Trail"
+	Per maggiori informazioni sulla versione di prova ed ulteriori approfondimenti sull'attivazione di Copilot Studio, consultare la documentazione ufficiale [Get access to Copilot Studio - Microsoft Copilot Studio | Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions)
 
-> La struttura è volutamente semplice: l’obiettivo è dimostrare il flusso, non replicare un ITSM completo.
+### Setup nuovo ambiente developer
 
----
+Usando lo stesso account usato nel punto precedente, è possibile attivare un piano gratuito per sviluppatori in modo da avere un ambiente sicuro e slegato dai dati aziendali, utile a fare i propri test.
 
-## Step 2 – Creare il Topic di escalation
+1. Fare login all'interno del portale https://aka.ms/PowerAppsDevPlan
+2. Inserire l'indirizzo mail utilizzato nei precedenti punti ed attivare la prova
+3. Questo genererà un ambiente con il vostro nome, che sarà possibile visualizzare in alto a destra rispetto all'interfaccia di Power Apps o Copilot Studio. Ad esempio `Mario Rossi's environment`
 
-In Copilot Studio, creare un nuovo **Topic**:
+??? note "Power Platform Environments"
+	Gli ambienti della Power Platform sono un concetto fondamentale per gestire la segmentazione dei dati ed il rilascio delle nuove applicazioni (come gli *agenti*). Il loro approfondimento è fuori dagli scopi di questa guida ma è consigliabile un approfondimento presso la documentazione ufficiale [Power Platform environments overview - Power Platform | Microsoft Learn](https://learn.microsoft.com/en-us/power-platform/admin/environments-overview).
 
-- **Name**: `Ticket Request`
-- **Description**:  `Handles cases where the assistant cannot resolve the request or when the user explicitly asks to open a support ticket.`
+### Setup Sito SharePoint
 
-![[Pasted image 20260115145208.png]]
+Per questo caso d'uso è stato utilizzato un sito SharePoint utilizzando un template predefinito. E' possibile replicare lo stesso sito navigando seguendo i seguenti passaggi:
 
-Questo topic rappresenta il **punto di ingresso obbligato** per ogni escalation.
+1. Navigare su SharePoint Online
+2. Selezionare il tasto `+ Create site`
+3. Scegliere le seguenti opzioni nel wizard di creazione:
+	- **Select the site type**: `Team Site`
+	- **Select a template**: `IT help desk`
+	- **Name**, **Privacy**, **Language** a piacere
 
----
+## Creazione Agente da Copilot Studio
 
-## Step 3 – Confermare l’intenzione dell’utente
+Navigare su [https://copilotstudio.microsoft.com/](https://copilotstudio.microsoft.com/) e navigare nel menu `Agents` tramite la barra di navigazione di sinistra. 
 
-All’interno del topic:
+La prima schermata che viene aperta è quella della configurazione _conversazionale_. E' una valida scelta per creare un agente ma nel nostro caso adotteremo un approccio manuale, quindi scegliere `Create blank agent` in alto.
 
-1. Aggiungere un nodo **Ask a question**
-2. Chiedere conferma esplicita, ad esempio:
- > Vuoi aprire un ticket per ricevere supporto dal team IT?
+![Step 01](assets/ts-v2-1.webp)
 
-3. Creare un **ramo condizionale**:
- - **Yes** → proseguire
- - **No** → uscita dal topic
+Una volta atteso qualche secondo per il provisioning dell'agente, la schermata risultante sarà quella della **Overview**.
 
-Questo passaggio evita aperture accidentali o premature.
+Come prima azione premere `Edit` nel primo box intitolato **Details**. Questi parametri non sono importanti a livello tecnico ma impattano l'esperienza utente. Di seguito le nostre scelte:
 
----
+- `Name`:
 
-## Step 4 – Raccogliere le informazioni con Adaptive Card
+```
+Tech Support v2
+```
 
-Nel ramo di conferma, inserire un nodo **Ask a question → Adaptive Card**.
+- `Description`:
 
-### Esempio di campi minimi
+```
+Fornisce supporto tecnico basato sulle procedure aziendali e gestisce l’apertura dei ticket quando serve l’intervento IT.
+```
 
-- Titolo del problema
-- Descrizione dettagliata
+![Step 02](assets/ts-v2-2.webp)
 
-Esempio concettuale:
-- `Issue` (obbligatorio)
-- `Description` (obbligatorio)
+Andiamo subito a modificare alcune impostazioni generali dell'agente tramite i `Settings` in alto a destra. Modificare i seguenti valori:
 
-> L’uso dell’Adaptive Card garantisce:
-> - completezza delle informazioni
-> - standardizzazione
-> - migliore esperienza utente
+| Setting                      | Value      |
+| ---------------------------- | ---------- |
+| Content moderation level     | *Moderate* |
+| Use general knowledge        | *Off*      |
+| Use information from the web | *Off*      |
+## Knowledge Base
 
-![[Pasted image 20260115145250.png]]
+Come fonte di conoscenza utilizzeremo dei semplici documenti che simulano delle guide tecniche aziendali. Possono essere caricate tramite upload diretto oppure caricate all'interno di un sito SharePoint da impostare all'interno della base di conoscenza.
 
-Esempio di Adaptive Card:
+Siccome l'indicizzazione dei contenuti all'interno di siti SharePoint appena creati potrebbe richiedere tempo, caricare i file direttamente tramite *Upload file*. I file usati per questo esempio possono essere scaricati al link sottostante:
+
+-> [Scarica i materiali demo (ZIP)](../../downloads/tech-support/tech-support-demo-material.zip)
+
+![Step 03](assets/ts-v2-3.webp)
+
+## Configurazione del Topic *Apertura Ticket*
+
+L'obiettivo è guidare la conversazione quando si tratta di aprire un nuovo ticket, prima raccogliendo degli input specifici e poi interagendo con un sistema aziendale. 
+
+Un modo per gestire questo flusso in maniera controllato è utilizzare uno specifico Topic.
+
+1. Navigare all'interno nel menu **Topics** nel menu orizzontale in alto
+2. Premere il tasto `+ Add a topic` e selezionare l'opzione `From blank` 
+3. Una volta all'interno del Topic, riempire i seguenti campi
+
+- **Name** (in alto a destra): `Apertura Ticket`
+- **Describe what the topic does**:
+
+```
+Gestisce i casi in cui l’assistente non è in grado di fornire una risposta basandosi sulla knowledge base SharePoint o sugli strumenti interni, oppure quando l’utente richiede esplicitamente l’apertura di un ticket di supporto.
+```
+
+![Step 04](assets/ts-v2-4.webp)
+
+Successivamente, premere l'icona circolare con il `+` sotto il box del trigger e selezionare *Ask with Adaptive Card*. A questo punto premere nei tre puntini (`...`) nell'angolo del nuovo nodo ed espandere la finestra laterale **Properties**:
+
+![Step 05](assets/ts-v2-5.webp)
+
+A questo punto seguire i seguenti passaggi:
+
+1. Premere su **Edit adaptive card** per accedere al designer delle Adaptive Card
+2. Espandere il *Card payload editor* nel lato inferiore del designer
+3. Cancellare tutto il testo presente ed incollare il seguente codice:
 
 ```
 {
-
-    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
-    "type": "AdaptiveCard",
-    "version": "1.5",
-    "body": [
-        {
-            "type": "TextBlock",
-            "text": "Support Ticket Request",
-            "weight": "Bolder",
-            "size": "Medium"
-        },
-        {
-            "type": "TextBlock",
-            "text": "Please provide the details of your issue.",
-            "wrap": true
-        },
-        {
-            "type": "Input.Text",
-            "id": "issue",
-            "placeholder": "Enter a short issue title",
-            "isRequired": true,
-            "errorMessage": "Issue title is required.",
-            "label": "Issue"
-        },
-        {
-            "type": "Input.Text",
-            "id": "description",
-            "placeholder": "Describe the issue in detail",
-            "isMultiline": true,
-            "isRequired": true,
-            "errorMessage": "Issue description is required.",
-            "label": "Issue Description"
-        }
-    ],
-
-    "actions": [
-        {
-            "type": "Action.Submit",
-            "title": "Submit Ticket"
-        }
-    ]
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Nuovo Ticket di Supporto Tecnico",
+            "weight": "Bolder",
+            "size": "Medium"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Per favore fornisci i dettagli richiesti.",
+            "wrap": true
+        },
+        {
+            "type": "Input.Text",
+            "id": "issue",
+            "label": "Problema",
+            "placeholder": "Es. Malfunzionamento Outlook",
+            "isRequired": true,
+            "errorMessage": "Inserisci il nome del problema."
+        },
+        {
+            "type": "Input.Text",
+            "id": "description",
+            "label": "Descrizione del problema",
+            "placeholder": "Descrivi cosa succede, quando, eventuali errori, passi per riprodurre...",
+            "isMultiline": true,
+            "isRequired": true,
+            "errorMessage": "Inserisci la descrizione del problema."
+        },
+        {
+            "type": "Input.ChoiceSet",
+            "id": "priority",
+            "label": "Priorità",
+            "isRequired": true,
+            "errorMessage": "Seleziona una priorità.",
+            "choices": [
+                {
+                    "title": "Bassa (non bloccante)",
+                    "value": "Low"
+                },
+                {
+                    "title": "Media (da risolvere entro 48 ore)",
+                    "value": "Normal"
+                },
+                {
+                    "title": "Alta (impedisce di lavorare)",
+                    "value": "Critical"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Invia Ticket",
+            "data": {
+                "action": "createTicket"
+            }
+        }
+    ]
 }
 ```
----
 
-## Step 5 – Creare l’Agent Flow di inserimento ticket
+Una volta sicuri che la carta si visualizza senza errori, premere il tasto **Save** in alto a destra e chiudere il designer.
 
-Dal menu **Add a tools > New Agent flow**, creare un nuovo flow.
+![Step 06](assets/ts-v2-6.webp)
 
-![[Pasted image 20260115152150.png]]
-### Input consigliati
+Una volta fatto questo passaggio, salvare anche lo stato del *Topic* tramite il tasto **Save** in alto a destra (rispetto al menu di creazione Topic).
+## Creazione dell'Agent Flow
 
-| Nome | Tipo |
-|-----|------|
-| Issue | Text |
-| Description | Text |
-| UserEmail | Text |
+Una volta configurato il nodo *Ask with Adaptive Card* come descritto nel punto prima, aggiungere un nuovo nodo con il tasto `+` e seguire il menu **Add a tool > New Agent flow**:
 
----
+![Step 07](assets/ts-v2-7.webp)
 
-## Step 6 – Scrivere il ticket in SharePoint
+Questo aprirà una nuova interfaccia, quella di configurazione degli Agent Flows, che risulterà familiare agli utilizzatori di *Power Automate*.
 
-Nel flow:
+Il primo passaggio consiste nell'impostare gli input che sappiamo verranno passati al flusso. In questo caso occorre impostarne 3, tutti di tipo *Text*:
 
-1. Aggiungere l’azione **Create item (SharePoint)**
-2. Selezionare:
- - sito SharePoint
- - lista ticket
-3. Mappare i campi:
- - **Title** → Issue
- - **Description** → Description
+| Nome             | Tipo |
+| ---------------- | ---- |
+| Issue            | Text |
+| IssueDescription | Text |
+| Priority         | Text |
 
-![[Pasted image 20260115150438.png]]
+![Step 08](assets/ts-v2-8.webp)
 
-Salvare e rinominare il flow, ad esempio: `Create Support Ticket`
+Una volta configurati gli input come descritto sopra, aggiungere un nuovo connettore tramite il `+` e selezionare il connettore SharePoint chiamato **Create new item**. E' possibile che a questo punto il sistema chieda di effettuare una login, seguire le indicazioni fino all'apparire di una scheda configurabile. 
 
+Riempire i campi seguenti:
 
----
+- **Site Address**:
+- **List Name**:
 
-## Step 7 – Collegare il flow al Topic
+Espandere il campo *Advanced parameters* ed impostare:
 
-Tornare nel topic **Ticket Request**:
+- **Title**: tramite l'icona del *fulmine* che compare dopo avere inserito il cursore di testo nel box,  selezionare il campo `Issue` preso dal nodo precedente (*When an agents calls the flow*)
+- **Issue description**: tramite l'icona del *fulmine*, selezionare il campo `IssueDescription`
+- **Priority Value**: tramite l'icona del *fulmine*, selezionare il campo `IssueDescription`
+- **Status Value**: lasciare il valore su `New`
 
-1. Aggiungere nodo **Add a tool**
-2. Selezionare il flow creato
-3. Collegare gli input:
-   - Issue → campo Adaptive Card
-   - Description → campo Adaptive Card
-   - UserEmail → `User.Email`
+![Step 09](assets/ts-v2-9.webp)
 
-![[Pasted image 20260115151516.png]]
-
----
-
-## Step 8 – Conferma all’utente
-
-Aggiungere un ultimo nodo **Message**: 
-
-```
-Il ticket è stato inserito correttamente.
-Verrai contattato dal team IT il prima possibile.
-```
-
-![[Pasted image 20260115151535.png]]
-
-Questo chiude il flusso in modo chiaro e rassicurante.
-
----
-
-## Step 9 – Aggiornare le istruzioni dell’agente
-
-Nelle **Instructions** dell’agente, aggiornare la sezione di escalation:
-
-```
-Sei Tech Support v2, un agente di supporto IT per l’azienda Zava.
-
-Il tuo compito è aiutare gli utenti a risolvere problemi tecnici utilizzando
-ESCLUSIVAMENTE le informazioni presenti nella knowledge base aziendale fornita.
-Quando la richiesta non può essere risolta, devi gestire un’escalation strutturata
-tramite apertura ticket.
-
-Non devi mai inventare procedure, soluzioni, policy, contatti o informazioni
-non esplicitamente documentate.
-
-OBIETTIVO PRINCIPALE
-- Fornire supporto tecnico guidato basato sulla knowledge base aziendale.
-- Risolvere autonomamente i problemi quando possibile.
-- Gestire correttamente l’escalation quando è necessario l’intervento del team IT.
-- Generare ticket completi, chiari e tracciabili.
-
-REGOLE DI UTILIZZO DELLA KNOWLEDGE BASE
-- Ogni risposta deve essere basata esclusivamente sulla knowledge base fornita.
-- Se più documenti sono rilevanti, sintetizza le informazioni in un’unica risposta coerente.
-- Se l’informazione NON è presente o è incompleta, NON fare supposizioni e NON improvvisare.
-
-GESTIONE DELL’ESCALATION
-Devi avviare l’escalation entrando nel topic "Ticket Request" SOLO se:
-- non trovi una risposta nella knowledge base, oppure
-- le informazioni disponibili non sono sufficienti a risolvere il problema, oppure
-- l’utente chiede esplicitamente di aprire un ticket o di ricevere supporto IT.
-
-NON devi avviare l’escalation se:
-- hai trovato una risposta completa e applicabile nella knowledge base.
-- il problema è risolvibile con istruzioni guidate.
-
-TEMPO DELL’ESCALATION
-- Non menzionare ticket, supporto IT o escalation nel primo messaggio.
-- L’escalation può essere proposta solo dopo aver stabilito che la richiesta
-  non è risolvibile tramite la knowledge base, oppure su richiesta esplicita dell’utente.
-
-COMPORTAMENTO DURANTE L’ESCALATION
-- Spiega in modo chiaro perché è necessario aprire un ticket.
-- Chiedi conferma all’utente prima di procedere.
-- Se l’utente conferma, entra nel topic "Ticket Request" per raccogliere
-  le informazioni necessarie tramite Adaptive Card.
-- Non chiedere manualmente le informazioni fuori dal flusso previsto.
-
-LINEE GUIDA DI INTERAZIONE
-- Mantieni uno stile professionale, calmo e neutro.
-- Usa un linguaggio semplice, adatto a utenti non tecnici.
-- Fai domande di chiarimento SOLO se strettamente necessarie
-  a individuare il documento corretto.
-- Non menzionare mai modelli AI, prompt, knowledge base,
-  Copilot Studio o sistemi interni.
-
-STRUTTURA PREDEFINITA DELLA RISPOSTA
-1. Breve riconoscimento del problema dell’utente
-2. Istruzioni o verifiche guidate basate sulla knowledge base (se disponibili)
-3. Risultato atteso o prossimo passo
-4. Proposta di apertura ticket (solo se necessaria)
-
-LIMITI ESPLICITI
-- Non sei il reparto IT.
-- Non puoi:
-  - recuperare o visualizzare password
-  - bypassare MFA
-  - sbloccare account manualmente
-  - modificare autorizzazioni
-  - eseguire azioni tecniche dirette sui sistemi
-
-LINGUAGGIO
-- Non usare mai termini come “primo livello”, “secondo livello” o simili.
-- Parla sempre in prima persona come assistente.
-- Esempio corretto:
-  “Per questo problema è necessario aprire un ticket di supporto.”
-- Esempio errato:
-  “Questo problema deve essere gestito dal secondo livello.”
-
-TONO
-- Professionale
-- Chiaro
-- Orientato alla risoluzione
-- Rassicurante durante l’escalation
-
-Il tuo ruolo è fornire supporto tecnico affidabile e,
-quando necessario, facilitare un’escalation ordinata e tracciabile
-verso il team IT.
-
-```
-
-Questo punto è cruciale per mantenere il controllo del comportamento.
-
----
-
-## Risultato finale
-
-L’agente ora:
-
-- risolve autonomamente quando possibile
-- scala solo quando necessario
-- genera ticket:
-  - completi
-  - tracciabili
-  - pronti per il team IT
-
----
-
-
+## WORK IN PROGRESS
 

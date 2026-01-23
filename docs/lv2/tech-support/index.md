@@ -10,69 +10,46 @@ Problemi complessi, casi fuori knowledge base o richieste che richiedono **inter
 
 **Tech Support (v2)** estende l’agente di primo livello introducendo una **gestione strutturata dell’escalation**, eliminando email informali, messaggi diretti o ticket incompleti.
 
-## Continuità con il livello 1
-
-Tech Support v2 **non sostituisce** il livello 1, ma lo completa.
-
-- Il **LV1** si occupa di:
-  - Risposte guidate basate esclusivamente su KB aziendale
-  - Troubleshooting di primo livello
-  - Riconoscimento delle richieste fuori perimetro
-
-- Il **LV2** interviene quando:
-  - Le informazioni in KB non sono sufficienti
-  - Il problema richiede un’azione tecnica
-  - L’utente chiede esplicitamente supporto umano
-
-L’obiettivo non è “aprire più ticket”, ma **aprire ticket migliori**.
-
 ## Problema
 
-Nella maggior parte delle organizzazioni, l’escalation presenta criticità ricorrenti:
+Nel supporto IT esiste una criticità strutturale ricorrente: **la maggior parte delle richieste potrebbe essere risolta rapidamente**, ma finisce comunque per congestionare il team IT.
 
-- **Ticket incompleti o ambigui**
-- **Canali non standard** (email, chat, messaggi diretti)
-- **Assenza di contesto** tecnico o funzionale
-- **Bassa tracciabilità** e priorità non chiare
+Questo accade perché tutte le richieste seguono lo stesso percorso, indipendentemente dalla loro complessità. Attività semplici e già documentate vengono trattate come problemi critici, generando un effetto di “tappo” che rallenta l’intero servizio.
 
-Questo genera inefficienza sia per gli utenti sia per il team IT.
+In particolare:
+
+- molte richieste riguardano **procedure note e ripetitive**, risolvibili con poche istruzioni guidate
+- l’assenza di un **filtro iniziale efficace** porta ogni richiesta a diventare un ticket, anche quando non necessario
+
+Quando l’utente non trova subito una risposta, l’escalation avviene spesso in modo **prematuro e non strutturato**:
+
+- apertura di ticket incompleti
+- utilizzo di canali informali (email, messaggi diretti)
+- mancanza di contesto tecnico utile
+
+Il risultato complessivo è un supporto IT percepito come lento, non perché manchino le soluzioni, ma perché **le richieste non vengono filtrate prima di arrivare al team**.
+
+In questo scenario, migliorare il supporto non significa rispondere più velocemente, ma **distinguere correttamente ciò che può essere risolto subito da ciò che richiede davvero un intervento umano**.
 
 ## Soluzione
 
-**Tech Support (v2)** introduce un’escalation guidata e controllata:
+**Tech Support (v2)** introduce la possibilità di **aprire ticket interagendo direttamente con gli strumenti aziendali**, in modo controllato e prevedibile.
 
-- L’agente valuta se la richiesta può essere risolta in autonomia
-- In caso contrario, **propone l’apertura di un ticket**
-- La raccolta dati avviene tramite **Adaptive Card**
-- Un **agent flow** registra il ticket in una **SharePoint List**
-- Il team IT riceve richieste **complete, standardizzate e subito lavorabili**
+L’agente segue una logica semplice: prova sempre a risolvere la richiesta usando la knowledge base, se la richiesta non è risolvibile, **non improvvisa** ma propone l’apertura di un ticket.
+L’apertura del ticket non è manuale e non avviene via testo libero.
 
-Il risultato è un flusso:
+Quando l’utente conferma l’escalation:
 
-> Conversazione → Decisione → Raccolta dati → Ticket strutturato
+1. L’agente raccoglie le informazioni tramite **Adaptive Card**, questo consenta di definire a priori i campi che caratterizzano un ticket (oggetto, descrizione, etc.)
+2. I dati vengono passati dall'agente ad un tool dedicato chiamato **agent flow**
+3. Il flow crea un nuovo elemento nel sistema ticketing interno. In questo esempio per semplicità è stata utilizzata una **SharePoint List**, ma è molto facile connettersi anche a servizi terze parti come *ServiceNow* o *Jira*.
 
-## Come funziona l’escalation
+In questo modo l’utente è guidato nella compilazione ed i ticket hanno sempre la struttura coerente che ci aspettiamo.
 
-### 1. Riconoscimento del limite
-L’agente identifica che:
-- la richiesta non è coperta dalla KB  
-- oppure non è risolvibile con le informazioni disponibili
+Questo approccio permette di:
 
-### 2. Conferma dell’utente
-L’utente viene guidato e informato, non “scaricato”:
-> *Vuoi aprire un ticket per ricevere supporto dal team IT?*
-
-### 3. Raccolta strutturata
-Tramite Adaptive Card vengono richiesti:
-- Titolo del problema
-- Descrizione dettagliata
-- Eventuali informazioni aggiuntive
-
-### 4. Creazione del ticket
-Un flow dedicato:
-- Scrive i dati nella SharePoint List
-- Mantiene coerenza e tracciabilità
-- Può essere esteso a sistemi ITSM esterni
+- Agire da filtro, evitando l’apertura di ticket inutili
+- Separare chiaramente la parte conversazione dell'agente, più libera, dalla logica di automazione ed integrazione con procedure aziendali che devono rimanere standard.
 
 ## Esempi di utilizzo
 
