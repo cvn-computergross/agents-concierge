@@ -258,7 +258,7 @@ Salvare il tool.
 
 ## Istruzioni
 
-- Istruzioni
+Terminati i tools ora andiamo a inserire le istruzioni per premettere all'agente di poter svolgere il suo ruolo:
 
 ```
 ## RUOLO
