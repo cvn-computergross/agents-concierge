@@ -117,4 +117,4 @@ L'agente a questo punto sarà pienamente funzionante e sarà possibile testarlo 
 
 ## Scopri la versione avanzata con Copilot Studio
 
-→ TO DO **[Job Writer · v2](../../lv2/job-writer/index.md)**
+→ **[Job Writer · v2](../../lv2/job-writer/index.md)**
