@@ -13,6 +13,7 @@ theme:
 nav:
 - Home: index.md
 - Agent Builder:
+<<<<<<< HEAD
   - Overview: lv1/index.md
   - Tech Support (v1): lv1/tech-support/index.md
   - Job Writer (v1): lv1/job-writer/index.md
@@ -22,3 +23,20 @@ nav:
   - Tech Support (v2): lv2/tech-support/index.md
   - Job Writer (v2): lv2/job-writer/index.md
   - Postman (v2): lv2/postman/index.md
+=======
+  - Lista Agenti: lv1/index.md
+  - Tech Support (v1): 
+    - Panoramica: lv1/tech-support/index.md
+    - Setup Guide: lv1/tech-support/lab-guide.md
+  - Job Writer (v1):
+    - Panoramica: lv1/job-writer/index.md
+    - Setup Guide: lv1/job-writer/lab-guide.md
+- Copilot Studio:
+  - Lista Agenti: lv2/index.md
+  - Tech Support (v2): 
+    - Panoramica: lv2/tech-support/index.md
+    - Setup Guide: lv2/tech-support/lab-guide.md
+  - Job Writer (v2): 
+    - Panoramica: lv2/job-writer/index.md
+    - Setup Guide: lv2/job-writer/lab-guide.md
+>>>>>>> 096082e9ed1e130eb146a03a5dbe4b1228c1cf8b
