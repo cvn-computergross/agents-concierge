@@ -1,9 +1,7 @@
 site_name: Agents Concierge Tech Guides
 site_url: ''
-
-repo_name: 'Agents Concierge'
-repo_url: 'https://github.com/cvn-computergross/agents-concierge'
-
+repo_name: Agents Concierge
+repo_url: https://github.com/cvn-computergross/agents-concierge
 markdown_extensions:
 - admonition
 - pymdownx.details
@@ -22,6 +20,10 @@ nav:
   - Job Writer (v1):
     - Panoramica: lv1/job-writer/index.md
     - Setup Guide: lv1/job-writer/lab-guide.md
+  - Postman (v1):
+    - Panoramica: lv1/postman/index.md
+    - Setup Guide: lv1/postman/lab-guide.md
+  
 - Copilot Studio:
   - Lista Agenti: lv2/index.md
   - Tech Support (v2): 
@@ -30,3 +32,6 @@ nav:
   - Job Writer (v2): 
     - Panoramica: lv2/job-writer/index.md
     - Setup Guide: lv2/job-writer/lab-guide.md
+  - Postman (v2):
+    - Panoramica: lv2/postman/index.md
+    - Setup Guide: lv2/postman/lab-guide.md

@@ -28,3 +28,4 @@ Gli agenti presentati in questa sezione propongono una **versione evoluta** degl
 **Descrizione**: Gestisce in maniera più precisa l'escalation, guidando l'utente all'apertura del ticket tramite Adaptive Card all'interno della chat, seguito dall'utilizzo di un *Agent Flow* per scrivere le informazioni nel portale di supporto interno.
 	
 ➡️[Vai alla documentazione](tech-support/index.md)
+- **[Postman · v2](postman/index.md)**
