@@ -34,7 +34,7 @@ Navigare all'interno di [Copilot Studio](https://copilotstudio.microsoft.com/) e
 Accedendo alla sezione **Agents**, viene inizialmente proposta la schermata di configurazione conversazionale. 
 Sebbene questa modalità consenta di creare rapidamente un agente, in questa guida procederemo con una configurazione manuale; per questo motivo, selezionare l’opzione `Create blank agent` disponibile nella parte superiore della pagina.
 
-![Provisioning](../../lv2/job-writer/assets/JobWriterv2-Provisioning.png)
+![Provisioning](../../assets/Provisioning.png)
 
 Finito il provisioning dell'agente modificare **Nome** e **Descrizione**:
 
@@ -307,6 +307,7 @@ Pubblicare Postman (v2) attraverso il tasto **Publish**, poi recarsi su un quals
 !!! warning "Nota tecnica"
 	Nel presente esempio l’agente è stato integrato con **Job Writer (v2)** al solo fine di dimostrarne il funzionamento. Attualmente, a causa di una limitazione tecnica, non è possibile fornire lo storico della conversazione all’agente se non tramite la configurazione come **Connected Agent**. Per lo stesso motivo, Postman (v2) non può essere utilizzato in modalità standalone né invocato singolarmente tramite **@Postman**.
 
+
 Aperto l'agent su copilot studio andare sulla pagina Agent, premsere su **+Add** e selezionare Postman (v2).
 
 Ora andare nella schermata di Overview per modificare le istruzioni ed aggiungere il seguente prompt:
@@ -321,6 +322,36 @@ Sostituire il nome dell'agente con l'iperlink utilizzando il tasto `/` seguito d
 
 Salvare le istruzioni.
 
+## Pubblicazione in Microsoft 365
+
+!!! note "Info"
+	La seguente sezione è stata presa da un altra guida. Tutti i passaggi mostrati rimangono corretti.
+
+Premere il tasto `Publish` in alto a destra.
+
+![Publish](../../assets/Publish-1.png)
+
+Dopo la pubblicazione, andare sul menu `Channels` e selezionare `Teams and Microsoft 365 Copilot`.
+
+![Publish](../../assets/Publish-2.png)
+
+Se è la prima volta che si usa il canale, premere `Add channel` nell'angolo in basso a destra.
+
+![Publish](../../assets/Publish-3.png)
+
+Per visualizzarlo all'interno della propria Microsoft 365 Copilot Chat, premere `See agent in Microsoft 365`. Se non si possiede licenza Microsoft 365 Copilot ed il pagamento a consumo non è stato abilitato, l'opzione Teams dovrebbe essere compresa nella trial di Copilot Studio.
+
+![Publish](../../assets/Publish-4.png)
+
+!!! warning "Info"
+	Prima che l'agente venga pubblicato su Microsoft 365 è necessario che la richiesta venga approvata da admin center tramite **Agents → All Agents → Request**.
+
+Una volta pubblicato l'agente sarà presente nella lista agenti di ogni interfaccia Copilot Chat e sarà anche menzionabile nella chat generale tramite `@nomeAgente` 
+
+![Publish](../../assets/Publish-5.png)
+
+!!! note "Nota"
+	Per condividere l'agente con la popolazione aziendale (o sottogruppi) valgono gli stessi principi della pubblicazione delle Teams Apps. Maggiori informazioni in [documentazione](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/publish)
 
 ## Risultato finale
 
