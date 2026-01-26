@@ -9,7 +9,7 @@ Nel lavoro quotidiano, molte conversazioni avvengono in chat e portano a una ris
 
 Con **Postman (v1)** l’obiettivo era strutturare correttamente un contenuto già selezionato dall’utente, mantenendolo invariato e inserendolo nel corpo di una email standard.
 
-**Postman (v2)** evolve questo approccio introducendo un **connected agent**, progettato per operare in combinazione con altri agenti all’interno di un flusso orchestrato.  
+**Postman (v2)** è progettato per operare in combinazione con altri agenti all’interno di un flusso orchestrato.  
 In questo scenario, Postman riceve come input **l’intero storico della conversazione**, fornito da agenti a monte, e agisce **in modo trasparente e non intrusivo per l’utente**, senza richiedere alcuna attivazione esplicita.
 
 L’agente opera quindi **in background**, come componente di un altro agent, individuando in autonomia la risposta finale più rilevante dell’assistente.
@@ -28,7 +28,7 @@ Postman utilizza due strumenti distinti, con responsabilità chiaramente separat
 
 1. **Testo in HTML**  
    - Identifica la risposta più finale e autorevole dell’assistente all’interno dello storico della conversazione  
-   - Trasforma quella risposta in un frammento **HTML professionale**  
+   - Trasforma quella risposta in un **HTML professionale**  
    - Non modifica né riassume ulteriormente il contenuto prodotto dallo strumento  
 
 2. **Send Email Recap**  
