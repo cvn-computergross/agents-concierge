@@ -20,5 +20,5 @@ La documentazione copre due livelli di complessità:
 
 Questa suddivisione consente ai meno esperti di procedere per gradi, utilizzando il livello 1 come punto di partenza, mentre chi possiede già esperienza nello sviluppo di agenti può fare riferimento direttamente al livello 2.
 
-!!! tip "Contattateci"
-	Gli agenti proposti sono pensati come **primi use case**, utili a prendere confidenza con le funzionalità e a testarle **in modo pratico**.  Nel momento in cui si desideri un confronto più approfondito, supporto diretto, o semplicemente condividere del feedback, **consigliamo il contatto con il team** Computer Gross. In mancanza di contatti specifici, fare riferimento alla pagina: [**concierge.computergross.it/contattaci**](https://concierge.computergross.it/contattaci/).
+!!! tip "Contattaci"
+	Gli agenti proposti sono pensati come **primi use case**, utili a prendere confidenza con gli strumenti **in modo pratico**.  Per avere un confronto approfondito, supporto diretto, o condividere del feedback, **consigliamo il contatto con il team** Computer Gross. Per conttarci fare riferimento alla pagina: [**concierge.computergross.it/contattaci**](https://concierge.computergross.it/contattaci/).

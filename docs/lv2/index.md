@@ -28,4 +28,10 @@ Gli agenti presentati in questa sezione propongono una **versione evoluta** degl
 **Descrizione**: Gestisce in maniera più precisa l'escalation, guidando l'utente all'apertura del ticket tramite Adaptive Card all'interno della chat, seguito dall'utilizzo di un *Agent Flow* per scrivere le informazioni nel portale di supporto interno.
 	
 ➡️[Vai alla documentazione](tech-support/index.md)
-- **[Postman · v2](postman/index.md)**
+
+### **Postman · v2**
+**Categorie**: Universale, E-mail, Multi Agente
+
+**Descrizione**: Postman (v2) è un "plug-in" per ogni altro agente: introduce un flusso completamente automatizzato per la generazione e l’invio di email di riepilogo dall'alto valore grafico (immagini, collegamenti, etc.) a partire da una conversazione.
+	
+➡️[Vai alla documentazione](postman/index.md)

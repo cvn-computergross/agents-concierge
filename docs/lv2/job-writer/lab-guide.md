@@ -1,6 +1,9 @@
 
 # Lab Guide (Job Writer · v2)
 
+??? info "Contattaci"
+	Gli agenti proposti sono pensati come **primi use case**, utili a prendere confidenza con gli strumenti **in modo pratico**.  Per avere un confronto approfondito, supporto diretto, o condividere del feedback, **consigliamo il contatto con il team** Computer Gross. Per conttarci fare riferimento alla pagina: [**concierge.computergross.it/contattaci**](https://concierge.computergross.it/contattaci/).
+
 ## Prerequisiti
 
 ### Setup Copilot Studio

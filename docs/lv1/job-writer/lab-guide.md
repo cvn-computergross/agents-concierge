@@ -1,5 +1,8 @@
 # Lab Guide (Job Writer · v1)
 
+??? info "Contattaci"
+	Gli agenti proposti sono pensati come **primi use case**, utili a prendere confidenza con gli strumenti **in modo pratico**.  Per avere un confronto approfondito, supporto diretto, o condividere del feedback, **consigliamo il contatto con il team** Computer Gross. Per conttarci fare riferimento alla pagina: [**concierge.computergross.it/contattaci**](https://concierge.computergross.it/contattaci/).
+
 !!! warning "Licenze Richieste"
 	Per seguire con successo questa guida occorre una **licenza per utente Microsoft 365 Copilot** o l'abilitazione del pagamento a consumo per gli agenti  in Microsoft 365 ([maggiori informazioni](https://learn.microsoft.com/en-us/copilot/microsoft-365/pay-as-you-go/setup)).
 
@@ -77,8 +80,8 @@ E' possibile scaricare il Template demo utilizzato da questa guida premendo il l
 
 -> [Scarica il Template (Word)](../../downloads/job-writer/Template Annunci di Lavoro.docx)
 
-??? tip "Scrivere Template efficaci"
-	Se un certo Template verrà utilizzato dall'AI per produrre nuovi contenuti, è possibile ottimizzarlo in poco tempo. Per ogni sezione che l'agente deve generare, è consigliabile inserire direttive specifiche direttamente all'interno del template come mostrato dal nostro esempio.
+??? tip "Scrivere Template per l'AI"
+	Per ottimizzare un template per la produzione di contenuti con l'AI è consigliabile inserire meta-informazioni per la generazione direttamente nelle sezioni del documento, come mostrato nel nostro esempio. Questo consente di rendere più consistente l'output, evitando anche la necessità di scrivere prompt eccessivamente dettagliati.
 
 Una volta ottenuto il template, sarà necessario caricarlo all'interno dell'agente premendo il tasto **Carica da dispositivo** come evidenziato dall'immagine sottostante. 
 
@@ -114,6 +117,7 @@ L'agente a questo punto sarà pienamente funzionante e sarà possibile testarlo 
 
 ??? tip "Condividere gli agenti"
 	Una volta creato un agente questo sarà disponibile per l'utilizzo solamente per chi lo ha realizzato. Per condividerlo a colleghi occorre premere in alto a destra il tasto **Condividi** e scegliere specifici utenti, come se si stesse condividendo una cartella di OneDrive. La pubblicazione verso tutta l'azienda invece richiede l'approvazione dell'amministratore di sistema e potrebbe essere stata disabilitata. Per maggiori informazioni, consultare la [documentazione ufficiale](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-builder-share-manage-agents).
+
 
 ## Scopri la versione avanzata con Copilot Studio
 

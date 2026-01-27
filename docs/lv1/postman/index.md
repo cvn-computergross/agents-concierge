@@ -5,22 +5,17 @@
 
 ## Panoramica
 
-Nel lavoro quotidiano, la comunicazione via email rimane uno strumento essenziale per formalizzare informazioni, rispondere a richieste o archiviare decisioni prese in altri contesti.
+Nel lavoro quotidiano, gli utenti si affidano sempre più a Copilot per ottenere informazioni, generare contenuti, riepilogare riunioni o produrre testi. Tuttavia, nella maggior parte dei casi, il risultato di queste interazioni deve poi essere trasferito dentro una email, che rimane lo strumento principale per comunicare in modo formale, condividere decisioni o rispondere a richieste interne ed esterne.
 
-In questi scenari, è spesso sufficiente disporre di un **email strutturata correttamente**, che presenti le informazioni in modo chiaro e formale senza introdurre interpretazioni o modifiche al contenuto.
-
-
-Queste richieste:
-
-- Si basano su contenuti già definiti dall’utente  
-- Richiedono precisione e fedeltà al testo originale  
-- Necessitano solo di una struttura formale tipica di una email  
+Nella maggior parte dei casi, però, agli utenti non serve una riscrittura o un’interpretazione del contenuto: hanno già il testo corretto e devono solo incapsularlo in una email strutturata, pulita e pronta da inviare.
 
 ## Problema
 
-Abbiamo identificato tre criticità principali nella preparazione delle email:
+È proprio in questo passaggio, dal risultato di Copilot al corpo di una mail, che emergono le maggiori frizioni: formattazioni che si perdono nel copia‑incolla, rientri da sistemare, liste che si sfaldano, oppure la necessità di reintrodurre manualmente una struttura formale (saluti, firma, etc.).
 
-- **Rielaborazione manuale del contenuto** : Il testo deve essere copiato e adattato manualmente nel corpo della mail.
+Nella maggior parte dei casi, però, agli utenti non serve una riscrittura o un’interpretazione del contenuto: hanno già il testo corretto e devono solo incapsularlo in una email strutturata, pulita e pronta da inviare. Abbiamo identificato tre criticità principali nella preparazione delle email:
+
+- **Rielaborazione manuale del contenuto** : Il testo deve essere copiato dalla chat di Copilot e adattato manualmente nel corpo della mail.
 - **Rischio di alterazione delle informazioni** : Durante la riscrittura possono essere introdotte modifiche non intenzionali.
 - **Struttura non uniforme** : Introduzione e chiusura delle email variano in base all’utente o al momento.
 
@@ -28,7 +23,7 @@ Abbiamo identificato tre criticità principali nella preparazione delle email:
 
 ![Chat](assets/Postmanv1-Chat.png)
 
-**Postman (v1)** è un agente progettato **esclusivamente per creare il corpo delle email**, **riportando in modo invariato il contenuto specificato dall’utente** e aggiungendo una struttura formale standard.
+**Postman (v1)** è un semplice agente progettato **per creare il corpo delle email**, **riportando in modo invariato il contenuto specificato dall’utente** e aggiungendo una struttura formale standard.
 
 L’agente:
 
@@ -58,15 +53,19 @@ Questo approccio permette di:
 
 ![Esempio1](assets/Postmanv1-Esempio1.png)
 
-1. Se la richiesta è troppo generica l'agente chiede di specificare l'esatto contenuto richiesto.
-2. Acquisisce il contenuto fornito dall’utente  
-3. Identifica il contesto generale della comunicazione  
-4. Inserisce una breve introduzione tipica di una email  
-5. Riporta il contenuto in modo invariato  
-6. Aggiunge una chiusura formale standard  
+Se la richiesta è troppo generica l'agente chiede di specificare l'esatto contenuto richiesto.
+
+1. Acquisisce il contenuto fornito dall’utente  
+2. Identifica il contesto generale della comunicazione  
+3. Inserisce una breve introduzione tipica di una email  
+4. Riporta il contenuto in modo invariato  
+5. Aggiunge una chiusura formale standard  
 
 ![Esempio3](assets/Postmanv1-Esempio3.png)
 ![Esempio2](assets/Postmanv1-Esempio2.png)
+
+!!! info "Personalizzazioni"
+    Lo stile della risposta può essere personalizzato secondo esigenze, ad esempio filtrare i contenuti iniziali eliminando le emoji o prevedendo due versioni italiano e inglese.
 
 ## Get started
 → **[Apri la guida tecnica](lab-guide.md)**

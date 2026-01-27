@@ -27,4 +27,10 @@ Gli agenti presentati in questa sezione rappresentano **il primo passo** verso i
 **Descrizione**: Fornisce supporto tecnico di primo livello sulla documentazione fornita, suggerendo all'utente come muoversi quando la richiesta dell'utente è fuori dal perimetro di competenza dell'agente: 
 	
 ➡️[Vai alla documentazione](tech-support/index.md)
-- **[Postman · v1](postman/index.md)**
+
+### **Postman · v1**
+**Categorie**: Universale, E-mail
+
+**Descrizione**: Postman (v1) è un agente progettato per creare il corpo delle email, riportando in modo invariato il contenuto specificato dall’utente e aggiungendo una struttura formale standard.
+	
+➡️[Vai alla documentazione](postman/index.md)

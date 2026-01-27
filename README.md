@@ -1,6 +1,7 @@
 # Copilot Agents Concierge · Tech Guides
 
 Documentazione tecnica associata al progetto **Copilot Agents Concierge**. 
+
 Le guide qui fornite sono consultabili dalla pagina associata https://cvn-computergross.github.io/agents-concierge/
 
 Il progetto originale è presentato su: https://concierge.computergross.it/
