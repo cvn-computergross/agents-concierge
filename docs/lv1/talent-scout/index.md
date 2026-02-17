@@ -1,7 +1,6 @@
 # Talent Scout · v1 (Agent Builder)
 
 ## Get started
-
 → **[Apri la guida tecnica](lab-guide.md)**
 
 ## Panoramica
@@ -59,7 +58,5 @@ Questo approccio permette di:
 2. Analizza i CV disponibili rispetto ai criteri forniti
 3. Restituisce una lista strutturata di candidati classificati per grado di match
     
-
 ## Get started
-
 → **[Apri la guida tecnica](lab-guide.md)**
