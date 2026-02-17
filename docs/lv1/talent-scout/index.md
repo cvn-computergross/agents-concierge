@@ -2,7 +2,7 @@
 
 ## Get started
 
-→ **[Apri la guida tecnica](https://chatgpt.com/lab-guide.md)**
+→ **[Apri la guida tecnica](lab-guide.md)**
 
 ## Panoramica
 
@@ -62,4 +62,4 @@ Questo approccio permette di:
 
 ## Get started
 
-→ **[Apri la guida tecnica](https://chatgpt.com/lab-guide.md)**
+→ **[Apri la guida tecnica](lab-guide.md)**
