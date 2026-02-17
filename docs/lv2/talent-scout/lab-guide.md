@@ -40,7 +40,7 @@ Per questo caso d'uso è stato utilizzato un sito SharePoint. E' possibile repli
 	- **Privacy**, **Language** a piacere
 4. Nella cartella Documents caricare i seguenti Cv demo:
 
-![CV-Demo](../../downloads/talent-scout/Cv-demo.zip)
+-> [Scarica i Cv](../../downloads/talent-scout/Cv-demo.zip)
 
 ###  Creazione del canale su Teams
 

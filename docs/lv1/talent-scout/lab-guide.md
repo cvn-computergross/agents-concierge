@@ -68,7 +68,7 @@ Se non trovi corrispondenze, comunicalo chiaramente e proponi eventualmente di a
 
 Nella knowledge base aggiungere i file contenuti in questo .zip:
 
-![CV](../../downloads/talent-scout/Demo-Cv-lv1.zip)
+-> [Scarica i Cv](../../downloads/talent-scout/Demo-Cv-lv1.zip)
 
 
 ??? tip "Condividere gli agenti"
