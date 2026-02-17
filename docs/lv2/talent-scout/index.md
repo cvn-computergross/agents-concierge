@@ -2,7 +2,7 @@
 
 ## Get started
 
-→ **[Apri la guida tecnica](https://chatgpt.com/lab-guide.md)**
+→ **[Apri la guida tecnica](lab-guide.md)**
 
 ## Panoramica
 
@@ -83,4 +83,4 @@ Arriva una email con allegato `CV_NomeCandidato.pdf`
 
 ## Get started
 
-→ **[Apri la guida tecnica](https://chatgpt.com/lab-guide.md)**
+→ **[Apri la guida tecnica](lab-guide.md)**
