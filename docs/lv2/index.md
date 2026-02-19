@@ -35,3 +35,4 @@ Gli agenti presentati in questa sezione propongono una **versione evoluta** degl
 **Descrizione**: Postman (v2) è un "plug-in" per ogni altro agente: introduce un flusso completamente automatizzato per la generazione e l’invio di email di riepilogo dall'alto valore grafico (immagini, collegamenti, etc.) a partire da una conversazione.
 	
 ➡️[Vai alla documentazione](postman/index.md)
+- **[Talent Scout · v2](talent-scout/index.md)**

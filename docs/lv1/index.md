@@ -34,3 +34,4 @@ Gli agenti presentati in questa sezione rappresentano **il primo passo** verso i
 **Descrizione**: Postman (v1) è un agente progettato per creare il corpo delle email, riportando in modo invariato il contenuto specificato dall’utente e aggiungendo una struttura formale standard.
 	
 ➡️[Vai alla documentazione](postman/index.md)
+- **[Talent Scout · v1](talent-scout/index.md)**
