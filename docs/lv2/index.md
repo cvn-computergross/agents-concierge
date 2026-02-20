@@ -35,4 +35,10 @@ Gli agenti presentati in questa sezione propongono una **versione evoluta** degl
 **Descrizione**: Postman (v2) è un "plug-in" per ogni altro agente: introduce un flusso completamente automatizzato per la generazione e l’invio di email di riepilogo dall'alto valore grafico (immagini, collegamenti, etc.) a partire da una conversazione.
 	
 ➡️[Vai alla documentazione](postman/index.md)
-- **[Talent Scout · v2](talent-scout/index.md)**
+
+### **Talent Scout · v2**
+**Categorie**: Autonomo, Interazione Email, Risorse Umane
+
+**Descrizione**: Talent Scout (v2) è un agente per lo screening dei candidati che automatizza ricerca, analisi dei CV e gestione delle nuove candidature, archiviandole in modo strutturato e notificando il team HR in tempo reale.
+	
+➡️[Vai alla documentazione](talent-scout/index.md)

@@ -23,7 +23,10 @@ nav:
   - Postman (v1):
     - Panoramica: lv1/postman/index.md
     - Setup Guide: lv1/postman/lab-guide.md
-  - Talent Scout: lv1/talent-scout/index.md
+  - Talent Scout (v1): 
+    - Panoramica: lv1/talent-scout/index.md
+    - Setup Guide: lv1/talent-scout/lab-guide.md
+
 - Copilot Studio:
   - Lista Agenti: lv2/index.md
   - Tech Support (v2):
@@ -35,4 +38,6 @@ nav:
   - Postman (v2):
     - Panoramica: lv2/postman/index.md
     - Setup Guide: lv2/postman/lab-guide.md
-  - Talent Scout: lv2/talent-scout/index.md
+  - Talent Scout (v2): 
+    - Panoramica: lv2/talent-scout/index.md
+    - Setup Guide: lv2/talent-scout/lab-guide.md

@@ -1,5 +1,8 @@
 # Lab Guide (Postman · v2)
 
+??? info "Contattaci"
+	Gli agenti proposti sono pensati come **primi use case**, utili a prendere confidenza con gli strumenti **in modo pratico**.  Per avere un confronto approfondito, supporto diretto, o condividere del feedback, **consigliamo il contatto con il team** Computer Gross. Per conttarci fare riferimento alla pagina: [**concierge.computergross.it/contattaci**](https://concierge.computergross.it/contattaci/).
+
 ## Prerequisiti
 
 ### Setup Copilot Studio
@@ -322,44 +325,10 @@ Sostituire il nome dell'agente con l'iperlink utilizzando il tasto `/` seguito d
 
 Salvare le istruzioni.
 
-## Pubblicazione in Microsoft 365
+L'agent è ora pronto e può essere liberamente testato su Copilot Studio e pubblicato su uno dei canali disponibili.
 
-!!! note "Info"
-	La seguente sezione è stata presa da un altra guida. Tutti i passaggi mostrati rimangono corretti.
+??? info "Pubblicazione in canale Microsoft 365"
+	Per pubblicare l'agente nel canale Microsoft 365 Copilot & Teams, seguire la guida presente [nella documentazione ufficiale](https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams). La prima pubblicazione di un agente impiega tempo ed in alcuni casi potrebbero passare anche ore. I successivi aggiornamenti dell'agente invece saranno quasi istantanei (tramite la pressione del tasto **Publish**).
 
-Premere il tasto `Publish` in alto a destra.
-
-![Publish](../../assets/Publish-1.png)
-
-Dopo la pubblicazione, andare sul menu `Channels` e selezionare `Teams and Microsoft 365 Copilot`.
-
-![Publish](../../assets/Publish-2.png)
-
-Se è la prima volta che si usa il canale, premere `Add channel` nell'angolo in basso a destra.
-
-![Publish](../../assets/Publish-3.png)
-
-Per visualizzarlo all'interno della propria Microsoft 365 Copilot Chat, premere `See agent in Microsoft 365`. Se non si possiede licenza Microsoft 365 Copilot ed il pagamento a consumo non è stato abilitato, l'opzione Teams dovrebbe essere compresa nella trial di Copilot Studio.
-
-![Publish](../../assets/Publish-4.png)
-
-!!! warning "Info"
-	Prima che l'agente venga pubblicato su Microsoft 365 è necessario che la richiesta venga approvata da admin center tramite **Agents → All Agents → Request**.
-
-Una volta pubblicato l'agente sarà presente nella lista agenti di ogni interfaccia Copilot Chat e sarà anche menzionabile nella chat generale tramite `@nomeAgente` 
-
-![Publish](../../assets/Publish-5.png)
-
-!!! note "Nota"
-	Per condividere l'agente con la popolazione aziendale (o sottogruppi) valgono gli stessi principi della pubblicazione delle Teams Apps. Maggiori informazioni in [documentazione](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/publish)
-
-## Risultato finale
-
-Miglioramenti e funzionalità di Postman (v2):
-
-- Analizzare automaticamente l’intero storico della conversazione
-- Individuare la risposta finale più rilevante dell’assistente senza interventi manuali
-- Convertire il contenuto selezionato in un’email HTML professionale e coerente
-- Inviare il riepilogo via email in modo trasparente come agente connesso
-- Ridurre le interazioni dell’utente mantenendo invariata l’esperienza conversazionale
-
+??? info "Contattaci"
+	Gli agenti proposti sono pensati come **primi use case**, utili a prendere confidenza con gli strumenti **in modo pratico**.  Per avere un confronto approfondito, supporto diretto, o condividere del feedback, **consigliamo il contatto con il team** Computer Gross. Per conttarci fare riferimento alla pagina: [**concierge.computergross.it/contattaci**](https://concierge.computergross.it/contattaci/).

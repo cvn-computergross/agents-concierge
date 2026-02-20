@@ -1,5 +1,8 @@
 # Setup Guide (Tech Support · v2)
 
+??? info "Contattaci"
+	Gli agenti proposti sono pensati come **primi use case**, utili a prendere confidenza con gli strumenti **in modo pratico**.  Per avere un confronto approfondito, supporto diretto, o condividere del feedback, **consigliamo il contatto con il team** Computer Gross. Per conttarci fare riferimento alla pagina: [**concierge.computergross.it/contattaci**](https://concierge.computergross.it/contattaci/).
+
 ## Prerequisiti
 
 ### Setup Copilot Studio
@@ -218,5 +221,164 @@ Espandere il campo *Advanced parameters* ed impostare:
 
 ![Step 09](assets/ts-v2-9.webp)
 
-## WORK IN PROGRESS
+Completare il flusso inserendo un valore di buona riuscita nel nodo **Respond to the agent** usando, ad esempio:
 
+- **Output** (text): `Il ticket è stato inserito con successo`
+
+![Step 10](assets/ts-v2-10.png)
+
+Salvare il flusso tramite il tasto **Save draft** in alto a destra, dopo di che spostarsi sulla scheda **Overview** in alto a sinistra:
+
+![Step 11](assets/ts-v2-11.png)
+
+Modificare la sezione **Details** tramite il tasto **Edit**, inserendo i seguenti valori:
+
+- **Flow name**: `Create New Ticket`
+- **Description**: `Il flusso prende in input i valori richiesti per aprire un nuovo ticket nella lista Tickets del sito SharePoint Zava IT`
+
+Assicurarsi che il **Plan** sia impostato su *Copilot Studio*. 
+
+![Step 12](assets/ts-v2-12.png)
+
+Una volta salvate le modifiche, tornare su **Designer** e pubblicare il flusso premendo sul tasto **Publish** in alto a destra.
+
+Tornare nelle configurazioni del topic *Apertura Ticket* all'interno dell'agente, a aggiungere sotto il nodo con l'adaptive card un nuovo nodo **Add a tool > Create New Ticket**.
+
+![Step 13](assets/ts-v2-13.png)
+
+Riempire i campi di input del tool appena caricato con i rispettivi output del nodo precedente. 
+
+![Step 14](assets/ts-v2-15.png)
+
+Opzionalmente, terminare il flusso con un nodo **Send a message** contente il messaggio di risposta del nodo azione precedente, come mostrato in figura:
+
+![Step 15](assets/ts-v2-14.png)
+
+Salvare il topic e ritornare nella pagina di **Overview**
+
+## Istruzioni
+
+L'ultimo passaggio è quello di configurare le istruzioni. 
+Per ottenere i risultati mostrati negli esempi forniti è stato utilizzato il seguente system prompt:
+
+```
+# RUOLO
+Sei Tech Support v2, agente di supporto IT per l’azienda Zava.
+Fornisci assistenza tecnica utilizzando esclusivamente le procedure ufficiali presenti nella knowledge base aziendale.
+
+# BASE DI CONOSCENZA
+Rispondi esclusivamente utilizzando le procedure presenti nella knowledge base.
+Se una procedura:
+- non è presente
+- è incompleta
+- non è applicabile al caso specifico
+deve essere considerata non disponibile.
+
+# FLUSSO OPERATIVO
+1. Analisi
+- Comprendi la richiesta.
+- Verifica se esiste una procedura documentata applicabile.
+
+2a. Se esiste una procedura
+Devi:
+- Riconoscere brevemente il problema.
+- Fornire istruzioni chiare e operative.
+- Indicare il risultato atteso o il prossimo passo.
+- Non menzionare il ticket.
+
+3b. Se NON esiste una procedura documentata
+È vietato:
+- Fornire procedure generiche.
+- Adattare guide simili.
+- Suggerire verifiche non documentate.
+- Completare informazioni mancanti con ipotesi.
+Devi invece:
+- Dichiarare che non esiste una procedura documentata applicabile.
+- Indicare che la knowledge base è stata verificata.
+- Proporre l’apertura del ticket.
+- Essere conciso e deterministico.
+Formato escalation obbligatorio:
+- Assenza procedura documentata
+- Necessità coinvolgimento IT
+- Domanda di conferma
+
+# REGOLE ESCALATION 
+Puoi entrare nel topic 
+Apertura Ticket
+ solo se:
+- Nessuna procedura pertinente è disponibile.
+- La documentazione è insufficiente.
+- ’utente richiede esplicitamente un ticket.
+Non devi:
+- Usare il ticket come chiusura standard.
+- Proporre escalation preventiva.
+- Menzionare il ticket se la soluzione esiste.
+
+# STRUTTURA RISPOSTE
+## RISOLUZIONE
+- Riconoscimento breve
+- Procedura passo-passo
+- Esito atteso
+## ESCALATION
+- Conferma assenza procedura
+- Necessità IT
+- Richiesta conferma ticket
+- Risposta breve. Nessuna spiegazione superflua.
+
+# LINGUAGGIO
+- Tono professionale e diretto.
+- Linguaggio semplice.
+- Prima persona.
+- Nessuna formulazione vaga (“forse”, “di solito”, “potrebbe”).
+
+# LIMITI
+Non puoi:
+- Recuperare password
+- Bypassare o disattivare MFA
+- Sbloccare account manualmente
+- Modificare permessi o configurazioni
+- Eseguire azioni dirette sui sistemi
+
+# DIVIETI
+- Non menzionare AI o sistemi interni.
+- Non usare terminologia di livello supporto.
+- Non proporre escalation cautelative.
+
+# FEW-SHOT COMPORTAMENTO CORRETTO
+## Esempio 1 — Procedura Documentata
+Utente:
+“Come resetto la password?”
+Risposta corretta:
+Per reimpostare la password del tuo account Zava, segui questi passaggi.
+Procedura di reset password (Self-Service):
+Accedi al Portale Account Zava.
+Clicca su “Password dimenticata”.
+Inserisci la tua email aziendale ([nome.cognome@zava.com]()).
+Conferma l’identità tramite codice email o app di autenticazione.
+Imposta una nuova password che rispetti i criteri Zava:
+Minimo 12 caratteri
+Almeno una maiuscola, una minuscola, un numero e un carattere speciale
+Non deve contenere nome, cognome o email
+Non riutilizzare le ultime 5 password
+Attendi la conferma di reset completato.
+Se l’account risulta bloccato, attendi 15 minuti e riprova.
+
+## Esempio 2 — Procedura NON Documentata
+Utente:
+“Ricevo errore 0xA123 su OneDrive”
+Risposta corretta:
+Ho verificato la knowledge base e non è presente una procedura documentata per l’errore 0xA123 su OneDrive.
+È necessario coinvolgere il team IT.
+Vuoi che apra un ticket?
+```
+
+!!! tip "Modificare le istruzioni"
+	Le istruzioni sono responsabili del comportamento dell'agente. Il consiglio è quello di modificare le istruzioni dopo l'uso per allineare le risposte dell'agente alle proprie aspettative. In caso di indecisione su come modificare le istruzioni, chiedere a Copilot è un'ottima idea!
+
+L'agent è ora pronto e può essere liberamente testato su Copilot Studio e pubblicato su uno dei canali disponibili.
+
+??? info "Pubblicazione in canale Microsoft 365"
+	Per pubblicare l'agente nel canale Microsoft 365 Copilot & Teams, seguire la guida presente [nella documentazione ufficiale](https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams). La prima pubblicazione di un agente impiega tempo ed in alcuni casi potrebbero passare anche ore. I successivi aggiornamenti dell'agente invece saranno quasi istantanei (tramite la pressione del tasto **Publish**).
+
+??? info "Contattaci"
+	Gli agenti proposti sono pensati come **primi use case**, utili a prendere confidenza con gli strumenti **in modo pratico**.  Per avere un confronto approfondito, supporto diretto, o condividere del feedback, **consigliamo il contatto con il team** Computer Gross. Per conttarci fare riferimento alla pagina: [**concierge.computergross.it/contattaci**](https://concierge.computergross.it/contattaci/).

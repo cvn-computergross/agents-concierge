@@ -1,3 +1,8 @@
+# Lab Guide (Talent Scout · v2)
+
+??? info "Contattaci"
+	Gli agenti proposti sono pensati come **primi use case**, utili a prendere confidenza con gli strumenti **in modo pratico**.  Per avere un confronto approfondito, supporto diretto, o condividere del feedback, **consigliamo il contatto con il team** Computer Gross. Per conttarci fare riferimento alla pagina: [**concierge.computergross.it/contattaci**](https://concierge.computergross.it/contattaci/).
+
 ## Prerequisiti
 
 ### Setup Copilot Studio
@@ -40,7 +45,7 @@ Per questo caso d'uso è stato utilizzato un sito SharePoint. E' possibile repli
 	- **Privacy**, **Language** a piacere
 4. Nella cartella Documents caricare i seguenti Cv demo:
 
--> [Scarica i Cv](../../downloads/talent-scout/Cv-demo.zip)
+-> [Scarica il materiale demo](../../downloads/talent-scout/Cv-demo.zip)
 
 ###  Creazione del canale su Teams
 
@@ -88,7 +93,7 @@ Talent Scout (v2) è un agente intelligente che analizza i CV in base ai criteri
 Recarsi nelle impostazioni di linguaggio per aggiungere la lingua italiana.
 Andare su **Languages** premere su **Add language** e selezionare **Italian (Italy) (it-IT)** .
 
-![Italian](assets/Postmanv2-Lingua.png)
+![Italian](../postman/assets/Postmanv2-Lingua.png)
 
 ## Creazione del Trigger
 
@@ -410,42 +415,10 @@ Cartella che contiene i Cv dei candidati.
 
 ![kb](assets/knowledge.png)
 
-## Pubblicazione in Microsoft 365
+L'agent è ora pronto e può essere liberamente testato su Copilot Studio e pubblicato su uno dei canali disponibili.
 
-!!! note "Info"
-	La seguente sezione è stata presa da un altra guida. Tutti i passaggi mostrati rimangono corretti.
+??? info "Pubblicazione in canale Microsoft 365"
+	Per pubblicare l'agente nel canale Microsoft 365 Copilot & Teams, seguire la guida presente [nella documentazione ufficiale](https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams). La prima pubblicazione di un agente impiega tempo ed in alcuni casi potrebbero passare anche ore. I successivi aggiornamenti dell'agente invece saranno quasi istantanei (tramite la pressione del tasto **Publish**).
 
-Premere il tasto `Publish` in alto a destra.
-
-![Publish](../../assets/Publish-1.png)
-
-Dopo la pubblicazione, andare sul menu `Channels` e selezionare `Teams and Microsoft 365 Copilot`.
-
-![Publish](../../assets/Publish-2.png)
-
-Se è la prima volta che si usa il canale, premere `Add channel` nell'angolo in basso a destra.
-
-![Publish](../../assets/Publish-3.png)
-
-Per visualizzarlo all'interno della propria Microsoft 365 Copilot Chat, premere `See agent in Microsoft 365`. Se non si possiede licenza Microsoft 365 Copilot ed il pagamento a consumo non è stato abilitato, l'opzione Teams dovrebbe essere compresa nella trial di Copilot Studio.
-
-![Publish](../../assets/Publish-4.png)
-
-!!! warning "Info"
-	Prima che l'agente venga pubblicato su Microsoft 365 è necessario che la richiesta venga approvata da admin center tramite **Agents → All Agents → Request**.
-
-Una volta pubblicato l'agente sarà presente nella lista agenti di ogni interfaccia Copilot Chat e sarà anche menzionabile nella chat generale tramite `@nomeAgente` 
-
-![Publish](../../assets/Publish-5.png)
-
-!!! note "Nota"
-	Per condividere l'agente con la popolazione aziendale (o sottogruppi) valgono gli stessi principi della pubblicazione delle Teams Apps. Maggiori informazioni in [documentazione](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/publish)
-
-
-## Risultato finale
-
-Miglioramenti e funzionalità di Talent Scout (v2):
-
-- Raccolta dei Cv e upload automatico
-- Notifica su teams quando arriva un nuovo candidato
-- Ricerca di candidati in base ai parametri richiesti
+??? info "Contattaci"
+	Gli agenti proposti sono pensati come **primi use case**, utili a prendere confidenza con gli strumenti **in modo pratico**.  Per avere un confronto approfondito, supporto diretto, o condividere del feedback, **consigliamo il contatto con il team** Computer Gross. Per conttarci fare riferimento alla pagina: [**concierge.computergross.it/contattaci**](https://concierge.computergross.it/contattaci/).

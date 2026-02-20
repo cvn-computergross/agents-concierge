@@ -53,39 +53,47 @@ Questo approccio permette di:
 
 ## Esempi di utilizzo
 
-### Escalation dopo troubleshooting
+### Risposta documentata 
 
 **Richiesta utente**
 
-`OneDrive mi restituisce errore di accesso, ho già provato a riconnettermi`
+`Ricevo errori all'accesso delle mie applicazioni aziendali, cosa posso fare?`
 
 **Comportamento dell’agente**
 
-1. Verifica la KB disponibile
-2. Riconosce il limite del supporto automatico
-3. Propone apertura ticket
-4. Raccoglie i dettagli via Adaptive Card
-5. Registra il ticket per il team IT
+1. Cerca nella knowledge base le procedure pertinenti
+2. Fornisce una risposta operativa e step-by-step
+3. Evita escalation se esiste una procedura documentata
 
-### Apertura ticket diretta
+![Esempio 1](assets/ts-v2-e1.png)
+
+### Escalation in assenza di procedure
 
 **Richiesta utente**
 
-`Vorrei aprire un ticket per un problema tecnico`
+`Non riesco ad accedere all'archivio della posta elettronica`
 
 **Comportamento dell’agente**
 
-1. Salta il troubleshooting
-2. Attiva direttamente il flusso di ticketing
-3. Garantisce una richiesta completa e standard
+1. Verifica la knowledge base
+2. Se non trova una procedura documentata, dichiara il limite in modo esplicito
+3. Chiede all’utente se desidera aprire un ticket (escalation controllata)
 
-## Benefici principali
+![Esempio 2](assets/ts-v2-e2.png)
 
-- Riduzione drastica dei ticket incompleti
-- Migliore esperienza per l’utente finale
-- Minor carico cognitivo per il team IT
-- Tracciabilità e governance del processo
-- Base solida per integrazioni ITSM avanzate
+### Apertura ticket su richiesta esplicita
+
+**Richiesta utente**
+
+`Voglio aprire un ticket tecnico`
+
+**Comportamento dell’agente**
+
+1. Riconosce la richiesta esplicita di ticket
+2. Avvia direttamente la raccolta dati tramite **Adaptive Card**
+3. Invia i dettagli al flusso di ticketing (Agent Flow) per creare il ticket in modo standardizzato
+
+![Esempio 3](assets/ts-v2-e3.png)
 
 ## Get started
 → **[Apri la guida tecnica](lab-guide.md)**
