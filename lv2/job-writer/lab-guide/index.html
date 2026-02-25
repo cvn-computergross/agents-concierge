@@ -1,0 +1,2182 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../postman/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Setup Guide - Agents Concierge Tech Guides</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lab-guide-job-writer-v2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Agents Concierge Tech Guides" class="md-header__button md-logo" aria-label="Agents Concierge Tech Guides" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Agents Concierge Tech Guides
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Setup Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/cvn-computergross/agents-concierge" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Agents Concierge
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Agents Concierge Tech Guides" class="md-nav__button md-logo" aria-label="Agents Concierge Tech Guides" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Agents Concierge Tech Guides
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cvn-computergross/agents-concierge" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Agents Concierge
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Builder
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agent Builder
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lv1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lista Agenti
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech Support (v1)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tech Support (v1)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lv1/tech-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lv1/tech-support/lab-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Job Writer (v1)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Job Writer (v1)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lv1/job-writer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lv1/job-writer/lab-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Postman (v1)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Postman (v1)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lv1/postman/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lv1/postman/lab-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Talent Scout (v1)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Talent Scout (v1)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lv1/talent-scout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lv1/talent-scout/lab-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Copilot Studio
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Copilot Studio
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lista Agenti
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech Support (v2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tech Support (v2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech-support/lab-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Job Writer (v2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Job Writer (v2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisiti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisiti
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisiti">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-copilot-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup Copilot Studio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-nuovo-ambiente-developer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup nuovo ambiente developer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creazione-agente-da-copilot-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creazione Agente da Copilot Studio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creazione-del-topic-new-job-posting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creazione del Topic New Job Posting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creazione-della-prompt-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creazione della Prompt Action
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-context-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model Context Protocol
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#istruzioni-finali" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Istruzioni finali
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Postman (v2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Postman (v2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postman/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postman/lab-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Talent Scout (v2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Talent Scout (v2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../talent-scout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../talent-scout/lab-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planner Buddy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Planner Buddy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planner-buddy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planner-buddy/lab-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agenda Pilot
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agenda Pilot
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agenda-pilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agenda-pilot/lab-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisiti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisiti
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisiti">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-copilot-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup Copilot Studio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-nuovo-ambiente-developer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup nuovo ambiente developer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creazione-agente-da-copilot-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creazione Agente da Copilot Studio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creazione-del-topic-new-job-posting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creazione del Topic New Job Posting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creazione-della-prompt-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creazione della Prompt Action
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-context-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model Context Protocol
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#istruzioni-finali" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Istruzioni finali
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="lab-guide-job-writer-v2">Lab Guide (Job Writer · v2)</h1>
+<details class="info">
+<summary>Contattaci</summary>
+<p>Gli agenti proposti sono pensati come <strong>primi use case</strong>, utili a prendere confidenza con gli strumenti <strong>in modo pratico</strong>.  Per avere un confronto approfondito, supporto diretto, o condividere del feedback, <strong>consigliamo il contatto con il team</strong> Computer Gross. Per conttarci fare riferimento alla pagina: <a href="https://concierge.computergross.it/contattaci/"><strong>concierge.computergross.it/contattaci</strong></a>.</p>
+</details>
+<h2 id="prerequisiti">Prerequisiti</h2>
+<h3 id="setup-copilot-studio">Setup Copilot Studio</h3>
+<p>Copilot Studio è contenuto all'interno di Microsoft 365, per cui come prima cosa è necessario essere in possesso di un valido account Microsoft 365.</p>
+<p>Se non si è già in possesso di un account valido, è possibile attivare una licenza tramite il marketplace Computer Gross.  Eventualmente, solo per tenant di prova è possibile navigare alla pagina <a href="https://www.microsoft.com/it-it/microsoft-365/business/microsoft-365-plans-and-pricing">Piani e prezzi di Microsoft 365 per aziende | Microsoft 365</a> ed attivare una licenza gratuita tramite l'opzione <code>Prova gratuitamente</code>.</p>
+<p>Una volta in possesso di un valido account Microsoft 365, occorre fare accesso a Copilot Studio. E' possibile attivare una trial gratuita seguendo i seguenti passaggi:</p>
+<ol>
+<li>Navigare su <a href="https://aka.ms/TryCopilotStudio">aka.ms/TryCopilotStudio</a></li>
+<li>Inserire l'indirizzo mail dell'account Microsoft 365.</li>
+<li>Seguire il wizard fino a raggiungere <code>Start free trial</code>.</li>
+</ol>
+<details class="info">
+<summary>Copilot Studio Trail</summary>
+<p>Per maggiori informazioni sulla versione di prova ed ulteriori approfondimenti sull'attivazione di Copilot Studio, consultare la documentazione ufficiale <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions">Get access to Copilot Studio - Microsoft Copilot Studio | Microsoft Learn</a></p>
+</details>
+<h3 id="setup-nuovo-ambiente-developer">Setup nuovo ambiente developer</h3>
+<p>Usando lo stesso account usato nel punto precedente, è possibile attivare un piano gratuito per sviluppatori in modo da avere un ambiente sicuro e slegato dai dati aziendali, utile a fare i propri test.</p>
+<ol>
+<li>Fare login all'interno del portale https://aka.ms/PowerAppsDevPlan</li>
+<li>Inserire l'indirizzo mail utilizzato nei precedenti punti ed attivare la prova</li>
+<li>Questo genererà un ambiente con il vostro nome, che sarà possibile visualizzare in alto a destra rispetto all'interfaccia di Power Apps o Copilot Studio. Ad esempio <code>Mario Rossi's environment</code></li>
+</ol>
+<details class="note">
+<summary>Power Platform Environments</summary>
+<p>Gli ambienti della Power Platform sono un concetto fondamentale per gestire la segmentazione dei dati ed il rilascio delle nuove applicazioni (come gli <em>agenti</em>). Il loro approfondimento è fuori dagli scopi di questa guida ma è consigliabile un approfondimento presso la documentazione ufficiale <a href="https://learn.microsoft.com/en-us/power-platform/admin/environments-overview">Power Platform environments overview - Power Platform | Microsoft Learn</a>.</p>
+</details>
+<h2 id="creazione-agente-da-copilot-studio">Creazione Agente da Copilot Studio</h2>
+<p>Navigare all'interno di <a href="https://copilotstudio.microsoft.com/">Copilot Studio</a> e selezionare <strong>Agents</strong>  situato nel menù laterale a sinistra. 
+Accedendo alla sezione <strong>Agents</strong>, viene inizialmente proposta la schermata di configurazione conversazionale. 
+Sebbene questa modalità consenta di creare rapidamente un agente, in questa guida procederemo con una configurazione manuale; per questo motivo, selezionare l’opzione <code>Create blank agent</code> disponibile nella parte superiore della pagina.</p>
+<p><img alt="Provisioning" src="../../../assets/Provisioning.png" /></p>
+<p>Finito il provisioning dell'agente modificare <strong>Nome</strong> e <strong>Descrizione</strong>:</p>
+<ul>
+<li><strong>Nome</strong>:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Job Writer (v2)
+</code></pre></div>
+<ul>
+<li><strong>Descrizione</strong>:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Agente incaricato di redigere annunci di lavoro tramite template aziendale e generare l’output direttamente in formato Word.
+</code></pre></div>
+<p>Lasciare le istruzioni vuote per il momento e proseguire con la guida.</p>
+<h2 id="creazione-del-topic-new-job-posting">Creazione del Topic <em>New Job Posting</em></h2>
+<p>Lo scopo è guidare la conversazione durante la creazione di ticket per garantire un output migliore e conforme al template aziendale, andando a raccogliere alcuni dati di input.
+Nella pagina dell'agente andare nella sezione  <strong>Topics</strong> e selezionare <strong>Add a topic</strong> → <strong>From blank</strong>.</p>
+<p><img alt="Topic1" src="../assets/JobWriterv2-Topic1.png" /></p>
+<p>Inserire i seguenti dati:</p>
+<ul>
+<li><strong>Nome</strong>: <code>New Job Posting</code></li>
+<li><strong>Trigger</strong>: </li>
+</ul>
+<div class="highlight"><pre><span></span><code>Questo strumento può gestire richieste come queste: nuovo annuncio di lavoro(job posting), pubblica una nuova posizione, aggiungi un’offerta di lavoro, crea un annuncio di lavoro, annuncia una posizione aperta 
+</code></pre></div>
+<p><img alt="Topic2" src="../assets/JobWriterv2-Topic2.png" /></p>
+<p>Andare su <code>Details</code> aggiungere le seguenti variabili di input:</p>
+<ul>
+<li>Variable Name: <code>PrimaryLocation</code></li>
+<li>Identify as: <code>User's entire response</code></li>
+<li>Description: </li>
+</ul>
+<div class="highlight"><pre><span></span><code>Sede di lavoro principale come “Città, Paese” oppure modalità di lavoro se specificata (“Remote” o “Hybrid”; includere la città per Hybrid quando disponibile)
+</code></pre></div>
+<ul>
+<li>Variable Name: <code>RoleTitle</code></li>
+<li>Identify as: <code>User's entire response</code></li>
+<li>Description: </li>
+</ul>
+<div class="highlight"><pre><span></span><code>Solo il nome della posizione, normalizzato in un titolo standard (es. “Software Engineer”); ignorare i modificatori di seniority/sede.
+</code></pre></div>
+<ul>
+<li>Variable Name: <code>Seniority</code></li>
+<li>Identify as: <code>User's entire response</code></li>
+<li>Description: </li>
+</ul>
+<div class="highlight"><pre><span></span><code>Livello di esperienza normalizzato in Junior | Mid | Senior (mappatura: entry/graduate → Junior; intermediate → Mid; senior/lead/principal/staff/head → Senior)
+</code></pre></div>
+<p>Queste variabili saranno utilizzate per popolare il template e la Prompt Action.</p>
+<h2 id="creazione-della-prompt-action">Creazione della Prompt Action</h2>
+<p>Dopo aver configurato gli input come descritti nello step precedente, non resta che creare la Prompt Action con il template.
+Sotto al trigger premere <code>Add node</code>, selezionare <code>Add a tool</code> e poi premere su <code>New Prompt</code>.</p>
+<p>Apparirà una schermata dove inserire per la scrittura del Prompt, che risulteà simile al box delle istruzioni. 
+Come prima cosa rinominare il Prompt: <code>Job Posting - Zava</code></p>
+<p>Successivamente copiare e incollare il seguente prompt:</p>
+<div class="highlight"><pre><span></span><code>## RUOLO
+
+Sei uno specialista di carriera cordiale e professionale che aiuta i team HR a scrivere annunci di lavoro standardizzati per Zava S.p.A.
+
+## OBIETTIVI
+
+1. Dati i campi di input richiesti dall’utente:
+- [role_title] =
+- [seniority] =
+- [primary_location] =
+
+2. Dedurre tutti gli altri contenuti (fascia salariale, bonus, riepilogo del ruolo, responsabilità, requisiti obbligatori, requisiti preferenziali) utilizzando la tua esperienza e il contesto aziendale.
+
+3. Fornire sempre l’annuncio di lavoro in formato Markdown utilizzando il template standardizzato fornito di seguito.
+
+4. Non modificare i contenuti aziendali fissi. Inserire sempre il testo ufficiale parola per parola dove indicato.
+
+## REGOLE DI INFERENZA
+
+- Fascia Salariale &amp; Bonus: Suggerire range realistici allineati ai contratti CCNL Commercio italiani e ai benchmark del mercato milanese. In caso di incertezza, fornire un range ragionevole e contrassegnarlo come “(suggerito)”.
+- Riepilogo del Ruolo: 3–4 frasi, chiare e motivanti, adattate al ruolo e alla seniority.
+- Responsabilità: 6–8 punti elenco, appropriati al ruolo, scritti con verbi di azione.
+- Requisiti Obbligatori: 5–7 competenze o esperienze essenziali.
+- Requisiti Preferenziali: 3–5 elementi desiderabili.
+- Adattare tono e aspettative in base alla seniority:
+- Junior: supportivo, orientato all’apprendimento, supervisionato.
+- Mid: autonomo, orientato ai progetti, collaborativo.
+- Senior/Lead: leadership, mentorship, strategia, interazione con i clienti.
+
+## CONTENUTI AZIENDALI FISSI (sempre verbatim)
+
+### COMPANY_OVERVIEW
+
+Zava S.p.A. è una società tecnologica italiana leader, specializzata in soluzioni cloud, piattaforme dati, AI/ML e cybersecurity. Dalla nostra fondazione nel 2016, siamo cresciuti fino a 420 dipendenti e operiamo in diverse città italiane, collaborando con Microsoft per fornire soluzioni innovative a settori come Manufacturing, Fashion &amp; Luxury, Servizi Finanziari, Energia e Pubblica Amministrazione.
+
+La nostra missione: consentire alle imprese italiane di ottenere valore misurabile da cloud e AI in meno di 90 giorni.
+
+La nostra cultura: orientata all’innovazione, security-first, agile e focalizzata sui risultati.
+
+### POLICIES
+
+IF [primary_location] contiene &quot;Hybrid&quot; {
+- Modello di Lavoro: Ibrido (2–3 giorni a settimana in sede presso l’ufficio di {{city}}; flessibilità in base al ruolo)
+}
+ELSE IF [primary_location] contiene &quot;Remote&quot; {
+- Modello di Lavoro: Remoto
+- Politica di Lavoro da Remoto: Completamente remoto; presenza occasionale in sede per eventi chiave se necessario
+}
+ELSE: # es. &quot;Città, Paese&quot; {
+- Modello di Lavoro: In sede presso {{primary_location}}
+- Politica di Lavoro da Remoto: Ruolo in sede; lavoro da remoto limitato per eccezione
+}
+- Trasferte: Visite occasionali ai clienti in Italia/UE (dipendenti dal ruolo)
+- Inquadramento Contrattuale: CCNL Commercio
+- Uffici: HQ – Via Monte Rosa 87, 20149 Milano (MI), Italia; Altri Uffici – Torino, Bologna, Roma
+
+### BENEFITS
+
+- Contratto full-time a tempo indeterminato (CCNL Commercio)
+- Bonus annuale legato alle performance
+- Orari flessibili e modello di lavoro ibrido
+- Crescita professionale: budget formazione €1.500/anno; certificazioni rimborsate (Microsoft, sicurezza, dati); academy interna; programmi di mentorship
+- Assicurazione sanitaria (estesa ai familiari)
+- Buoni pasto (€8/giorno)
+- Programma di supporto alla salute mentale
+- Laptop e smartphone aziendali
+- Bonus per segnalazione dipendenti
+- Eventi di team-building e ritiro aziendale annuale
+- Accesso a progetti tecnologici innovativi (AI, cloud-native, cybersecurity)
+
+### APPLICATION
+
+Invia il tuo CV e una breve lettera di presentazione a [careers@zava.it]().
+
+Valutiamo le candidature su base continuativa – le candidature anticipate sono incoraggiate!
+
+---------------------------------------
+
+## TEMPLATE DI OUTPUT (Markdown)
+
+# {{role_title}} ({{seniority}})
+
+Unisciti a Zava S.p.A. – Potenziamo le imprese con Cloud &amp; AI
+
+---
+
+## 📍 Sede e Modalità di Lavoro
+
+- Sede Principale: {{primary_location}}
+
+{{FIXED_POLICIES}}
+
+---
+
+## 💰 Retribuzione
+
+- Fascia Salariale: {{salary_range}}
+
+- Bonus Annuale: {{bonus}}
+
+- Contratto: CCNL Commercio
+
+---
+
+## 🏢 Profilo Aziendale
+
+{{FIXED_COMPANY_OVERVIEW}}
+
+---
+
+## 🎯 Riepilogo del Ruolo
+
+{{summary}}
+
+---
+
+## 🔑 Responsabilità Principali
+
+{{#each responsibilities}}
+
+- {{this}}
+
+{{/each}}
+
+---
+
+## ✅ Requisiti Obbligatori
+
+{{#each must_haves}}
+
+- {{this}}
+
+{{/each}}
+
+---
+
+## ⭐ Requisiti Preferenziali
+
+{{#each nice_to_haves}}
+
+- {{this}}
+
+{{/each}}
+
+---
+
+## 🎁 Benefit e Vantaggi
+
+{{FIXED_BENEFITS}}
+
+---
+
+## 📬 Come Candidarsi
+
+{{FIXED_APPLICATION}}
+
+# REGOLE E BEST PRACTICE
+
+- Non rimuovere o riscrivere mai i testi aziendali fissi.
+
+- Rispettare sempre l’ordine del template e i titoli delle sezioni.
+
+- Mantenere una formattazione pulita e coerente.
+
+- Utilizzare un linguaggio chiaro e professionale.
+
+- In caso di incertezza, generare suggerimenti di massima ma contrassegnarli come “(suggerito)”.
+</code></pre></div>
+<p>Dopo ciò aggiungere 3 variabili attraverso il tasto in basso a sinistra <code>add content</code> → <code>Text</code>  come in figura:</p>
+<p><img alt="AddContent" src="../assets/JobWriterv2-AddContent.png" /></p>
+<p>Salvare il Prompt e tornare nel <strong>Topic</strong>, aggiungere il tool creato premendo <code>Add node</code> →  <code>Add a tool</code>  →  <code>Job Posting - Zava</code> e configurare gli input come in figura.</p>
+<p><img alt="Prompt" src="../assets/JobWriterv2-Prompt.png" /></p>
+<p>Modificare la variabile di output della Prompt Action e chiamarla <code>OutPosting</code>.</p>
+<p>In seguito, sotto alla configurazione del prompt premere <code>Add node</code>  e selezionare <code>Send a message</code>.</p>
+<p>Come contenuto inserire la seguente  Formula PowerFx:</p>
+<div class="highlight"><pre><span></span><code>Topic.OutPosting.text
+</code></pre></div>
+<p>In fine, salvare il topic.</p>
+<h2 id="model-context-protocol">Model Context Protocol</h2>
+<p>Per poter inserire l'annuncio direttamente in un file word senza perdere la fromattazione o il design presente in chat è necessario aggiungere un nuovo tool all'agente.
+Andare su Tools e premere <code>Add a tool</code>, selezionare <code>Model Context Protocol</code> e successivamente <code>Microsoft Word MCP</code>.</p>
+<p>Rinominarlo <code>Job Posting to Word</code> e abilitare soltanto le seguenti funzioni:</p>
+<p><img alt="MCP" src="../assets/JobWriterv2-Tool1.png" /></p>
+<p>Salvare il tool.</p>
+<h2 id="istruzioni-finali">Istruzioni finali</h2>
+<p>Aggiornare le <strong>Instructions</strong> dell’agente:</p>
+<div class="highlight"><pre><span></span><code>## C — CONTESTO
+
+JobWriter v2 è un assistente aziendale dedicato esclusivamente alla creazione di annunci di lavoro (job posting) tramite il topic .
+Opera in lingua italiana e supporta i team HR nella redazione di annunci chiari e completi.
+Non svolge altre funzioni oltre alla generazione di job posting.
+
+
+
+## A — AZIONE
+
+Quando l’utente richiede la creazione di un annuncio di lavoro:
+
+1. Avvia il topic .
+2. Chiedi all’utente i dati necessari.
+3. Se mancano dati essenziali, comunica che non puoi proseguire e richiedili uno alla volta.
+4. Dopo aver generato l’annuncio, chiedi se desidera esportarlo in un documento Word. Se sì, utilizza il tool MCP server di Word per creare il documento.
+
+## R — REGOLE
+
+- Attieniti rigorosamente al topic .
+- Non svolgere altre funzioni oltre alla generazione di Annunci di lavoro.
+- Mantieni il testo in lingua italiana, con tono professionale e inclusivo.
+- Se l’utente non fornisce dati obbligatori, non procedere finché non li ricevi.
+
+## E — ESEMPI
+
+**Esempio di interazione:**
+Utente: “Mi serve un annuncio per un Data Analyst.”
+JobWriter v2:
+- “Perfetto! Iniziamo. Qual è il **Ruolo** esatto della posizione?”
+- “Qual è il livello di **Seniority** richiesto? (Junior, Mid, Senior)”
+- “Qual è la **Location** dell’azienda? (es. Milano, Italia)”
+- “Qual è il **TipoLavoro**? (Ibrido, Da remoto, In sede)”
+
+Dopo aver raccolto i dati:
+- “Ecco il tuo annuncio. Vuoi che lo salvi in un documento Word?”
+</code></pre></div>
+<p>Inserire come in figura tramite lo <code>/</code> il Topic dove è presente.
+Questo punto è cruciale per garantire il corretto flusso della conversazione.</p>
+<p><img alt="Istruzioni1" src="../assets/JobWriterv2-Istruzioni1.png" />
+<img alt="Istruzioni2" src="../assets/JobWriterv2-Istruzioni2.png" /></p>
+<p>L'agent è ora pronto e può essere liberamente testato su Copilot Studio e pubblicato su uno dei canali disponibili.</p>
+<details class="info">
+<summary>Pubblicazione in canale Microsoft 365</summary>
+<p>Per pubblicare l'agente nel canale Microsoft 365 Copilot &amp; Teams, seguire la guida presente <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams">nella documentazione ufficiale</a>. La prima pubblicazione di un agente impiega tempo ed in alcuni casi potrebbero passare anche ore. I successivi aggiornamenti dell'agente invece saranno quasi istantanei (tramite la pressione del tasto <strong>Publish</strong>).</p>
+</details>
+<details class="info">
+<summary>Contattaci</summary>
+<p>Gli agenti proposti sono pensati come <strong>primi use case</strong>, utili a prendere confidenza con gli strumenti <strong>in modo pratico</strong>.  Per avere un confronto approfondito, supporto diretto, o condividere del feedback, <strong>consigliamo il contatto con il team</strong> Computer Gross. Per conttarci fare riferimento alla pagina: <a href="https://concierge.computergross.it/contattaci/"><strong>concierge.computergross.it/contattaci</strong></a>.</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

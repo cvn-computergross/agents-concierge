@@ -1,0 +1,2303 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../planner-buddy/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Setup Guide - Agents Concierge Tech Guides</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lab-guide-talent-scout-v2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Agents Concierge Tech Guides" class="md-header__button md-logo" aria-label="Agents Concierge Tech Guides" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Agents Concierge Tech Guides
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Setup Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/cvn-computergross/agents-concierge" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Agents Concierge
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Agents Concierge Tech Guides" class="md-nav__button md-logo" aria-label="Agents Concierge Tech Guides" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Agents Concierge Tech Guides
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cvn-computergross/agents-concierge" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Agents Concierge
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Builder
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agent Builder
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lv1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lista Agenti
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech Support (v1)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tech Support (v1)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lv1/tech-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lv1/tech-support/lab-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Job Writer (v1)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Job Writer (v1)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lv1/job-writer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lv1/job-writer/lab-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Postman (v1)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Postman (v1)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lv1/postman/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lv1/postman/lab-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Talent Scout (v1)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Talent Scout (v1)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lv1/talent-scout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lv1/talent-scout/lab-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Copilot Studio
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Copilot Studio
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lista Agenti
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech Support (v2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tech Support (v2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech-support/lab-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Job Writer (v2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Job Writer (v2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../job-writer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../job-writer/lab-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Postman (v2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Postman (v2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postman/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postman/lab-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Talent Scout (v2)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Talent Scout (v2)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisiti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisiti
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisiti">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-copilot-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup Copilot Studio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-nuovo-ambiente-developer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup nuovo ambiente developer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creazione-sito-sharepoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creazione Sito SharePoint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creazione-del-canale-su-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creazione del canale su Teams
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creazione-agente-da-copilot-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creazione Agente da Copilot Studio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#impostazioni-generali" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Impostazioni generali
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creazione-del-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creazione del Trigger
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creazione-del-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creazione del Tool
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#istruzioni-finali" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Istruzioni Finali
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knowledge-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Knowledge Base
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planner Buddy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Planner Buddy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planner-buddy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planner-buddy/lab-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agenda Pilot
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agenda Pilot
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agenda-pilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Panoramica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agenda-pilot/lab-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisiti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisiti
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisiti">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-copilot-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup Copilot Studio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-nuovo-ambiente-developer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup nuovo ambiente developer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creazione-sito-sharepoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creazione Sito SharePoint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creazione-del-canale-su-teams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creazione del canale su Teams
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creazione-agente-da-copilot-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creazione Agente da Copilot Studio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#impostazioni-generali" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Impostazioni generali
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creazione-del-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creazione del Trigger
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creazione-del-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creazione del Tool
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#istruzioni-finali" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Istruzioni Finali
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knowledge-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Knowledge Base
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="lab-guide-talent-scout-v2">Lab Guide (Talent Scout · v2)</h1>
+<details class="info">
+<summary>Contattaci</summary>
+<p>Gli agenti proposti sono pensati come <strong>primi use case</strong>, utili a prendere confidenza con gli strumenti <strong>in modo pratico</strong>.  Per avere un confronto approfondito, supporto diretto, o condividere del feedback, <strong>consigliamo il contatto con il team</strong> Computer Gross. Per conttarci fare riferimento alla pagina: <a href="https://concierge.computergross.it/contattaci/"><strong>concierge.computergross.it/contattaci</strong></a>.</p>
+</details>
+<h2 id="prerequisiti">Prerequisiti</h2>
+<h3 id="setup-copilot-studio">Setup Copilot Studio</h3>
+<p>Copilot Studio è contenuto all'interno di Microsoft 365, per cui come prima cosa è necessario essere in possesso di un valido account Microsoft 365.</p>
+<p>Se non si è già in possesso di un account valido, è possibile attivare una licenza tramite il marketplace Computer Gross.  Eventualmente, solo per tenant di prova è possibile navigare alla pagina <a href="https://www.microsoft.com/it-it/microsoft-365/business/microsoft-365-plans-and-pricing">Piani e prezzi di Microsoft 365 per aziende | Microsoft 365</a> ed attivare una licenza gratuita tramite l'opzione <code>Prova gratuitamente</code>.</p>
+<p>Una volta in possesso di un valido account Microsoft 365, occorre fare accesso a Copilot Studio. E' possibile attivare una trial gratuita seguendo i seguenti passaggi:</p>
+<ol>
+<li>Navigare su <a href="https://aka.ms/TryCopilotStudio">aka.ms/TryCopilotStudio</a></li>
+<li>Inserire l'indirizzo mail dell'account Microsoft 365.</li>
+<li>Seguire il wizard fino a raggiungere <code>Start free trial</code>.</li>
+</ol>
+<details class="info">
+<summary>Copilot Studio Trail</summary>
+<p>Per maggiori informazioni sulla versione di prova ed ulteriori approfondimenti sull'attivazione di Copilot Studio, consultare la documentazione ufficiale <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/requirements-licensing-subscriptions">Get access to Copilot Studio - Microsoft Copilot Studio | Microsoft Learn</a></p>
+</details>
+<h3 id="setup-nuovo-ambiente-developer">Setup nuovo ambiente developer</h3>
+<p>Usando lo stesso account usato nel punto precedente, è possibile attivare un piano gratuito per sviluppatori in modo da avere un ambiente sicuro e slegato dai dati aziendali, utile a fare i propri test.</p>
+<ol>
+<li>Fare login all'interno del portale https://aka.ms/PowerAppsDevPlan</li>
+<li>Inserire l'indirizzo mail utilizzato nei precedenti punti ed attivare la prova</li>
+<li>Questo genererà un ambiente con il vostro nome, che sarà possibile visualizzare in alto a destra rispetto all'interfaccia di Power Apps o Copilot Studio. Ad esempio <code>Mario Rossi's environment</code></li>
+</ol>
+<details class="note">
+<summary>Power Platform Environments</summary>
+<p>Gli ambienti della Power Platform sono un concetto fondamentale per gestire la segmentazione dei dati ed il rilascio delle nuove applicazioni (come gli <em>agenti</em>). Il loro approfondimento è fuori dagli scopi di questa guida ma è consigliabile un approfondimento presso la documentazione ufficiale <a href="https://learn.microsoft.com/en-us/power-platform/admin/environments-overview">Power Platform environments overview - Power Platform | Microsoft Learn</a>.</p>
+</details>
+<h3 id="creazione-sito-sharepoint">Creazione Sito SharePoint</h3>
+<p>Per questo caso d'uso è stato utilizzato un sito SharePoint. E' possibile replicare lo stesso sito navigando seguendo i seguenti passaggi:</p>
+<ol>
+<li>Navigare su SharePoint Online</li>
+<li>Selezionare il tasto <code>+ Create site</code></li>
+<li>Scegliere le seguenti opzioni nel wizard di creazione:<ul>
+<li><strong>Select the site type</strong>: <code>Team Site</code></li>
+<li><strong>Select a template</strong>: <code>Blank</code></li>
+<li><strong>Name</strong>: <code>Cv-Site</code></li>
+<li><strong>Privacy</strong>, <strong>Language</strong> a piacere</li>
+</ul>
+</li>
+<li>Nella cartella Documents caricare i seguenti Cv demo:</li>
+</ol>
+<p>-&gt; <a href="../../../downloads/talent-scout/Cv-demo.zip">Scarica il materiale demo</a></p>
+<h3 id="creazione-del-canale-su-teams">Creazione del canale su Teams</h3>
+<p>Per questo caso d'uso è stato utilizzato un nuovo team su Teams. E' possibile replicare lo stesso sito navigando seguendo i seguenti passaggi:</p>
+<ol>
+<li>Navigare su Teams</li>
+<li>Selezionare il tasto <code>+ New Team</code></li>
+<li>Scegliere le seguenti opzioni nel wizard di creazione:<ul>
+<li>Team Name: <code>Concierge2026</code></li>
+<li>Description: <code>Blank</code></li>
+<li>Team type: <code>Private</code></li>
+<li>First channel name: <code>Generale</code></li>
+</ul>
+</li>
+<li>Nel Team premere su <code>Create a channel</code>:<ul>
+<li>Channel Name: <code>Applicants</code></li>
+<li>Description: <code>Blank</code></li>
+<li>Choose a channel type: <code>Standard</code></li>
+<li>Layout: <code>Posts</code></li>
+</ul>
+</li>
+<li>Premere Create</li>
+</ol>
+<h2 id="creazione-agente-da-copilot-studio">Creazione Agente da Copilot Studio</h2>
+<p>Navigare all'interno di <a href="https://copilotstudio.microsoft.com/">Copilot Studio</a> e selezionare <strong>Agents</strong>  situato nel menù laterale a sinistra. 
+Accedendo alla sezione <strong>Agents</strong>, viene inizialmente proposta la schermata di configurazione conversazionale. 
+Sebbene questa modalità consenta di creare rapidamente un agente, in questa guida procederemo con una configurazione manuale; per questo motivo, selezionare l’opzione <code>Create blank agent</code> disponibile nella parte superiore della pagina.</p>
+<p><img alt="Provisioning" src="../../../assets/Provisioning.png" /></p>
+<p>Finito il provisioning dell'agente modificare <strong>Nome</strong> e <strong>Descrizione</strong>:</p>
+<ul>
+<li><strong>Nome</strong>:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Talent Scout (v2)
+</code></pre></div>
+<ul>
+<li><strong>Descrizione</strong>:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Talent Scout (v2) è un agente intelligente che analizza i CV in base ai criteri espressi dall’utente, creando shortlist di candidati compatibili. Gestisce automaticamente le nuove candidature ricevute via email, salvando i PDF su SharePoint e notificando il team HR su Teams, rendendo il processo di recruiting più rapido, centralizzato e tracciabile.
+</code></pre></div>
+<h2 id="impostazioni-generali">Impostazioni generali</h2>
+<p>Recarsi nelle impostazioni di linguaggio per aggiungere la lingua italiana.
+Andare su <strong>Languages</strong> premere su <strong>Add language</strong> e selezionare <strong>Italian (Italy) (it-IT)</strong> .</p>
+<p><img alt="Italian" src="../../postman/assets/Postmanv2-Lingua.png" /></p>
+<h2 id="creazione-del-trigger">Creazione del Trigger</h2>
+<p>Nella sezione <code>Triggers</code>, premere <code>+Add Trigger</code>  e selezionare <code>When a new email arrives (V3)</code>.</p>
+<p><img alt="trigger1" src="../assets/trigger.png" /></p>
+<p>Configurare i seguenti campi del trigger:</p>
+<ul>
+<li>Include Attachments : Yes</li>
+<li>Subject Filter : Application</li>
+<li>Only with Attachments : Yes</li>
+</ul>
+<p><img alt="trigger2" src="../assets/trigger2.png" /></p>
+<p>Premere su <code>Create trigger</code> e successivamente <code>Edit in Power Automate</code>.</p>
+<p><img alt="trigger3" src="../assets/trigger3.png" /></p>
+<p>Una volta aperto il flow su PowerAutomate selezionare il trigger e andare nei <code>Settings</code> per abilitare lo <code>Split on</code> e  selezionare <code>@triggerOutputs()?['body/value']</code></p>
+<p><img alt="PA1" src="../assets/PowerAutomate1.png" /></p>
+<p>Successivamente premere sotto al trigger il <code>+</code> e aggiungere una <code>Condition</code> con i seguenti settaggi:</p>
+<p><img alt="PA2" src="../assets/PowerAutomate2.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Tips</p>
+<p>Per inserire valori dinamici come <code>contentType</code> premere su <code>ƒx</code> →  Dynamic Content.</p>
+</div>
+<p>Configurata la Condition recarsi sotto il ramo <code>True</code> e aggiungere <code>Create File</code> di SharePoint che deve essere configurato con questi parametri:
+- Site Address: Cv-Site
+- Folder Path: /Shared Documents</p>
+<p>Gli altri campi da configurare come in figura:</p>
+<p><img alt="PA3" src="../assets/PowerAutomate3.png" /></p>
+<p>Terminato il connettore per l'upload del file su SharePoint aggiungiamo un altro connettore per permettere la creazione di un link di sharing.
+Cercare <code>Create sharing link for a file or folder</code> e inserire :
+- Site Address : Cv-Site
+- Library Name : Documents
+- Item Id : body/ItemId (Dynamic Content dal nodo precedente)
+- Link Type : View only
+- Link Scope : Poeple in your organization</p>
+<p>In fine prendere il nodo finale <code>Sends a prompt to the specified copilot for processing</code> spostarlo sotto il nodo precedente e inserire il seguente body/message : </p>
+<div class="highlight"><pre><span></span><code>Usa il tool &quot;Notify Teams Applicant channel&quot;  per postare su Teams il nuovo resume con questi dati [ResumeLink (text)] = &quot;@{outputs(&#39;Create_sharing_link_for_a_file_or_folder&#39;)?[&#39;body/link/webUrl&#39;]}&quot; and [ResumeTitle (text_1)] = &quot;@{outputs(&#39;Create_file&#39;)?[&#39;body/Name&#39;]}&quot;
+</code></pre></div>
+<p><img alt="PA4" src="../assets/PowerAutomate4.png" /></p>
+<p>Salvare premendo su Save draft e poi pubblicarlo con Publish.</p>
+<h2 id="creazione-del-tool">Creazione del Tool</h2>
+<p>Andare su Tools → <code>Add a tool</code> → <code>New Agent Flow</code>.
+Rinominare il flow <code>Notify Teams Applicant channel</code> e inserire come input nel nodo <code>When an agent calls the flow</code> i seguenti parametri:
+- Text | ResumeLink | Link fornito dal trigger
+- Text | ResumeName | Nome del file fornito dal trigger</p>
+<p><img alt="Teams1" src="../assets/Teams1.png" /></p>
+<p>Aggiungere <code>Post card in a chat or channel</code> come nodo sotto al trigger e configurarlo con i seguenti dati:</p>
+<ul>
+<li>Post as : Flow bot</li>
+<li>Post in : Channel </li>
+<li>Team : Concierge 2026</li>
+<li>Channel : Applicants</li>
+<li>Adaptive card :</li>
+</ul>
+<div class="highlight"><pre><span></span><code>{
+    &quot;type&quot;: &quot;AdaptiveCard&quot;,
+    &quot;speak&quot;: &quot;New Resume Uploaded&quot;,
+    &quot;body&quot;: [
+        {
+            &quot;inlines&quot;: [
+                {
+                    &quot;type&quot;: &quot;TextRun&quot;,
+                    &quot;size&quot;: &quot;Small&quot;,
+                    &quot;text&quot;: &quot;New Resume&quot;,
+                    &quot;selectAction&quot;: {
+                        &quot;url&quot;: &quot;@{triggerBody()?[&#39;text&#39;]}&quot;,
+                        &quot;type&quot;: &quot;Action.OpenUrl&quot;
+                    }
+                }
+            ],
+            &quot;type&quot;: &quot;RichTextBlock&quot;
+        },
+        {
+            &quot;columns&quot;: [
+                {
+                    &quot;width&quot;: &quot;stretch&quot;,
+                    &quot;items&quot;: [
+                        {
+                            &quot;size&quot;: &quot;Large&quot;,
+                            &quot;text&quot;: &quot;📄 New Resume Uploaded&quot;,
+                            &quot;weight&quot;: &quot;Bolder&quot;,
+                            &quot;wrap&quot;: true,
+                            &quot;type&quot;: &quot;TextBlock&quot;
+                        }
+                    ],
+                    &quot;verticalContentAlignment&quot;: &quot;Center&quot;,
+                    &quot;type&quot;: &quot;Column&quot;
+                }
+            ],
+            &quot;spacing&quot;: &quot;Small&quot;,
+            &quot;type&quot;: &quot;ColumnSet&quot;
+        },
+        {
+            &quot;type&quot;: &quot;Table&quot;,
+            &quot;columns&quot;: [
+                {
+                    &quot;width&quot;: 1
+                },
+                {
+                    &quot;width&quot;: 2
+                }
+            ],
+            &quot;rows&quot;: [
+                {
+                    &quot;type&quot;: &quot;TableRow&quot;,
+                    &quot;cells&quot;: [
+                        {
+                            &quot;type&quot;: &quot;TableCell&quot;,
+                            &quot;items&quot;: [
+                                {
+                                    &quot;type&quot;: &quot;TextBlock&quot;,
+                                    &quot;text&quot;: &quot;Name&quot;,
+                                    &quot;wrap&quot;: true,
+                                    &quot;weight&quot;: &quot;Bolder&quot;
+                                }
+                            ],
+                            &quot;verticalContentAlignment&quot;: &quot;Center&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;TableCell&quot;,
+                            &quot;items&quot;: [
+                                {
+                                    &quot;type&quot;: &quot;TextBlock&quot;,
+                                    &quot;text&quot;: &quot;@{triggerBody()?[&#39;text_1&#39;]}&quot;,
+                                    &quot;wrap&quot;: true
+                                }
+                            ],
+                            &quot;verticalContentAlignment&quot;: &quot;Center&quot;
+                        }
+                    ]
+                },
+                {
+                    &quot;type&quot;: &quot;TableRow&quot;,
+                    &quot;cells&quot;: [
+                        {
+                            &quot;type&quot;: &quot;TableCell&quot;,
+                            &quot;items&quot;: [
+                                {
+                                    &quot;type&quot;: &quot;TextBlock&quot;,
+                                    &quot;text&quot;: &quot;Status&quot;,
+                                    &quot;wrap&quot;: true,
+                                    &quot;weight&quot;: &quot;Bolder&quot;
+                                }
+                            ],
+                            &quot;verticalContentAlignment&quot;: &quot;Center&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;TableCell&quot;,
+                            &quot;items&quot;: [
+                                {
+                                    &quot;type&quot;: &quot;TextBlock&quot;,
+                                    &quot;text&quot;: &quot;Waiting for Review&quot;,
+                                    &quot;wrap&quot;: true
+                                }
+                            ],
+                            &quot;verticalContentAlignment&quot;: &quot;Center&quot;
+                        }
+                    ]
+                },
+                {
+                    &quot;type&quot;: &quot;TableRow&quot;,
+                    &quot;cells&quot;: [
+                        {
+                            &quot;type&quot;: &quot;TableCell&quot;,
+                            &quot;items&quot;: [
+                                {
+                                    &quot;type&quot;: &quot;TextBlock&quot;,
+                                    &quot;text&quot;: &quot;Due Date&quot;,
+                                    &quot;wrap&quot;: true,
+                                    &quot;weight&quot;: &quot;Bolder&quot;
+                                }
+                            ],
+                            &quot;verticalContentAlignment&quot;: &quot;Center&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;TableCell&quot;,
+                            &quot;items&quot;: [
+                                {
+                                    &quot;type&quot;: &quot;TextBlock&quot;,
+                                    &quot;text&quot;: &quot;@{addDays(utcNow(), 3, &#39;MMM dd, yyyy&#39;)}&quot;,
+                                    &quot;wrap&quot;: true
+                                }
+                            ],
+                            &quot;verticalContentAlignment&quot;: &quot;Center&quot;
+                        }
+                    ]
+                },
+                {
+                    &quot;type&quot;: &quot;TableRow&quot;,
+                    &quot;cells&quot;: [
+                        {
+                            &quot;type&quot;: &quot;TableCell&quot;,
+                            &quot;items&quot;: [
+                                {
+                                    &quot;type&quot;: &quot;TextBlock&quot;,
+                                    &quot;text&quot;: &quot;Priority&quot;,
+                                    &quot;wrap&quot;: true,
+                                    &quot;weight&quot;: &quot;Bolder&quot;
+                                }
+                            ],
+                            &quot;verticalContentAlignment&quot;: &quot;Center&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;TableCell&quot;,
+                            &quot;items&quot;: [
+                                {
+                                    &quot;type&quot;: &quot;TextBlock&quot;,
+                                    &quot;text&quot;: &quot;🚩 Important&quot;,
+                                    &quot;color&quot;: &quot;Attention&quot;,
+                                    &quot;wrap&quot;: true
+                                }
+                            ],
+                            &quot;verticalContentAlignment&quot;: &quot;Center&quot;
+                        }
+                    ]
+                }
+            ],
+            &quot;firstRowAsHeaders&quot;: false,
+            &quot;showGridLines&quot;: false
+        },
+        {
+            &quot;actions&quot;: [
+                {
+                    &quot;title&quot;: &quot;View Resume&quot;,
+                    &quot;type&quot;: &quot;Action.OpenUrl&quot;,
+                    &quot;url&quot;: &quot;@{triggerBody()?[&#39;text&#39;]}&quot;
+                }
+            ],
+            &quot;type&quot;: &quot;ActionSet&quot;,
+            &quot;spacing&quot;: &quot;ExtraLarge&quot;
+        }
+    ],
+    &quot;$schema&quot;: &quot;https://adaptivecards.io/schemas/adaptive-card.json&quot;,
+    &quot;version&quot;: &quot;1.5&quot;
+}
+</code></pre></div>
+<p>In fine premere su <code>respont to the Agent</code> e inserire come Output:
+- End Conversation | Finished | Fine Conversazione</p>
+<p>Premere su Save Draft e successivamente Publish`.</p>
+<h2 id="istruzioni-finali">Istruzioni Finali</h2>
+<p>Aggiornare le <strong>Instructions</strong> dell’agente:</p>
+<div class="highlight"><pre><span></span><code># Contesto
+Sei TalentScout, un assistente AI per lo screening CV.
+Hai accesso a CV archiviati in SharePoint, contenenti: nome, ruoli, anni di esperienza,
+competenze tecniche e soft skill, formazione, lingue.
+Rispondi sempre in italiano, in modo professionale e sintetico.
+
+# Azione
+Quando ricevi una richiesta di ricerca candidati:
+1. Identifica i requisiti (ruolo, anni di esperienza, competenze, altri criteri).
+   Se la richiesta è ambigua, chiedi una breve chiarificazione.
+2. Cerca nei CV i candidati che corrispondono, inclusi match equivalenti (es. &quot;3 anni&quot; ≈ &quot;3+ anni&quot;).
+3. Elenca solo i candidati idonei con: Nome, Ruolo, Anni di esperienza, Competenze chiave, Sintesi profilo.
+   Spiega sempre perché il candidato soddisfa i requisiti.
+
+# Regole
+- Usa solo le informazioni presenti nei CV e nei metadati: non inventare candidati, esperienze o competenze.
+- Stile strutturato (elenchi, punti chiave), senza emoji o elementi grafici.
+- Se nessun candidato corrisponde, dillo esplicitamente e suggerisci di ampliare i criteri.
+
+# Esempi
+Richiesta: &quot;Candidati con 3 anni di esperienza come developer&quot;
+→ Luca Rossi | Software Developer | 3 anni | C#, .NET, SQL | Sviluppo app web enterprise in ambito finance.
+
+Richiesta: &quot;SAP Consultant con almeno 5 anni di esperienza&quot;
+→ Maria Verdi | SAP Consultant | 7 anni | SAP FI/CO, S/4HANA | Implementazioni SAP in contesti internazionali.
+
+# Tool Usage
+[Notify Teams Applicant channel] -&gt; Postare su Teams i nuovi CV ricevuti via mail e caricati su SharePoint tramite il trigger.
+</code></pre></div>
+<p>Inserire come in figura tramite lo <code>/</code> il Tool dove è presente.
+Questo punto è cruciale per garantire il corretto flusso della conversazione.</p>
+<p><img alt="Istruzioni" src="../assets/Istruzioni.png" /></p>
+<h2 id="knowledge-base">Knowledge Base</h2>
+<p>Una volta aggiunti tutti i Tool e le istruzioni manca solo la base dati su cui l'agente deve lavorare, andare su Knowledge → Add Knowledge.
+Selezionare SharePoint e cercare il sito creato in precedenza chiamato CV-Site selezionare la cartella SharedDocuments e configurare :</p>
+<ul>
+<li>Name</li>
+</ul>
+<div class="highlight"><pre><span></span><code>CV-Folder
+</code></pre></div>
+<ul>
+<li>Description</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Cartella che contiene i Cv dei candidati.
+</code></pre></div>
+<p><img alt="kb" src="../assets/knowledge.png" /></p>
+<p>L'agent è ora pronto e può essere liberamente testato su Copilot Studio e pubblicato su uno dei canali disponibili.</p>
+<details class="info">
+<summary>Pubblicazione in canale Microsoft 365</summary>
+<p>Per pubblicare l'agente nel canale Microsoft 365 Copilot &amp; Teams, seguire la guida presente <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams">nella documentazione ufficiale</a>. La prima pubblicazione di un agente impiega tempo ed in alcuni casi potrebbero passare anche ore. I successivi aggiornamenti dell'agente invece saranno quasi istantanei (tramite la pressione del tasto <strong>Publish</strong>).</p>
+</details>
+<details class="info">
+<summary>Contattaci</summary>
+<p>Gli agenti proposti sono pensati come <strong>primi use case</strong>, utili a prendere confidenza con gli strumenti <strong>in modo pratico</strong>.  Per avere un confronto approfondito, supporto diretto, o condividere del feedback, <strong>consigliamo il contatto con il team</strong> Computer Gross. Per conttarci fare riferimento alla pagina: <a href="https://concierge.computergross.it/contattaci/"><strong>concierge.computergross.it/contattaci</strong></a>.</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
