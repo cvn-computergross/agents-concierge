@@ -42,3 +42,21 @@ Gli agenti presentati in questa sezione propongono una **versione evoluta** degl
 **Descrizione**: Talent Scout (v2) è un agente per lo screening dei candidati che automatizza ricerca, analisi dei CV e gestione delle nuove candidature, archiviandole in modo strutturato e notificando il team HR in tempo reale.
 	
 ➡️[Vai alla documentazione](talent-scout/index.md)
+
+### **Planner Buddy**
+**Categorie**: Pianificazione operativa, Collaborazione, Task Management
+
+**Descrizione**: Un agente AI dedicato a Planner, organizza attività e piani di lavoro in modo intelligente.
+Aggiorna automaticamente lo stato dei task e ottimizza la distribuzione delle attività.
+Supporta team e utenti nel mantenere ordine, priorità e avanzamento dei progetti.
+	
+➡️[Vai alla documentazione](planner-buddy/index.md)
+
+### **Agenda Pilot**
+**Categorie**: Calendar, Scheduling automatizzato
+
+**Descrizione**: Un agente AI per la gestione dei calendari analizza impegni, priorità e disponibilità.
+Propone automaticamente le fasce orarie migliori e risolve eventuali conflitti.
+Supporta la produttività adattandosi alle abitudini dell’utente e integrandosi con altri strumenti.
+
+➡️[Vai alla documentazione](agenda-pilot/index.md)
