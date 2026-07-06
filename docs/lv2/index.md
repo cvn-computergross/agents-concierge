@@ -60,3 +60,4 @@ Propone automaticamente le fasce orarie migliori e risolve eventuali conflitti.
 Supporta la produttività adattandosi alle abitudini dell’utente e integrandosi con altri strumenti.
 
 ➡️[Vai alla documentazione](agenda-pilot/index.md)
+- **[Maps Agent · v2](maps-agent/index.md)**

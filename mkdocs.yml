@@ -40,10 +40,13 @@ nav:
   - Talent Scout (v2):
     - Panoramica: lv2/talent-scout/index.md
     - Setup Guide: lv2/talent-scout/lab-guide.md
-  - Planner Buddy: 
+  - Planner Buddy:
     - Panoramica: lv2/planner-buddy/index.md
     - Setup Guide: lv2/planner-buddy/lab-guide.md
   - Agenda Pilot:
     - Panoramica: lv2/agenda-pilot/index.md
     - Setup Guide: lv2/agenda-pilot/lab-guide.md
-
+  - Maps Agent:
+    - Panoramica: lv2/maps-agent/index.md
+    - Setup Guide: lv2/maps-agent/lab-guide.md
+    
