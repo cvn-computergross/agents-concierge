@@ -59,7 +59,7 @@ Assegnare il Nome :
 - **Nome**:
 
 ```
-Maps Agent (v2)
+Maps Agent
 ```
 
 
