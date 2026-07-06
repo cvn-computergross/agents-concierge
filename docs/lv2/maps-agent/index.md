@@ -10,13 +10,13 @@ La pianificazione di ritiri e consegne richiede di validare indirizzi, calcolare
 
 Con **Maps Agent** l'obiettivo è affidare questo lavoro a un assistente conversazionale che si appoggia ad **Azure Maps** per validare le location, calcolare distanze e tempi di percorrenza, ed elaborare un percorso ottimizzato su più tappe.
 
-**Maps Agent (v2)** introduce l'integrazione diretta con Azure Maps ed è costruito sulla **nuova esperienza Agents di Copilot Studio** (non *Classic*): il comportamento dell'agente è guidato interamente da **Instructions** in linguaggio naturale e dai **Tool** collegati, senza dover progettare Topic o flussi di conversazione dedicati.
+**Maps Agent** introduce l'integrazione diretta con Azure Maps ed è costruito sulla **nuova esperienza Agents di Copilot Studio** (non *Classic*): il comportamento dell'agente è guidato interamente da **Instructions** in linguaggio naturale e dai **Tool** collegati, senza dover progettare Topic o flussi di conversazione dedicati.
 
 Il risultato è una risposta strutturata e ripetibile (percorso ottimizzato, tappe, distanza, tempi, vettore raccomandato, costo stimato e link di navigazione esterni) pronta per essere condivisa con il team logistico.
 
 ## Soluzione
 
-**Maps Agent (v2)** introduce un processo guidato per la pianificazione di percorsi di ritiro e consegna, eliminando le stime manuali e la ricerca dispersiva tra più strumenti di mappatura.
+**Maps Agent** introduce un processo guidato per la pianificazione di percorsi di ritiro e consegna, eliminando le stime manuali e la ricerca dispersiva tra più strumenti di mappatura.
 
 L'agente segue una logica chiara e ripetibile: identifica le location coinvolte, le valida e le converte in coordinate tramite Azure Maps, calcola il percorso ottimale e confronta i vettori disponibili prima di restituire una raccomandazione.
 
