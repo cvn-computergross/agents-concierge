@@ -90,13 +90,6 @@ Training Builder **non utilizza una base di conoscenza aziendale fissa**: lavora
 
 Per questo motivo, nella sezione **Knowledge** è sufficiente abilitare la **ricerca sul web**, così che l'agente possa consultare documentazione tecnica pubblica e aggiornata (ad esempio le pagine ufficiali di prodotto).
 
-!!! note "Non limitare le fonti"
-	In questo scenario **non** abilitare l'opzione **Only use specified sources**: quando l'utente indica solo un argomento, l'agente deve poter usare la ricerca web e la propria conoscenza generale per costruire il corso. Le istruzioni gli chiedono comunque di distinguere ciò che deriva dalle fonti da ciò che è una proposta didattica.
-
-## Abilitare la creazione di documenti
-
-Le skill di Training Builder producono come formato predefinito un **documento Word** (agenda e quiz). Nella sezione **Capabilities** abilitare quindi la creazione di documenti, così che l'agente possa generare direttamente i file.
-
 ## Skills
 
 Per rendere i materiali coerenti tra un corso e l'altro, Training Builder utilizza due **skill**: pacchetti riutilizzabili di istruzioni che l'agente attiva automaticamente quando la richiesta dell'utente corrisponde alla loro descrizione. Entrambe contengono anche il **template Word** da compilare.
@@ -126,6 +119,8 @@ Crea un quiz di verifica compilando il template **TPL-TRN-002**, a partire da un
 -> [Scarica la skill quiz (ZIP)](../../downloads/training-builder/quiz-da-template.zip)
 
 ### Aggiungere le skill all'agente
+
+![skills](assets/Skills.png)
 
 Per ciascuna delle due skill:
 

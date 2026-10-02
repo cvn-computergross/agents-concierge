@@ -23,6 +23,8 @@ Abbiamo identificato tre criticità principali:
 
 ## Soluzione
 
+![Agent](assets/Trainer.png)
+
 **Training Builder (v1)** è un agente che opera come **instructional designer specializzato in contenuti tecnici**: trasforma documenti aziendali o argomenti tecnici in percorsi formativi completi, adattati al pubblico.
 
 L'agente produce:
@@ -48,6 +50,8 @@ Questo approccio permette di:
 `Crea l'agenda di un corso tecnico di 4 ore su Microsoft 365 Copilot per un pubblico IT intermedio, con tempi e obiettivi per modulo.`
 
 **Comportamento dell'agente**
+
+![Risposta1](assets/Answer1.png)
 
 1. Riepiloga le assunzioni (pubblico, durata, modalità) e chiede solo i dati essenziali mancanti
 2. Compila il template dell'agenda con scheda del corso, obiettivi e programma per moduli
