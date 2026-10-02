@@ -52,6 +52,8 @@ Questo approccio permette di:
 
 **Comportamento dell'agente**
 
+![Risposta1](assets/Answer1.png)
+
 1. Individua le aree di controllo (applicabilità e registrazione, governance, gestione del rischio, incidenti e notifiche, continuità operativa, supply chain, vulnerabilità, accessi, crittografia, formazione)
 2. Le presenta come checklist, con l'articolo di riferimento della Direttiva per ciascuna area
 3. In assenza di evidenze, segna ogni controllo come *Da verificare* e non come conforme
