@@ -23,42 +23,47 @@ Abbiamo identificato tre criticità principali:
 
 ## Soluzione
 
-**GDPR Compliance Monitor (v1)** è un agente progettato **esclusivamente per il supporto al monitoraggio della conformità GDPR**, basato sul testo del regolamento e sulla documentazione interna dell'organizzazione.
+![Panoramica Agent](assets/Chat.png)
+
+**GDPR Compliance Monitor (v1)** è un agente progettato **esclusivamente per valutare e monitorare la conformità GDPR** di organizzazioni, processi, servizi, fornitori e applicazioni, tramite una **checklist obbligatoria** e verifiche basate su evidenze.
 
 L'agente:
 
-- Risponde a domande sul GDPR **citando l'articolo di riferimento**
-- Esegue una **gap analysis** di un documento interno (es. informativa privacy, registro dei trattamenti) rispetto ai requisiti del regolamento
-- Produce **checklist di conformità** per ambito (data breach, diritti degli interessati, fornitori/responsabili, sicurezza)
-- Classifica i gap rilevati per priorità e suggerisce le azioni correttive
+- Usa il **documento ufficiale del GDPR** caricato nella knowledge base come fonte primaria e riporta per ogni area l'**articolo o considerando** di riferimento
+- Integra il testo con le fonti ufficiali aggiornate di **UE, EDPB e Garante**, distinguendo norme vincolanti, orientamenti delle autorità e buone pratiche
+- Classifica ogni controllo come *Conforme*, *Parzialmente conforme*, *Non conforme*, *Non applicabile* o *Non valutato*, senza mai dichiarare conforme un controllo privo di evidenza
+- Trasforma i gap in un **piano di remediation** con priorità, responsabile e scadenza
+- Segnala i casi che richiedono la validazione del DPO o una consulenza legale qualificata
 
 !!! warning "Disclaimer"
 	L'agente è uno **strumento di supporto** e non sostituisce il parere del DPO, dell'ufficio legale o di consulenti qualificati. Ogni valutazione deve essere verificata da personale competente.
 
 Questo approccio permette di:
 
-- Rendere la normativa accessibile anche a chi non è specialista
-- Accelerare le verifiche periodiche di conformità
-- Ridurre il carico di richieste operative verso il DPO
+- Rendere sistematiche e ripetibili le verifiche di conformità
+- Avere evidenze, riferimenti normativi e gap tracciati in un unico output
+- Prioritizzare le azioni correttive e ridurre il carico operativo sul DPO
 
 ## Esempi di utilizzo
 
 **Richiesta utente**
 
-`Verifica se l'informativa privacy allegata contiene tutti gli elementi richiesti dal GDPR`
+`Avvia una valutazione completa GDPR della mia organizzazione usando la checklist obbligatoria e il documento ufficiale GDPR della knowledge base.`
 
 **Comportamento dell'agente**
 
-1. Confronta il documento con i requisiti degli artt. 13 e 14 GDPR
-2. Produce una tabella Requisito | Presente/Assente/Parziale | Riferimento | Azione suggerita
-3. Assegna una priorità (Alta / Media / Bassa) ai gap rilevati
-4. Ricorda di sottoporre l'esito al DPO per la validazione
+1. Chiede il perimetro minimo: organizzazione o processo, giurisdizione, trattamenti, documenti disponibili e periodo di verifica
+2. Applica la checklist obbligatoria alle aree applicabili (registro dei trattamenti, basi giuridiche, diritti, responsabili, trasferimenti, DPIA, sicurezza, data breach…)
+3. Per ogni controllo riporta stato, evidenza, riferimento normativo, gap, rischio e azione correttiva
+4. Chiude con sintesi, percentuale di completamento, rischi principali, piano di remediation ed evidenze ancora da raccogliere
 
 Altri esempi:
 
-- `Entro quanto tempo dobbiamo notificare un data breach al Garante?`
-- `Crea una checklist per la gestione delle richieste di accesso degli interessati`
-- `Quali clausole deve contenere un accordo con un responsabile del trattamento?`
+- `Applica la checklist GDPR a un nuovo trattamento e identifica obblighi, evidenze mancanti e rischi.`
+- `Verifica se la documentazione DPIA è completa e indica gap, rischi residui e azioni correttive.`
+- `Valuta un incidente privacy con la checklist GDPR e indica documentazione, notifiche ed escalation necessarie.`
+- `Trasforma i rilievi GDPR in un piano di remediation prioritizzato con responsabili e scadenze.`
+- `Controlla la conformità GDPR di un responsabile esterno, inclusi contratto, sub-responsabili e trasferimenti.`
 
 ## Get started
 → **[Apri la guida tecnica](lab-guide.md)**
