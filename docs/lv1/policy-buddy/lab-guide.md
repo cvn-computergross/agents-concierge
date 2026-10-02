@@ -49,7 +49,7 @@ Sei **Policy Buddy**, l'assistente per le policy interne rivolto ai dipendenti.
 ```
 
 !!! tip "Le istruzioni sono importanti"
-	In questi semplici agenti **tutto il comportamento è dettato dalle istruzioni**. La richiesta esplicita di una sezione **Fonte** obbliga l'agente a rendere ogni risposta verificabile.
+	In questi semplici agenti **tutto il comportamento è dettato dalle istruzioni**. La richiesta di citare con link ogni indicazione obbliga l'agente a rendere ogni risposta verificabile.
 
 ## Aggiungere la base di conoscenza
 
@@ -71,13 +71,49 @@ Per collegare la documentazione:
 
 ## Skills
 
+Per rendere le risposte ancora più affidabili, è possibile aggiungere all'agente una **skill**: un pacchetto riutilizzabile di istruzioni che l'agente attiva automaticamente quando la richiesta dell'utente corrisponde alla sua descrizione.
 
+La skill **policy-answer-checklist** applica una checklist obbligatoria a ogni domanda su ferie, welfare, trasferte e procedure interne:
+
+1. Classifica la richiesta (ambito, popolazione, sede, date)
+2. Cerca le fonti autorevoli su SharePoint
+3. Verifica ogni documento (titolo, owner, stato di approvazione, data di validità, versione)
+4. Controlla l'attualità delle fonti e segnala eventuali conflitti
+5. Costruisce la risposta a partire dalle evidenze
+6. Cita ogni affermazione con il link cliccabile al documento
+7. Esegue un controllo finale di completezza prima di rispondere
+8. Gestisce i casi in cui non esistono fonti valide, senza inventare
+
+È possibile scaricare la skill premendo il link sottostante:
+
+-> [Scarica la skill (ZIP)](../../downloads/policy-buddy/policy-answer-checklist.zip)
+
+Per aggiungerla all'agente:
+
+1. Nella scheda **Configura** dell'agente espandere la sezione **Skills** e premere **Aggiungi**.
+2. Caricare il file `.zip` **così com'è**, senza estrarlo: il pacchetto deve contenere il file `SKILL.md`.
+3. Verificare nome, descrizione e istruzioni della skill mostrati nel riepilogo. Una volta caricata, la skill compare nella sezione **Skills**:
+
+	![Skill](assets/PolicyBuddyv1-Skill.png)
+
+4. Provare nel pannello di anteprima una domanda che dovrebbe attivare la skill, ad esempio `Quali sono le regole per richiedere ferie?`.
+
+!!! warning "Funzionalità in anteprima"
+	Le skill in Agent Builder sono in **anteprima** e sono disponibili solo per le organizzazioni iscritte al **Microsoft Frontier Program**. Senza questa abilitazione la sezione **Skills** non è visibile: l'agente funziona comunque, basandosi solo sulle istruzioni. Per maggiori informazioni, consultare la [documentazione ufficiale](https://learn.microsoft.com/microsoft-365/copilot/extensibility/agent-builder-add-skills).
+
+??? tip "Istruzioni o skill?"
+	Le **istruzioni** definiscono il comportamento generale dell'agente (ruolo, perimetro, tono), mentre la **skill** contiene il procedimento dettagliato per uno specifico compito. Separare le due parti mantiene le istruzioni brevi e rende la skill riutilizzabile anche in altri agenti.
 
 ## Prompt suggeriti
 
-Nella sezione finale della configurazione premere `Add a suggested prompt` e inserire, ad esempio:
+Nella sezione finale della configurazione premere `Add a suggested prompt` e inserire i seguenti dati:
 
-
+| Title | Message |
+|---|---|
+| `Verifica ferie` | `Quali sono le regole per richiedere ferie e quali approvazioni servono? Cita i documenti applicabili.` |
+| `Controlla welfare` | `Spiegami quali benefit welfare sono disponibili e i relativi requisiti, citando le policy correnti.` |
+| `Prepara una trasferta` | `Qual è la procedura per autorizzare e rendicontare una trasferta? Indica passaggi, limiti e fonti.` |
+| `Trova una procedura` | `Cerca la procedura interna applicabile al mio caso e mostrami i passaggi con i link ai documenti.` |
 
 ## Test e condivisione
 
@@ -85,7 +121,7 @@ L'agente a questo punto sarà pienamente funzionante e sarà possibile testarlo 
 
 Verificare in particolare che:
 
-- ogni risposta contenga la sezione **Fonte**;
+- ogni risposta citi con link i documenti utilizzati;
 - una domanda non coperta dai documenti (es. `Qual è la policy sugli animali in ufficio?`) produca una risposta di "informazione non disponibile" e non un'invenzione.
 
 ??? tip "Condividere gli agenti"
