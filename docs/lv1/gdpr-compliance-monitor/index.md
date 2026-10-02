@@ -48,22 +48,24 @@ Questo approccio permette di:
 
 **Richiesta utente**
 
-`Avvia una valutazione completa GDPR della mia organizzazione usando la checklist obbligatoria e il documento ufficiale GDPR della knowledge base.`
+`Quali sono i principali obblighi del GDPR per un'organizzazione? Crea una checklist con gli articoli di riferimento.`
 
 **Comportamento dell'agente**
 
-1. Chiede il perimetro minimo: organizzazione o processo, giurisdizione, trattamenti, documenti disponibili e periodo di verifica
-2. Applica la checklist obbligatoria alle aree applicabili (registro dei trattamenti, basi giuridiche, diritti, responsabili, trasferimenti, DPIA, sicurezza, data breach…)
-3. Per ogni controllo riporta stato, evidenza, riferimento normativo, gap, rischio e azione correttiva
-4. Chiude con sintesi, percentuale di completamento, rischi principali, piano di remediation ed evidenze ancora da raccogliere
+![Risposta1](assets/Answer1.png)
+
+1. Individua le aree di controllo applicabili (governance, registro dei trattamenti, basi giuridiche, informative, diritti, responsabili, sicurezza, data breach, DPIA, DPO, trasferimenti, conservazione)
+2. Le presenta come checklist, con l'articolo di riferimento del GDPR per ciascuna area
+3. In assenza di evidenze, segna ogni controllo come *Da verificare* e non come conforme
+4. Chiude con le azioni prioritarie e le evidenze da raccogliere, indicando i punti da far validare al DPO
 
 Altri esempi:
 
-- `Applica la checklist GDPR a un nuovo trattamento e identifica obblighi, evidenze mancanti e rischi.`
-- `Verifica se la documentazione DPIA è completa e indica gap, rischi residui e azioni correttive.`
-- `Valuta un incidente privacy con la checklist GDPR e indica documentazione, notifiche ed escalation necessarie.`
-- `Trasforma i rilievi GDPR in un piano di remediation prioritizzato con responsabili e scadenze.`
-- `Controlla la conformità GDPR di un responsabile esterno, inclusi contratto, sub-responsabili e trasferimenti.`
+- `Quali obblighi GDPR si applicano quando si avvia un nuovo trattamento di dati personali?`
+- `Quando è obbligatoria una DPIA e quali contenuti minimi deve avere secondo il GDPR?`
+- `Come si gestisce un data breach secondo il GDPR? Indica notifiche, tempistiche e documentazione necessarie.`
+- `Crea un modello di piano di remediation GDPR con priorità, responsabili e scadenze.`
+- `Cosa deve prevedere il contratto con un responsabile del trattamento secondo il GDPR, inclusi sub-responsabili e trasferimenti?`
 
 ## Get started
 → **[Apri la guida tecnica](lab-guide.md)**

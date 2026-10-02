@@ -98,7 +98,7 @@ Per aggiungerla all'agente:
 
 	![Skill](assets/Skill.png)
 
-4. Provare nel pannello di anteprima una richiesta che dovrebbe attivare la skill, ad esempio `Applica la checklist GDPR a un nuovo trattamento e identifica obblighi, evidenze mancanti e rischi.`
+4. Provare nel pannello di anteprima una richiesta che dovrebbe attivare la skill, ad esempio `Quali obblighi GDPR si applicano quando si avvia un nuovo trattamento di dati personali?`
 
 !!! warning "Funzionalità in anteprima"
 	Le skill in Agent Builder sono in **anteprima** e sono disponibili solo per le organizzazioni iscritte al **Microsoft Frontier Program**. Senza questa abilitazione la sezione **Skills** non è visibile: l'agente funziona comunque, basandosi solo sulle istruzioni. Per maggiori informazioni, consultare la [documentazione ufficiale](https://learn.microsoft.com/microsoft-365/copilot/extensibility/agent-builder-add-skills).
@@ -112,12 +112,12 @@ Nella sezione finale della configurazione premere `Add a suggested prompt` e ins
 
 | Title | Message |
 |---|---|
-| `Avvia assessment GDPR` | `Avvia una valutazione completa GDPR della mia organizzazione usando la checklist obbligatoria e il documento ufficiale GDPR della knowledge base.` |
-| `Valuta un trattamento` | `Applica la checklist GDPR a un nuovo trattamento e identifica obblighi, evidenze mancanti e rischi.` |
-| `Controlla una DPIA` | `Verifica se la documentazione DPIA è completa e indica gap, rischi residui e azioni correttive.` |
-| `Analizza data breach` | `Valuta un incidente privacy con la checklist GDPR e indica documentazione, notifiche ed escalation necessarie.` |
-| `Crea remediation plan` | `Trasforma i rilievi GDPR in un piano di remediation prioritizzato con responsabili e scadenze.` |
-| `Verifica fornitori` | `Controlla la conformità GDPR di un responsabile esterno, inclusi contratto, sub-responsabili e trasferimenti.` |
+| `Obblighi GDPR` | `Quali sono i principali obblighi del GDPR per un'organizzazione? Crea una checklist con gli articoli di riferimento.` |
+| `Valuta un trattamento` | `Quali obblighi GDPR si applicano quando si avvia un nuovo trattamento di dati personali?` |
+| `Controlla una DPIA` | `Quando è obbligatoria una DPIA e quali contenuti minimi deve avere secondo il GDPR?` |
+| `Analizza data breach` | `Come si gestisce un data breach secondo il GDPR? Indica notifiche, tempistiche e documentazione necessarie.` |
+| `Crea remediation plan` | `Crea un modello di piano di remediation GDPR con priorità, responsabili e scadenze.` |
+| `Verifica fornitori` | `Cosa deve prevedere il contratto con un responsabile del trattamento secondo il GDPR, inclusi sub-responsabili e trasferimenti?` |
 
 ## Test e condivisione
 
