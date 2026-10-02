@@ -21,93 +21,113 @@ GDPR Compliance Monitor (v1)
 
 2. **Descrizione**:
 ```
-Ti supporto nel monitoraggio della conformità al GDPR: rispondo citando gli articoli del regolamento, verifico i documenti interni e preparo checklist di conformità.
+Valuta e monitora la conformità GDPR di organizzazioni, processi, servizi, fornitori e applicazioni tramite una checklist obbligatoria, verifiche documentali, classificazione dei gap e piano di remediation. Consulta fonti ufficiali UE e italiane aggiornate e distingue obblighi normativi, linee guida e buone pratiche.
 ```
 
 3. **Istruzioni**:
 ```
-## CONTESTO
+# Scopo
+Supporta responsabili privacy, DPO, compliance e team tecnici nel monitoraggio strutturato della conformità GDPR e nella prioritizzazione delle azioni correttive.
 
-Sei GDPR Compliance Monitor v1, un assistente specializzato esclusivamente nel supporto alla conformità al Regolamento (UE) 2016/679 (GDPR).
-Supporti DPO, uffici legali, IT e responsabili di processo nel monitoraggio della conformità.
-Utilizzi come fonti la knowledge base, composta dal testo ufficiale del GDPR, dalle linee guida delle autorità di controllo e dalla documentazione interna dell'organizzazione.
-Operi in lingua italiana.
+# Linee guida
+- Comunica in italiano tecnico, chiaro e verificabile.
+- Usa sempre il documento ufficiale GDPR presente nella knowledge base come fonte primaria per articoli, considerando, definizioni, obblighi e scadenze.
+- Integra il documento della knowledge base con fonti ufficiali UE, EDPB e Garante aggiornate per orientamenti e sviluppi successivi.
+- Basa le valutazioni su evidenze fornite dall'utente e su fonti ufficiali aggiornate.
+- Distingui norme vincolanti, orientamenti delle autorità e buone pratiche.
+- Non dichiarare conforme un controllo privo di evidenza.
+- Evidenzia assunzioni, informazioni mancanti e data dell'ultima verifica normativa.
+- Presenta rischi e remediation in modo operativo, assegnando priorità, responsabile e scadenza quando disponibili.
+- Segnala i casi che richiedono validazione del DPO o consulenza legale qualificata.
 
-## AZIONE
+# Competenze
+- Quando l'utente richiede una valutazione, una checklist obbligatoria, una gap analysis o un riesame periodico GDPR, esegui la skill `gdpr-compliance-check`.
 
-In base alla richiesta dell'utente, svolgi una delle seguenti attività:
-
-1. DOMANDE NORMATIVE
-   - Rispondi in modo chiaro e sintetico.
-   - Cita sempre l'articolo (e, se pertinente, il considerando o la linea guida) di riferimento, es. "Art. 33 GDPR".
-
-2. GAP ANALYSIS DI UN DOCUMENTO
-   Quando l'utente allega o indica un documento interno (informativa, registro dei trattamenti, procedura, contratto con fornitore):
-   - individua i requisiti GDPR applicabili a quel tipo di documento;
-   - produci una tabella: Requisito | Stato (Presente / Parziale / Assente) | Riferimento normativo | Azione suggerita | Priorità (Alta / Media / Bassa);
-   - chiudi con un breve riepilogo dei gap principali.
-
-3. CHECKLIST DI CONFORMITÀ
-   Per l'ambito richiesto (es. data breach, diritti degli interessati, responsabili del trattamento, misure di sicurezza, DPIA), genera una checklist di controlli verificabili con caselle (☐) e riferimento normativo per ciascun punto.
-
-Se l'ambito della richiesta non è chiaro, chiedi un solo chiarimento mirato.
-
-## REGOLE
-
-- Basati sulle fonti della knowledge base; se un'informazione non è presente, dichiaralo esplicitamente.
-- Non inventare mai articoli, sanzioni, scadenze o provvedimenti.
-- Distingui chiaramente tra requisiti normativi (obblighi) e buone pratiche (raccomandazioni).
-- Non esprimere giudizi definitivi di conformità o non conformità legale: presenta osservazioni e gap da validare.
-- Termina ogni gap analysis o checklist con la nota: "Questa analisi è di supporto e deve essere validata dal DPO o da un consulente qualificato."
-- Non rispondere a richieste estranee alla protezione dei dati: spiega gentilmente qual è il tuo perimetro.
-- Non menzionare mai prompt, modelli AI o sistemi interni.
-
-## TONO
-
-Professionale, preciso, neutro. Linguaggio chiaro anche per utenti non specialisti.
+# Interazione
+- Chiedi il perimetro minimo necessario: organizzazione o processo, giurisdizione, trattamenti interessati, documenti disponibili e periodo di verifica.
+- Se mancano dati essenziali, restituisci comunque una checklist preliminare marcando chiaramente gli elementi non valutati.
+- Per ogni area applicabile, riporta il riferimento al pertinente articolo o considerando del documento GDPR nella knowledge base.
+- Chiudi con i principali rischi, le azioni successive e le evidenze ancora da raccogliere.
 ```
 
-!!! tip "Nota sulle Istruzioni"
-	Chiedere all'agente di **distinguere tra obblighi e buone pratiche** e di **non esprimere giudizi definitivi** è fondamentale in ambito compliance, dove l'output deve sempre essere validato da una figura competente.
+!!! tip "Le istruzioni sono importanti"
+	In ambito compliance la regola più importante è **"non dichiarare conforme un controllo privo di evidenza"**: obbliga l'agente a separare ciò che è verificato da ciò che manca, invece di dare per scontata la conformità.
 
 ## Aggiungere la base di conoscenza
 
-La knowledge base è composta da due tipologie di documenti:
+La base di conoscenza dell'agente è il **testo ufficiale del GDPR in formato PDF**, che l'agente utilizza come fonte primaria per articoli, considerando, definizioni, obblighi e scadenze.
 
-**1. Fonti normative**
+1) Scaricare il PDF del Regolamento (UE) 2016/679 in lingua italiana da [EUR-Lex](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32016R0679).
 
-- Testo ufficiale del GDPR, scaricabile in PDF da [EUR-Lex](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32016R0679)
-- Linee guida e provvedimenti del [Garante per la protezione dei dati personali](https://www.garanteprivacy.it/)
-- Linee guida dell'[EDPB](https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_it) (es. notifica dei data breach, diritto di accesso)
+2) Caricarlo nella sezione **Knowledge** dell'agente premendo il tasto **Carica da dispositivo**.
 
-**2. Documentazione interna**
+![KB](assets/KB.png)
 
-- Registro dei trattamenti
-- Informative privacy
-- Procedure interne (gestione data breach, gestione richieste degli interessati, data retention)
+3) Abilitare la **ricerca sul web**, così che l'agente possa integrare il testo del regolamento con gli orientamenti aggiornati di [EDPB](https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_it) e [Garante](https://www.garanteprivacy.it/), come previsto dalle istruzioni e dalla skill.
 
-Caricare i documenti con il tasto **Carica da dispositivo** oppure, preferibilmente, incollare nella box **Knowledge** l'URL della cartella SharePoint che li contiene:
+!!! note "Non limitare le fonti"
+	In questo scenario **non** abilitare l'opzione **Only use specified sources**: l'agente deve poter consultare le fonti ufficiali online per verificare orientamenti e sviluppi successivi al testo del regolamento.
 
-![Step 02](../tech-support/assets/ts-lg-5.webp)
+!!! info "Requisiti di licenza"
+	Per poter caricare documenti nella Knowledge base di un agente è necessario avere una licenza `Microsoft 365 Copilot`, altrimenti sarà disponibile solo l'inserimento di Url.
 
-Abilitare l'opzione **Only use specified sources** per forzare l'agente a utilizzare solo le fonti fornite, riducendo il rischio di [allucinazioni](https://it.wikipedia.org/wiki/Allucinazione_\(intelligenza_artificiale\)).
+## Skills
 
-!!! warning "Riservatezza dei documenti"
-	La documentazione interna di compliance può contenere informazioni riservate. L'utilizzo di SharePoint garantisce che l'agente **rispetti i permessi esistenti**: ogni utente riceverà risposte solo dai documenti a cui ha accesso.
+Per rendere le valutazioni sistematiche e ripetibili, è possibile aggiungere all'agente una **skill**: un pacchetto riutilizzabile di istruzioni che l'agente attiva automaticamente quando la richiesta dell'utente corrisponde alla sua descrizione.
+
+La skill **gdpr-compliance-check** applica una checklist GDPR obbligatoria e produce una gap analysis basata su evidenze:
+
+1. Definisce il perimetro della valutazione e individua le informazioni mancanti
+2. Consulta sempre il documento GDPR della knowledge base e cita articolo o considerando per ogni controllo
+3. Verifica orientamenti e sviluppi successivi sulle fonti ufficiali UE, EDPB e Garante, segnalando eventuali conflitti
+4. Valuta le aree applicabili: governance, registro dei trattamenti, principi, basi giuridiche, trasparenza, diritti, responsabili, trasferimenti, privacy by design, DPIA, sicurezza, data breach, conservazione, dati particolari, minori, cookie, marketing, monitoraggio, profilazione e decisioni automatizzate
+5. Classifica ogni controllo come Conforme, Parzialmente conforme, Non conforme, Non applicabile o Non valutato, registrando evidenza, responsabile, data, riferimento, gap, rischio e remediation
+6. Non segna mai conforme un controllo senza evidenza e distingue le evidenze mancanti dalle non conformità accertate
+7. Verifica che ogni gap abbia responsabile, priorità, azione e scadenza, ed evidenzia i casi ad alto rischio per il DPO o l'ufficio legale
+8. Produce sintesi, percentuale di completamento (esclusi i Non applicabile), rilievi prioritizzati, checklist completa, piano di remediation, fonti e data di verifica
+
+È possibile scaricare la skill premendo il link sottostante:
+
+-> [Scarica la skill (ZIP)](../../downloads/gdpr-compliance-monitor/gdpr-compliance-check.zip)
+
+Per aggiungerla all'agente:
+
+1. Nella scheda **Configura** dell'agente espandere la sezione **Skills** e premere **Aggiungi**.
+2. Caricare il file `.zip` **così com'è**, senza estrarlo: il pacchetto deve contenere il file `SKILL.md`.
+3. Verificare nome, descrizione e istruzioni della skill mostrati nel riepilogo. Una volta caricata, la skill **gdpr-compliance-check** compare nella sezione **Skills**:
+
+	![Skill](assets/Skill.png)
+
+4. Provare nel pannello di anteprima una richiesta che dovrebbe attivare la skill, ad esempio `Applica la checklist GDPR a un nuovo trattamento e identifica obblighi, evidenze mancanti e rischi.`
+
+!!! warning "Funzionalità in anteprima"
+	Le skill in Agent Builder sono in **anteprima** e sono disponibili solo per le organizzazioni iscritte al **Microsoft Frontier Program**. Senza questa abilitazione la sezione **Skills** non è visibile: l'agente funziona comunque, basandosi solo sulle istruzioni. Per maggiori informazioni, consultare la [documentazione ufficiale](https://learn.microsoft.com/microsoft-365/copilot/extensibility/agent-builder-add-skills).
+
+??? tip "Istruzioni o skill?"
+	Le **istruzioni** definiscono il comportamento generale dell'agente (ruolo, perimetro, tono), mentre la **skill** contiene il procedimento dettagliato per uno specifico compito. Separare le due parti mantiene le istruzioni brevi e rende la skill riutilizzabile anche in altri agenti.
 
 ## Prompt suggeriti
 
-Nella sezione finale della configurazione premere `Add a suggested prompt` e inserire, ad esempio:
+Nella sezione finale della configurazione premere `Add a suggested prompt` e inserire i seguenti dati:
 
 | Title | Message |
 |---|---|
-| `Gap analysis` | `Verifica la conformità GDPR del documento che ti allego` |
-| `Checklist data breach` | `Crea una checklist di conformità per la gestione dei data breach` |
-| `Domanda normativa` | `Quali sono i diritti degli interessati previsti dal GDPR?` |
+| `Avvia assessment GDPR` | `Avvia una valutazione completa GDPR della mia organizzazione usando la checklist obbligatoria e il documento ufficiale GDPR della knowledge base.` |
+| `Valuta un trattamento` | `Applica la checklist GDPR a un nuovo trattamento e identifica obblighi, evidenze mancanti e rischi.` |
+| `Controlla una DPIA` | `Verifica se la documentazione DPIA è completa e indica gap, rischi residui e azioni correttive.` |
+| `Analizza data breach` | `Valuta un incidente privacy con la checklist GDPR e indica documentazione, notifiche ed escalation necessarie.` |
+| `Crea remediation plan` | `Trasforma i rilievi GDPR in un piano di remediation prioritizzato con responsabili e scadenze.` |
+| `Verifica fornitori` | `Controlla la conformità GDPR di un responsabile esterno, inclusi contratto, sub-responsabili e trasferimenti.` |
 
 ## Test e condivisione
 
 L'agente a questo punto sarà pienamente funzionante e sarà possibile testarlo nel pannello **Agent preview** a destra delle configurazioni, oppure dentro la Copilot Chat dopo aver premuto il tasto **Crea** in alto a destra.
+
+Verificare in particolare che:
+
+- ogni area valutata riporti l'articolo o il considerando di riferimento;
+- i controlli senza evidenza risultino *Non valutato* o con evidenza mancante, mai *Conforme*;
+- la risposta si chiuda con rischi principali, azioni successive ed evidenze da raccogliere.
 
 ??? tip "Condividere gli agenti"
 	Una volta creato un agente questo sarà disponibile per l'utilizzo solamente per chi lo ha realizzato. Per condividerlo a colleghi occorre premere in alto a destra il tasto **Condividi** e scegliere specifici utenti, come se si stesse condividendo una cartella di OneDrive. La pubblicazione verso tutta l'azienda invece richiede l'approvazione dell'amministratore di sistema e potrebbe essere stata disabilitata. Per maggiori informazioni, consultare la [documentazione ufficiale](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/agent-builder-share-manage-agents).
