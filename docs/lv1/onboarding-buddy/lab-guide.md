@@ -103,7 +103,7 @@ Per aggiungerla all'agente:
 1. Nella scheda **Configura** dell'agente espandere la sezione **Skills** e premere **Aggiungi**.
 2. Caricare il file `.zip` **così com'è**, senza estrarlo: il pacchetto deve contenere il file `SKILL.md`.
 3. Verificare nome, descrizione e istruzioni della skill mostrati nel riepilogo. Una volta caricata, la skill **onboarding-guidance** compare nella sezione **Skills**.
-4. Provare nel pannello di anteprima una domanda che dovrebbe attivare la skill, ad esempio `Prepara la mia checklist di onboarding`.
+4. Provare nel pannello di anteprima una domanda che dovrebbe attivare la skill, ad esempio `Prepara la mia checklist di onboarding personalizzata per ruolo, sede e data di ingresso.`
 
 !!! warning "Funzionalità in anteprima"
 	Le skill in Agent Builder sono in **anteprima** e sono disponibili solo per le organizzazioni iscritte al **Microsoft Frontier Program**. Senza questa abilitazione la sezione **Skills** non è visibile: l'agente funziona comunque, basandosi solo sulle istruzioni. Per maggiori informazioni, consultare la [documentazione ufficiale](https://learn.microsoft.com/microsoft-365/copilot/extensibility/agent-builder-add-skills).

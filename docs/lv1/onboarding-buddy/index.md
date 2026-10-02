@@ -43,20 +43,21 @@ Questo approccio permette di:
 
 **Richiesta utente**
 
-`Sono appena entrato in azienda, cosa devo fare questa settimana?`
+`Prepara la mia checklist di onboarding personalizzata per ruolo, sede e data di ingresso.`
 
 **Comportamento dell'agente**
 
-1. Accoglie il neoassunto e, se utile, chiede reparto o ruolo
-2. Recupera dalla documentazione la checklist della fase corrente
-3. Presenta le attività come elenco ordinato, con i contatti di riferimento
-4. Propone le domande successive più comuni
+1. Chiede solo i dettagli mancanti indispensabili (ruolo, sede, data di ingresso)
+2. Recupera dalla documentazione di onboarding le attività applicabili
+3. Presenta la checklist per fasi, con stato, priorità, scadenza e responsabile quando documentati
+4. Evidenzia blocchi e dipendenze e chiude con le tre azioni più importanti da completare
 
 Altri esempi:
 
-- `A chi mi rivolgo se il mio PC non funziona?`
-- `Quali corsi di formazione obbligatoria devo completare?`
-- `Come funzionano i buoni pasto?`
+- `Quali attività devo completare nella mia prima settimana e in quale ordine?`
+- `Indicami chi contattare per accessi, dispositivi, formazione obbligatoria e supporto HR.`
+- `Rispondi alle mie domande di onboarding usando la documentazione aziendale disponibile.`
+- `Aiutami a controllare cosa ho completato, cosa manca e quali blocchi devo risolvere.`
 
 ## Get started
 → **[Apri la guida tecnica](lab-guide.md)**
