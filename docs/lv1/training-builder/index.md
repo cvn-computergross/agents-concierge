@@ -23,38 +23,44 @@ Abbiamo identificato tre criticità principali:
 
 ## Soluzione
 
-**Training Builder (v1)** è un agente progettato **esclusivamente per la creazione di materiali formativi** a partire da documenti caricati in chat o da un argomento tecnico indicato dall'utente.
+**Training Builder (v1)** è un agente che opera come **instructional designer specializzato in contenuti tecnici**: trasforma documenti aziendali o argomenti tecnici in percorsi formativi completi, adattati al pubblico.
 
-L'agente produce tre tipologie di output:
+L'agente produce:
 
-- **Agenda del corso** : moduli, obiettivi didattici e durata di ciascuna sessione
-- **Quiz** : domande a risposta multipla con soluzione e spiegazione
-- **Esercitazioni** : attività pratiche con obiettivo, prerequisiti, passaggi e risultato atteso
+- **Agenda del corso** : moduli, obiettivi didattici osservabili, tempi e matrice obiettivi-attività-verifica, a partire da un template aziendale
+- **Quiz** : domande in formati diversi con soluzioni spiegate, chiave di correzione, soglia di superamento e feedback per fascia di punteggio
+- **Esercitazioni** : scenario, obiettivo, prerequisiti, passaggi, risultato atteso e rubric di valutazione
+- **Note per il docente** e verifica di coerenza tra obiettivi, agenda, esercitazioni e quiz
+
+Prima di consegnare, l'agente controlla che le durate coincidano, che ogni obiettivo sia coperto e misurato e segnala i contenuti che richiedono conferma tecnica.
 
 Questo approccio permette di:
 
 - Ridurre drasticamente i tempi di preparazione di un corso
-- Standardizzare il formato dei materiali formativi
+- Standardizzare il formato dei materiali formativi grazie ai template
 - Includere sempre momenti di verifica e pratica
+- Adattare lo stesso contenuto a pubblici diversi
 
 ## Esempi di utilizzo
 
 **Richiesta utente**
 
-`Crea l'agenda di un corso di 4 ore su Microsoft Intune per tecnici IT junior`
+`Crea l'agenda di un corso tecnico di 4 ore su Microsoft 365 Copilot per un pubblico IT intermedio, con tempi e obiettivi per modulo.`
 
 **Comportamento dell'agente**
 
-1. Verifica i parametri essenziali (argomento, durata, destinatari, livello)
-2. Chiede eventuali dettagli mancanti prima di procedere
-3. Genera l'agenda in formato tabellare
-4. Propone di generare quiz ed esercitazioni coerenti con l'agenda
+1. Riepiloga le assunzioni (pubblico, durata, modalità) e chiede solo i dati essenziali mancanti
+2. Compila il template dell'agenda con scheda del corso, obiettivi e programma per moduli
+3. Verifica che la somma delle durate coincida con le 4 ore e che ogni obiettivo sia coperto da una verifica
+4. Propone una sola iterazione mirata (livello, durata, formato o difficoltà)
 
 Altri esempi:
 
-- `Crea 10 domande a risposta multipla sul documento allegato`
-- `Prepara un'esercitazione pratica di 30 minuti sulla configurazione di una VPN`
-- `Partendo da questo manuale, crea un corso completo di una giornata con quiz finale`
+- `Genera un quiz di 12 domande sull'argomento indicato, con difficoltà crescente, soluzioni spiegate e soglia di superamento.`
+- `Progetta un'esercitazione pratica di 45 minuti basata sui documenti disponibili, con scenario, passaggi, risultato atteso e rubric di valutazione.`
+- `Trasforma il documento che indico in un modulo formativo con obiettivi, agenda, quiz finale e note per il docente.`
+- `Adatta questo materiale tecnico a un pubblico non tecnico, mantenendo accuratezza e aggiungendo esempi concreti.`
+- `Controlla la coerenza tra obiettivi, agenda, esercitazioni e quiz di questo corso e segnala le lacune.`
 
 ## Get started
 → **[Apri la guida tecnica](lab-guide.md)**
