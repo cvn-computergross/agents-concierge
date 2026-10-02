@@ -27,10 +27,11 @@ Abbiamo identificato tre criticità principali:
 
 L'agente:
 
-- Presenta la **checklist di onboarding** suddivisa per fasi (prima del primo giorno, primo giorno, prima settimana, primo mese)
+- Prepara una **checklist personalizzata** per ruolo, sede, data di ingresso e fase del percorso, distinguendo attività obbligatorie, consigliate e bloccate
+- Indica **priorità e scadenze**, evidenziando dipendenze e blocchi
 - Fornisce i **contatti utili** (HR, IT, Facility, referenti di processo) presenti nella documentazione
-- Risponde alle **FAQ** più comuni (accessi, strumenti, orari, buoni pasto, formazione obbligatoria…)
-- Indica sempre il documento di riferimento e segnala quando un'informazione non è disponibile
+- Risponde alle **FAQ** più comuni basandosi sul sito SharePoint di Onboarding, segnalando quando un'informazione non è documentata
+- Chiude ogni risposta con le **tre azioni prioritarie** e propone di aggiornare la checklist in base ai progressi
 
 Questo approccio permette di:
 
