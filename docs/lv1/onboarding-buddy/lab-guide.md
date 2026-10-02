@@ -64,17 +64,7 @@ Per collegare la documentazione:
 
 2) Incollare l'URL nella box **Knowledge** dell'agente, premere *Invio* e verificare che venga riconosciuto il nome del sito o della raccolta:
 
-![Step 02](../tech-support/assets/ts-lg-5.webp)
-
-??? tip "Contenuti consigliati per il sito Onboarding"
-	Se non si dispone di documentazione reale, è possibile creare alcuni documenti di esempio (anche con l'aiuto di Copilot):
-
-	- `Checklist Onboarding.docx` – attività suddivise per fase (prima dell'ingresso, primo giorno, prima settimana, primo mese)
-	- `Contatti Utili.xlsx` – tabella con ambito, ufficio/referente, e-mail o canale Teams
-	- `FAQ Neoassunti.docx` – domande e risposte su accessi, dispositivi, orari, buoni pasto, formazione obbligatoria
-	- `Benvenuto in Azienda.pdf` – presentazione dell'azienda, valori e organizzazione
-
-	Documenti con titoli chiari, scadenze e referenti espliciti migliorano sensibilmente la qualità delle checklist generate.
+![Step 02](assets/KB.png)
 
 !!! info "Requisiti di licenza"
 	Senza licenza `Microsoft 365 Copilot` non è possibile utilizzare SharePoint o file caricati come knowledge: sarà disponibile solo l'inserimento di URL pubblici.
@@ -97,6 +87,8 @@ La skill **onboarding-guidance** guida il neoassunto in un percorso coerente:
 È possibile scaricare la skill premendo il link sottostante:
 
 -> [Scarica la skill (ZIP)](../../downloads/onboarding-buddy/onboarding-guidance.zip)
+
+![Skill](assets/SKill.png)
 
 Per aggiungerla all'agente:
 

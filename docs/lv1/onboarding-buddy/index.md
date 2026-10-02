@@ -23,6 +23,8 @@ Abbiamo identificato tre criticità principali:
 
 ## Soluzione
 
+![Agent](assets/OnboardingAGent.png)
+
 **Onboarding Buddy (v1)** è un agente progettato **esclusivamente per accompagnare i neoassunti** nelle prime settimane, basandosi sulla documentazione ufficiale di onboarding.
 
 L'agente:
@@ -46,6 +48,8 @@ Questo approccio permette di:
 `Prepara la mia checklist di onboarding personalizzata per ruolo, sede e data di ingresso.`
 
 **Comportamento dell'agente**
+
+![Esempio 1](assets/Answer1.png)
 
 1. Chiede solo i dettagli mancanti indispensabili (ruolo, sede, data di ingresso)
 2. Recupera dalla documentazione di onboarding le attività applicabili
