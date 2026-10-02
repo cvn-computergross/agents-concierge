@@ -23,6 +23,8 @@ Abbiamo identificato tre criticità principali:
 
 ## Soluzione
 
+![Panoramica Agent](assets/PolicyBuddy.png)
+
 **Policy Buddy (v1)** è un agente progettato **esclusivamente per rispondere a domande sulle policy e procedure interne**, utilizzando come fonte unica i documenti aziendali pubblicati su SharePoint.
 
 L'agente:
@@ -45,6 +47,8 @@ Questo approccio permette di:
 `Quanti giorni di ferie ho a disposizione e con quanto anticipo devo richiederle?`
 
 **Comportamento dell'agente**
+
+![Risposta1](assets/Answer1.png)
 
 1. Cerca la risposta nei documenti di policy collegati
 2. Restituisce una risposta sintetica e strutturata
