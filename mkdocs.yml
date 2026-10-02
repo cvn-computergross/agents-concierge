@@ -26,6 +26,21 @@ nav:
   - Talent Scout (v1):
     - Panoramica: lv1/talent-scout/index.md
     - Setup Guide: lv1/talent-scout/lab-guide.md
+  - Policy Buddy (v1):
+    - Panoramica: lv1/policy-buddy/index.md
+    - Setup Guide: lv1/policy-buddy/lab-guide.md
+  - Onboarding Buddy (v1):
+    - Panoramica: lv1/onboarding-buddy/index.md
+    - Setup Guide: lv1/onboarding-buddy/lab-guide.md
+  - Training Builder (v1):
+    - Panoramica: lv1/training-builder/index.md
+    - Setup Guide: lv1/training-builder/lab-guide.md
+  - GDPR Compliance Monitor (v1):
+    - Panoramica: lv1/gdpr-compliance-monitor/index.md
+    - Setup Guide: lv1/gdpr-compliance-monitor/lab-guide.md
+  - NIS2 Compliance Monitor (v1):
+    - Panoramica: lv1/nis2-compliance-monitor/index.md
+    - Setup Guide: lv1/nis2-compliance-monitor/lab-guide.md
 - Copilot Studio:
   - Lista Agenti: lv2/index.md
   - Tech Support (v2):

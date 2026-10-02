@@ -41,3 +41,38 @@ Gli agenti presentati in questa sezione rappresentano **il primo passo** verso i
 **Descrizione**: Talent Scout (v1) è un agente progettato esclusivamente per lo screening e la ricerca di candidati, sulla base di parametri e criteri di valutazione richiesti.
 	
 ➡️[Vai alla documentazione](talent-scout/index.md)
+
+### **Policy Buddy · v1**
+**Categorie**: Risorse Umane, Ricerca informazioni
+
+**Descrizione**: Risponde alle domande su ferie, welfare, trasferte e procedure interne, citando sempre i documenti aziendali pubblicati su SharePoint.
+
+➡️[Vai alla documentazione](policy-buddy/index.md)
+
+### **Onboarding Buddy · v1**
+**Categorie**: Risorse Umane, Onboarding
+
+**Descrizione**: Guida il neoassunto nelle prime settimane con checklist, contatti utili e FAQ basate sulla documentazione di onboarding.
+
+➡️[Vai alla documentazione](onboarding-buddy/index.md)
+
+### **Training Builder · v1**
+**Categorie**: Formazione, Creazione contenuti
+
+**Descrizione**: Crea agende di corso, quiz ed esercitazioni partendo da documenti o argomenti tecnici.
+
+➡️[Vai alla documentazione](training-builder/index.md)
+
+### **GDPR Compliance Monitor · v1**
+**Categorie**: Compliance, Normativa
+
+**Descrizione**: Supporta il monitoraggio della conformità al GDPR con risposte citate, gap analysis dei documenti interni e checklist di conformità.
+
+➡️[Vai alla documentazione](gdpr-compliance-monitor/index.md)
+
+### **NIS2 Compliance Monitor · v1**
+**Categorie**: Compliance, Cybersicurezza
+
+**Descrizione**: Supporta il monitoraggio della conformità alla direttiva NIS2 con risposte citate, gap analysis di policy e procedure e checklist di conformità.
+
+➡️[Vai alla documentazione](nis2-compliance-monitor/index.md)
