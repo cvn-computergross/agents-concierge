@@ -76,9 +76,6 @@ La base di conoscenza dell'agente è il **testo ufficiale della Direttiva NIS2 i
 
 ![KB](assets/KB.png)
 
-!!! note "Non limitare le fonti"
-	In questo scenario **non** abilitare l'opzione **Only use specified sources**: l'agente deve poter consultare le fonti ufficiali online, perché il quadro NIS2 italiano (decreto di recepimento e determinazioni ACN) è in continua evoluzione.
-
 !!! info "Requisiti di licenza"
 	Per poter caricare documenti nella Knowledge base di un agente è necessario avere una licenza `Microsoft 365 Copilot`, altrimenti sarà disponibile solo l'inserimento di Url.
 
