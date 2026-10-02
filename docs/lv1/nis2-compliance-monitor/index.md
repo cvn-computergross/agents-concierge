@@ -23,42 +23,47 @@ Abbiamo identificato tre criticità principali:
 
 ## Soluzione
 
-**NIS2 Compliance Monitor (v1)** è un agente progettato **esclusivamente per il supporto al monitoraggio della conformità NIS2**, basato sui testi normativi e sulla documentazione interna di sicurezza.
+![Panoramica Agent](assets/Chat.png)
+
+**NIS2 Compliance Monitor (v1)** è un agente che opera come **consulente tecnico per il monitoraggio della conformità NIS2** delle organizzazioni operanti in Italia, tramite una **checklist completa** e verifiche basate su evidenze.
 
 L'agente:
 
-- Risponde a domande su NIS2 e D.Lgs. 138/2024 **citando l'articolo di riferimento**
-- Esegue una **gap analysis** di policy e procedure interne rispetto alle misure di gestione del rischio previste
-- Produce **checklist di conformità** per ambito (gestione incidenti, supply chain, continuità operativa, controllo accessi, crittografia, formazione)
-- Classifica i gap rilevati per priorità e suggerisce le azioni correttive
+- Usa il **testo ufficiale della Direttiva NIS2** caricato nella knowledge base come fonte primaria, riportando articolo, pagina e fonte per ogni requisito
+- Integra il testo con aggiornamenti provenienti esclusivamente da fonti ufficiali (**EUR-Lex, Gazzetta Ufficiale, Normattiva, ACN**), distinguendo direttiva europea, recepimento italiano, atti attuativi e linee guida
+- Classifica ogni controllo come *Conforme*, *Parzialmente conforme*, *Non conforme*, *Non applicabile* o *Da verificare*, senza mai dedurre la conformità in assenza di evidenze
+- Trasforma i gap in una **roadmap di remediation** con priorità, responsabile, scadenza ed evidenza attesa
+- Evidenzia separatamente obblighi scaduti, rischi critici e informazioni mancanti
 
 !!! warning "Disclaimer"
-	L'agente è uno **strumento di supporto** e non sostituisce il parere di consulenti legali o di cybersicurezza qualificati. Ogni valutazione deve essere verificata da personale competente.
+	L'agente è uno **strumento di supporto** e non sostituisce il parere di consulenti legali o di cybersicurezza qualificati. Per interpretazioni controverse o decisioni legali definitive è necessaria la validazione della funzione legale competente.
 
 Questo approccio permette di:
 
-- Rendere la normativa accessibile a IT, management e responsabili di processo
-- Accelerare le attività di assessment periodico
-- Diffondere in azienda la conoscenza delle procedure di notifica degli incidenti
+- Rendere sistematiche e ripetibili le verifiche di conformità NIS2
+- Avere requisiti, evidenze, gap e scadenze tracciati in un unico output
+- Restare aggiornati sulle variazioni normative e sul loro impatto sui controlli
 
 ## Esempi di utilizzo
 
 **Richiesta utente**
 
-`Verifica se la nostra procedura di gestione degli incidenti è allineata ai requisiti NIS2`
+`Quali sono i principali obblighi della NIS2 per un'organizzazione? Crea una checklist con gli articoli di riferimento.`
 
 **Comportamento dell'agente**
 
-1. Confronta la procedura con gli obblighi di gestione e notifica degli incidenti
-2. Produce una tabella Requisito | Presente/Assente/Parziale | Riferimento | Azione suggerita
-3. Assegna una priorità (Alta / Media / Bassa) ai gap rilevati
-4. Ricorda di sottoporre l'esito ai referenti di sicurezza per la validazione
+1. Individua le aree di controllo (applicabilità e registrazione, governance, gestione del rischio, incidenti e notifiche, continuità operativa, supply chain, vulnerabilità, accessi, crittografia, formazione)
+2. Le presenta come checklist, con l'articolo di riferimento della Direttiva per ciascuna area
+3. In assenza di evidenze, segna ogni controllo come *Da verificare* e non come conforme
+4. Chiude con le azioni prioritarie, le domande aperte e i punti da far validare alla funzione legale
 
 Altri esempi:
 
-- `Quali sono le tempistiche di notifica di un incidente significativo?`
-- `Crea una checklist per la sicurezza della supply chain`
-- `Quali responsabilità ha il consiglio di amministrazione secondo la NIS2?`
+- `Quali criteri determinano se un'organizzazione rientra nella NIS2 come soggetto essenziale o importante?`
+- `Quali misure di gestione dei rischi di cybersicurezza richiede la NIS2?`
+- `Come si gestisce un incidente significativo secondo la NIS2? Indica notifiche, tempistiche e destinatari.`
+- `Cosa prevede la NIS2 per la sicurezza della catena di approvvigionamento e dei fornitori?`
+- `Quali responsabilità hanno gli organi di amministrazione secondo la NIS2?`
 
 ## Get started
 → **[Apri la guida tecnica](lab-guide.md)**
