@@ -65,9 +65,6 @@ La base di conoscenza dell'agente è il **testo ufficiale del GDPR in formato PD
 
 3) Abilitare la **ricerca sul web**, così che l'agente possa integrare il testo del regolamento con gli orientamenti aggiornati di [EDPB](https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_it) e [Garante](https://www.garanteprivacy.it/), come previsto dalle istruzioni e dalla skill.
 
-!!! note "Non limitare le fonti"
-	In questo scenario **non** abilitare l'opzione **Only use specified sources**: l'agente deve poter consultare le fonti ufficiali online per verificare orientamenti e sviluppi successivi al testo del regolamento.
-
 !!! info "Requisiti di licenza"
 	Per poter caricare documenti nella Knowledge base di un agente è necessario avere una licenza `Microsoft 365 Copilot`, altrimenti sarà disponibile solo l'inserimento di Url.
 
