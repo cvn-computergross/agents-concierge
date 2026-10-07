@@ -3,4 +3,5 @@
 raw-assets/
 resized-assets/
 .DS_Store
-Thumbs.db/.claude
+Thumbs.db
+/.claude
