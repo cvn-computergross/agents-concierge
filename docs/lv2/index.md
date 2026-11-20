@@ -61,3 +61,10 @@ Supporta la produttività adattandosi alle abitudini dell’utente e integrandos
 
 ➡️[Vai alla documentazione](agenda-pilot/index.md)
 - **[Maps Agent · v2](maps-agent/index.md)**
+
+### **Assistente Trasferte Zava**
+**Categorie**: Amministrazione, Note spese, Document Intelligence
+
+**Descrizione**: Un agente per trasferte e note spese dei dipendenti: apre le trasferte tramite Adaptive Card, le elenca leggendo i dati da *Dataverse* e registra le spese partendo dalla foto dello scontrino, analizzata con *Azure AI Document Intelligence* (Microsoft Foundry) tramite *Agent Flow*.
+
+➡️[Vai alla documentazione](trasferte-zava/index.md)

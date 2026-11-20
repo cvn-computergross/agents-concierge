@@ -64,4 +64,6 @@ nav:
   - Maps Agent:
     - Panoramica: lv2/maps-agent/index.md
     - Setup Guide: lv2/maps-agent/lab-guide.md
-    
+  - Assistente Trasferte Zava:
+    - Panoramica: lv2/trasferte-zava/index.md
+    - Setup Guide: lv2/trasferte-zava/lab-guide.md
