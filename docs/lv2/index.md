@@ -8,7 +8,7 @@ Copilot Studio consente di superare i limiti degli agenti più semplici, introdu
 !!! info "Per maggiori informazioni"
 	Per una panoramica completa di Copilot Studio, delle sue funzionalità e degli scenari supportati, fare riferimento alla [documentazione ufficiale](https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-what-is-copilot-studio).
 
-## Agenti disponibili
+## Standard Harness
 
 Gli agenti presentati in questa sezione propongono una **versione evoluta** degli use case introdotti nel livello 1. L’obiettivo è mostrare come uno stesso caso d’uso possa essere ripensato utilizzando strumenti più avanzati, pattern di progettazione più strutturati e un maggiore livello di controllo, al costo di maggiore tempo di implementazione e testing.
 
@@ -68,3 +68,9 @@ Supporta la produttività adattandosi alle abitudini dell’utente e integrandos
 **Descrizione**: Un agente per trasferte e note spese dei dipendenti: apre le trasferte tramite Adaptive Card, le elenca leggendo i dati da *Dataverse* e registra le spese partendo dalla foto dello scontrino, analizzata con *Azure AI Document Intelligence* (Microsoft Foundry) tramite *Agent Flow*.
 
 ➡️[Vai alla documentazione](trasferte-zava/index.md)
+
+## Microsoft Harness
+
+Gli agenti di questa sezione sono costruiti con il nuovo **harness** di Copilot Studio: istruzioni in Markdown, *Skill* con file di supporto e script eseguiti in sandbox, *Tool* e *Workflow*, al posto dei *Topic* classici.
+
+➡️[Vai alla lista degli agenti Microsoft Harness](harness/index.md)
