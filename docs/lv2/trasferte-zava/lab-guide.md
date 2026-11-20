@@ -4,7 +4,7 @@
 	Gli agenti proposti sono pensati come **primi use case**, utili a prendere confidenza con gli strumenti **in modo pratico**.  Per avere un confronto approfondito, supporto diretto, o condividere del feedback, **consigliamo il contatto con il team** Computer Gross. Per contattarci fare riferimento alla pagina: [**concierge.computergross.it/contattaci**](https://concierge.computergross.it/contattaci/).
 
 !!! note "Ambito della guida"
-	Questa guida copre l'**agente** (dettagli, modello, istruzioni), i **Topic**, i **Tool**, gli **Agent Flow** chiamati dall'agente. La creazione dell'app model-driven di back office e dei flussi "sotto al cofano" (approvazioni e notifiche in Teams) è fuori dagli scopi di questa guida.
+	Questa guida copre l'**agente** (dettagli, modello, istruzioni), i **Topic**, i **Tool**, gli **Agent Flow** chiamati dall'agente. La creazione dei flussi "sotto al cofano" (approvazioni e notifiche in Teams) è fuori dagli scopi di questa guida.
 
 ## Prerequisiti
 
@@ -53,9 +53,9 @@ La lettura degli scontrini è affidata ad **Azure AI Document Intelligence**, pa
 
 Le tabelle Dataverse (*Trasferta*, *Spesa*, *Categoria spesa*, *Dipendente*) devono essere già presenti nell'ambiente, ad esempio importando la solution `GestioneTrasferte` (prefisso di publisher `trv`).
 
-È possibile scaricare la solution (solo tabelle e app, senza agente e flussi) premendo il link sottostante, e importarla da [Power Apps](https://make.powerapps.com/) > **Solutions** > **Import solution**:
+È possibile scaricare la solution (solo le tabelle Dataverse) premendo il link sottostante, e importarla da [Power Apps](https://make.powerapps.com/) > **Solutions** > **Import solution**:
 
--> [Scarica la solution (ZIP)](../../downloads/trasferte-zava/GestioneTrasferte_1_0_0_13.zip)
+-> [Scarica la solution (ZIP)](../../downloads/trasferte-zava/GestioneTrasferte_1_0_0_14.zip)
 
 ## Creazione Agente da Copilot Studio
 

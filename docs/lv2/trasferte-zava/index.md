@@ -45,7 +45,7 @@ Questo approccio permette di:
 - Separare la conversazione (Copilot Studio) dalla lettura dei documenti (Foundry Tools)
 
 !!! note "Ambito della guida"
-    Questa guida tratta l'**agente** (dettagli, modello, istruzioni), i **Topic**, i **Tool**, gli **Agent Flow** chiamati dall'agente. L'app model-driven di back office e i flussi "sotto al cofano" (approvazioni e notifiche in Teams) non sono trattati.
+    Questa guida tratta l'**agente** (dettagli, modello, istruzioni), i **Topic**, i **Tool**, gli **Agent Flow** chiamati dall'agente. I flussi "sotto al cofano" (approvazioni e notifiche in Teams) non sono trattati.
 
 ## Esempio di utilizzo
 
