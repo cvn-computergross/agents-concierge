@@ -71,6 +71,30 @@ Supporta la produttività adattandosi alle abitudini dell’utente e integrandos
 
 ## Microsoft Harness
 
-Gli agenti di questa sezione sono costruiti con il nuovo **harness** di Copilot Studio: istruzioni in Markdown, *Skill* con file di supporto e script eseguiti in sandbox, *Tool* e *Workflow*, al posto dei *Topic* classici.
+### **Tech Support CH**
+**Categorie**: IT, Ticketing
 
-➡️[Vai alla lista degli agenti Microsoft Harness](harness/index.md)
+**Descrizione**: Assistente IT di primo livello che guida la diagnosi e, su richiesta, apre un ticket con la skill *Ticket Intake* e il workflow *Create New Ticket*.
+
+➡️[Vai alla documentazione](harness/tech-support/index.md)
+
+### **Job Writer CH**
+**Categorie**: Risorse Umane, Creazione contenuti
+
+**Descrizione**: Prepara bozze di annunci di lavoro con la skill *job-posting-builder* e genera il documento Word con uno script Python in sandbox.
+
+➡️[Vai alla documentazione](harness/job-writer/index.md)
+
+### **Postman CH**
+**Categorie**: Universale, E-mail, Multi Agente
+
+**Descrizione**: Invia via email un riepilogo HTML fedele della risposta finale, generato dalla skill *postman-email-recap* e spedito con il tool *Send Email Recap*.
+
+➡️[Vai alla documentazione](harness/postman/index.md)
+
+### **Talent Scout CH**
+**Categorie**: Risorse Umane, Screening CV
+
+**Descrizione**: Confronta i CV dell'archivio SharePoint con criteri espliciti tramite la skill *CV Screening* e notifica il canale Teams con il workflow *Notify Teams Applicant channel*.
+
+➡️[Vai alla documentazione](harness/talent-scout/index.md)

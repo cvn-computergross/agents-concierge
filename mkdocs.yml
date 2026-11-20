@@ -69,7 +69,6 @@ nav:
       - Panoramica: lv2/trasferte-zava/index.md
       - Setup Guide: lv2/trasferte-zava/lab-guide.md
   - Microsoft Harness:
-    - Lista Agenti: lv2/harness/index.md
     - Tech Support CH:
       - Panoramica: lv2/harness/tech-support/index.md
       - Setup Guide: lv2/harness/tech-support/lab-guide.md
